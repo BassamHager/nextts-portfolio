@@ -3,5 +3,9 @@
 @import "~tailwindcss/utilities";
 
 :root {
-  --primary: yellow;
+  --primary: #333;
+}
+
+body {
+  background: var(--primary);
 }

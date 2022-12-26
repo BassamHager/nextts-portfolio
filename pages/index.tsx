@@ -1,10 +1,14 @@
 import Head from "next/head";
-import { Inter } from "@next/font/google";
 import Header from "../components/header/Header";
+import { Social } from "../types/typings";
+import { GetStaticProps } from "next";
+import { fetchSocials } from "../utils/fetchSocials";
 
-const inter = Inter({ subsets: ["latin"] });
+type Props = {
+  socials: Social[];
+};
 
-export default function Home() {
+export default function Home({ socials }: Props) {
   return (
     <>
       <Head>
@@ -13,7 +17,7 @@ export default function Home() {
       </Head>
       <main>
         {/* header */}
-        <Header />
+        <Header socials={socials} />
 
         {/* hero */}
         {/* about */}
@@ -25,3 +29,14 @@ export default function Home() {
     </>
   );
 }
+
+export const getStaticProps: GetStaticProps<Props> = async () => {
+  const socials = (await fetchSocials()) ?? ([] as Social[]);
+
+  return {
+    props: {
+      socials,
+    },
+    revalidate: 10,
+  };
+};
