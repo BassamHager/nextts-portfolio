@@ -5,6 +5,7 @@ import { GetStaticProps } from "next";
 import { fetchSocials } from "../utils/fetchSocials";
 import Hero from "../components/hero/Hero";
 import { fetchPageInfo } from "../utils/fetchPageInfo";
+import About from "../components/about/About";
 
 type Props = {
   socials: Social[];
@@ -19,12 +20,11 @@ export default function Home({ socials, pageInfo }: Props) {
         {/* <link rel="icon" href="/favicon.ico" /> */} {/* @TODO: */}
       </Head>
       <main>
-        {/* header */}
         <Header socials={socials} />
-
-        {/* hero */}
         <Hero pageInfo={pageInfo} />
+
         {/* about */}
+        <About pageInfo={pageInfo} />
         {/* experiences */}
         {/* skills */}
         {/* projects */}
