@@ -6,10 +6,10 @@
   }
 
   .contactContainer {
-    @apply flex gap-[1rem] items-center text-gray-300 hover:text-white;
+    @apply flex gap-[1rem] items-center text-gray-500 hover:text-white;
 
     .emailIcon {
-      @apply rounded-md text-3xl cursor-pointer;
+      @apply rounded-md cursor-pointer text-5xl;
     }
     .contactText {
       @apply uppercase hidden md:inline-flex border-b-2 border-transparent;

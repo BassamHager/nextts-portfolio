@@ -77,7 +77,7 @@ export default function Header({ socials }: Props) {
             onMouseOver={() => setHoverState({ index: 10, isHovered: true })}
             onMouseLeave={() => setHoverState({ index: 10, isHovered: false })}
           >
-            <MdEmail className="cursor-pointer text-4xl" />
+            <MdEmail className={styles.emailIcon} />
             <p className={styles.contactText}>Get In Touch</p>
           </motion.div>
         </Link>
