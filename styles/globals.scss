@@ -4,6 +4,7 @@
 
 :root {
   --primary: #242424;
+  // --darkener: rgba(0, 0, 0, 0.5);
 }
 
 html {
@@ -66,11 +67,11 @@ p {
 }
 
 @layer base {
-  // :root {
-  //   --darkener: #1111;
-  //   --clr-neon: rgb(130, 20, 255);
-  //   --clr-bg: hsl(323 21% 16%);
-  // }
+  :root {
+    --darkener: #1111;
+    --clr-neon: rgb(130, 20, 255);
+    --clr-bg: hsl(323 21% 16%);
+  }
 }
 
 @layer components {

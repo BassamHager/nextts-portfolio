@@ -1,0 +1,29 @@
+.bgCirclesWrapper {
+  @apply relative flex justify-center;
+
+  .base {
+    @apply absolute rounded-full h-[550px] w-[550px] z-[10];
+    background: linear-gradient(rgba(0, 0, 0, 0.3), #000);
+  }
+  .n13 {
+    @apply absolute border  border-x-[var(--darkener)] border-y-[var(--darkener)] rounded-full h-[150px] w-[500px] mt-52 animate-spin-13 bg-[var(--darkener)];
+  }
+  .n21 {
+    @apply absolute border  border-x-[var(--darkener)] border-y-[var(--darkener)] rounded-full h-[150px] w-[500px] mt-52 animate-spin-21 bg-[black]/10 border-t-[transparent];
+  }
+  .n34 {
+    @apply absolute border  border-t-[transparent] border-x-[var(--darkener)] border-y-[var(--darkener)] rounded-full h-[150px] w-[500px] mt-52 animate-spin-34 bg-[blue]/20;
+  }
+  .n55 {
+    @apply absolute border border-x-[var(--darkener)] border-y-[var(--darkener)] rounded-full h-[150px] w-[500px] mt-52 animate-spin-55 bg-[purple]/50;
+  }
+  .n89 {
+    @apply absolute border  border-t-[transparent] border-x-[var(--darkener)] border-y-[var(--darkener)] rounded-full h-[150px] w-[500px] mt-52 animate-spin-89 bg-[maroon]/80;
+  }
+  .n144 {
+    @apply absolute border border-l-[black] border-t-[transparent] border-r-[var(--darkener)] border-y-[var(--darkener)] rounded-full h-[150px] w-[500px] mt-52 animate-spin-144 bg-[black];
+  }
+  .n233 {
+    @apply absolute border border-l-[#242424] border-t-[#242424] border-r-[#242424] border-y-[#242424] rounded-full h-[150px] w-[500px] mt-52 animate-spin-233 bg-[#242424];
+  }
+}

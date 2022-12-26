@@ -1,14 +1,17 @@
 import Head from "next/head";
 import Header from "../components/header/Header";
-import { Social } from "../types/typings";
+import { PageInfo, Social } from "../types/typings";
 import { GetStaticProps } from "next";
 import { fetchSocials } from "../utils/fetchSocials";
+import Hero from "../components/hero/Hero";
+import { fetchPageInfo } from "../utils/fetchPageInfo";
 
 type Props = {
   socials: Social[];
+  pageInfo: PageInfo;
 };
 
-export default function Home({ socials }: Props) {
+export default function Home({ socials, pageInfo }: Props) {
   return (
     <>
       <Head>
@@ -20,6 +23,7 @@ export default function Home({ socials }: Props) {
         <Header socials={socials} />
 
         {/* hero */}
+        <Hero pageInfo={pageInfo} />
         {/* about */}
         {/* experiences */}
         {/* skills */}
@@ -32,10 +36,12 @@ export default function Home({ socials }: Props) {
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
   const socials = (await fetchSocials()) ?? ([] as Social[]);
+  const pageInfo = (await fetchPageInfo()) ?? ({} as PageInfo);
 
   return {
     props: {
       socials,
+      pageInfo,
     },
     revalidate: 10,
   };

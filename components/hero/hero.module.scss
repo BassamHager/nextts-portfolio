@@ -1,0 +1,84 @@
+.heroWrapper {
+  @apply flex flex-col space-y-8 items-center justify-center text-center overflow-hidden;
+  min-height: 100vh;
+
+  .heroImage {
+    @apply relative rounded-full h-56 w-56 mx-auto object-cover z-[11];
+  }
+
+  .contentContainerBelowImage {
+    @apply z-10;
+
+    .role {
+      @apply text-lg uppercase text-gray-500 p-10 tracking-[15px];
+    }
+
+    .heroText {
+      @apply text-5xl text-gray-300 font-semibold px-10 lg:text-6xl h-[70px] flex justify-center items-center mt-28;
+    }
+
+    .linksContainer {
+      @apply pt-5;
+
+      .sectionButton {
+        @apply px-10 py-2 mt-24 mx-10 border-b-[white]/50  uppercase text-sm tracking-widest text-gray-500 transition-all hover:border-b-[white] hover:text-[#fff] bg-[royalblue]/30 hover:bg-[royalblue] rounded-full font-bold;
+      }
+
+      .neonButton {
+        display: inline-block;
+        margin: 1rem;
+        cursor: pointer;
+        color: var(--clr-neon);
+        border: var(--clr-neon) 4px solid;
+        font-size: 2rem;
+        padding: 0.25em 1em;
+        border-radius: 0.25em;
+        text-shadow: 0 0 0.025em hsl(0, 0, 100/0.3), 0 0 0.5em currentColor;
+        box-shadow: inset 0 0 0.5em 0 var(--clr-neon) 0 0 0.5em 0
+          var(--clr-neon);
+        position: relative;
+        transition: background-color 0.15s linear;
+      }
+      .neonButton::before {
+        pointer-events: none;
+        content: "";
+        position: absolute;
+        background: var(--clr-neon);
+        top: 120%;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        transform: perspective(1.5em) rotateX(75deg) scale(1, 0.35);
+        filter: blur(1.5em);
+        opacity: 0.7;
+      }
+      .neonButton:hover::before,
+      .neonButton:focus::before {
+        opacity: 1;
+      }
+      .neonButton::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        box-shadow: 0 0 2em 0.5em var(--clr-neon);
+        opacity: 0;
+        transition: opacity 0.15s linear;
+        background-color: var(--clr-neon);
+        z-index: -1;
+      }
+      .neonButton:hover::after,
+      .neonButton:focus::after {
+        opacity: 1;
+      }
+      .neonButton:hover,
+      .neonButton:focus {
+        color: var(--clr-bg);
+        text-shadow: none;
+        color: #fff;
+      }
+    }
+  }
+}
