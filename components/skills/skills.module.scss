@@ -1,0 +1,15 @@
+.skillsWrapper {
+  @apply text-center max-w-[1000px] xl:p-10 min-h-screen justify-center xl:space-y-0 mx-auto items-center mt-[30rem] pt-[30rem];
+
+  .sectionTitle {
+    @apply top-24 uppercase tracking-[20px] text-gray-500 text-2xl mb-[15rem];
+  }
+
+  .explanationText {
+    @apply top-36 uppercase tracking-[3px] text-gray-500 text-sm pb-[5rem];
+  }
+
+  .skillsContainer {
+    @apply flex flex-wrap gap-5;
+  }
+}
