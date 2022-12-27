@@ -20,10 +20,6 @@
     .linksContainer {
       @apply pt-5;
 
-      .sectionButton {
-        @apply px-10 py-2 mt-24 mx-10 border-b-[white]/50  uppercase text-sm tracking-widest text-gray-500 transition-all hover:border-b-[white] hover:text-[#fff] bg-[royalblue]/30 hover:bg-[royalblue] rounded-full font-bold;
-      }
-
       .neonButton {
         display: inline-block;
         margin: 1rem;
