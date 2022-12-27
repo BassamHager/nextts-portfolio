@@ -1,18 +1,21 @@
 import Head from "next/head";
-import Header from "../components/header/Header";
-import { PageInfo, Skill, Social, Experience, Project } from "../types/typings";
 import { GetStaticProps } from "next";
-import { fetchSocials } from "../utils/fetchSocials";
+// components
+import Header from "../components/header/Header";
 import Hero from "../components/hero/Hero";
-import { fetchPageInfo } from "../utils/fetchPageInfo";
 import About from "../components/about/About";
-import { fetchSkills } from "../utils/fetchSkills";
 import Skills from "../components/skills/Skills";
-import { fetchExperiences } from "../utils/fetchExperiences";
 import WorkExperience from "../components/experience/WorkExperience";
 import Projects from "../components/projects/Projects";
-import { fetchProjects } from "../utils/fetchProjects";
 import Contact from "../components/contact/Contact";
+// typings
+import { PageInfo, Skill, Social, Experience, Project } from "../types/typings";
+// utils
+import { fetchSocials } from "../utils/fetchSocials";
+import { fetchPageInfo } from "../utils/fetchPageInfo";
+import { fetchSkills } from "../utils/fetchSkills";
+import { fetchExperiences } from "../utils/fetchExperiences";
+import { fetchProjects } from "../utils/fetchProjects";
 
 type Props = {
   socials: Social[];
@@ -32,7 +35,11 @@ export default function Home({
   return (
     <>
       <Head>
-        <title>{`Bassam's `}Portfolio</title>
+        <title>{`Bassam Hager's Portfolio`}</title>
+        <meta charSet="utf-8" />
+        <meta httpEquiv="content-type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="rating" content="safe for kids" />
         {/* <link rel="icon" href="/favicon.ico" /> */} {/* @TODO: */}
       </Head>
 

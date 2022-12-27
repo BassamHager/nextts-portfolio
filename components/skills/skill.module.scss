@@ -1,5 +1,5 @@
 .skillWrapper {
-  @apply relative flex cursor-zoom-in m-auto border border-dashed border-gray-800 rounded-lg w-[28rem] items-center justify-between gap-4 hover:bg-black hover:border-transparent duration-700;
+  @apply relative flex cursor-zoom-in m-auto border border-dashed border-gray-800 rounded-lg w-[28rem] items-center justify-between gap-4 hover:bg-[var(--clr-neon)] hover:border-transparent duration-700;
   &:hover {
     .skillImage {
       width: 50%; /* @TODO: */
