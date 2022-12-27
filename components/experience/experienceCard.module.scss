@@ -1,0 +1,67 @@
+.cardBg {
+  @apply max-w-[600px] xl:w-[900] m-auto min-h-[40rem] overflow-hidden rounded-xl relative flex justify-center items-center;
+
+  .anime {
+    @apply relative w-full h-full flex justify-center items-center;
+    .animeOne {
+      @apply absolute h-[90rem] w-[40rem] rounded-full rotate-[70deg];
+      background: linear-gradient(220deg, transparent 0%, #000 100%);
+      background: rgb(0, 0, 0);
+    }
+    .animeFive {
+      @apply absolute h-[.5rem] w-[100rem] animate-spin-21 bg-[var(--clr-neon)];
+      background: var(--clr-neon);
+      box-shadow: 1rem 1rem 5rem 1rem var(--clr-neon);
+    }
+  }
+
+  .experienceCardWrapper {
+    @apply md:w-[600px] xl:w-[900] p-[1rem] overflow-hidden rounded-xl relative;
+    background: rgba($color: #000000, $alpha: 0.3);
+    position: absolute;
+    width: calc(100% - 1rem);
+    height: calc(100% - 1rem);
+    z-index: 32;
+    margin: 0.5rem;
+    border-right: 1.5rem inset black;
+    border-left: 1.5rem inset black;
+
+    .companyLogo {
+      @apply w-32 h-32 rounded-full xl:w-[15rem] xl:h-[15rem] object-contain m-auto bg-black object-center;
+    }
+
+    .contentContainerUnderLogo {
+      .jobTitle {
+        @apply text-4xl font-light text-center mt-[2rem];
+      }
+
+      .companyName {
+        @apply font-bold text-2xl mt-[2rem] text-gray-400;
+        width: max-content;
+        border: solid transparent;
+        border-bottom: solid var(--clr-neon);
+      }
+
+      .date {
+        @apply uppercase py-5 text-gray-300 text-right;
+        letter-spacing: 1.5px;
+      }
+
+      .techContainer {
+        @apply flex gap-[1rem] mt-[2rem] flex-wrap;
+
+        .techLogo {
+          @apply w-10 rounded-xl object-contain;
+        }
+      }
+
+      .readButton {
+        @apply border border-[var(--clr-neon)] p-[1rem] mt-[2rem] rounded-xl text-[var(--clr-neon)] cursor-pointer;
+      }
+
+      .experiencePointsContainer {
+        @apply list-disc space-y-4 ml-5 text-lg;
+      }
+    }
+  }
+}

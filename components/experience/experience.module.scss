@@ -1,0 +1,30 @@
+.experienceWrapper {
+  @apply relative overflow-hidden max-w-full w-full mx-auto items-center 
+  min-h-screen h-auto mt-[30rem] pb-[10rem];
+
+  .mainTitle {
+    @apply uppercase tracking-[2rem] text-gray-500 text-2xl text-center py-[3rem] pl-[1rem];
+  }
+
+  .experiencesContainer {
+    @apply py-[10rem];
+
+    .navArrowsContainer {
+      @apply flex justify-center items-center my-8 gap-12;
+
+      .navArrowContainer {
+        @apply text-4xl p-2 bg-black/20 text-white cursor-pointer hover:bg-[var(--clr-neon)] w-[10rem] duration-700;
+        &:nth-child(1) {
+          @apply rounded-l-full rounded-r-lg;
+        }
+        &:nth-child(2) {
+          @apply flex justify-end rounded-r-full;
+        }
+      }
+    }
+
+    .dotsContainer {
+      @apply flex items-center gap-[1rem] mt-[3rem] justify-center p-[1rem] text-4xl bg-black/30 w-fit m-auto rounded-full;
+    }
+  }
+}
