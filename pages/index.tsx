@@ -12,6 +12,7 @@ import { fetchExperiences } from "../utils/fetchExperiences";
 import WorkExperience from "../components/experience/WorkExperience";
 import Projects from "../components/projects/Projects";
 import { fetchProjects } from "../utils/fetchProjects";
+import Contact from "../components/contact/Contact";
 
 type Props = {
   socials: Social[];
@@ -42,6 +43,7 @@ export default function Home({
         <Skills skills={skills} />
         <WorkExperience experiences={experiences} />
         <Projects projects={projects} />
+        <Contact />
       </main>
 
       <footer>{/* contact */}</footer>

@@ -11,7 +11,7 @@
   }
 
   .projectsContainer {
-    @apply relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory;
+    @apply relative w-full flex overflow-x-hidden overflow-y-hidden snap-x snap-mandatory;
 
     .projectContainer {
       @apply w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen;
