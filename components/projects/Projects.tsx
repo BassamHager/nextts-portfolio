@@ -1,10 +1,13 @@
 import React from "react";
+import Image from "next/image";
+import Link from "next/link";
 import styles from "./projects.module.scss";
 // external libs & packages
 import { motion } from "framer-motion";
+// typings
 import { Project } from "../../types/typings";
+// utils
 import { urlFor } from "../../sanity";
-import Link from "next/link";
 
 type Props = {
   projects: Project[];
@@ -58,10 +61,12 @@ export default function Projects({ projects }: Props) {
                 <div className={styles.techsContainer}>
                   {project?.technologies?.map((tech) => {
                     return (
-                      <img
+                      <Image
                         key={tech?._id}
                         src={urlFor(tech?.image).url()}
                         alt={tech?.title || "tech"}
+                        width={100}
+                        height={100}
                         className={styles.techImage}
                       />
                     );

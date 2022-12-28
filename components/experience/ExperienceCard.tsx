@@ -1,9 +1,12 @@
 import React from "react";
+import Image from "next/image";
+import styles from "./experienceCard.module.scss";
 // external libs & packages
 import { motion } from "framer-motion";
+// typings
 import { Experience } from "../../types/typings";
+// utils
 import { urlFor } from "../../sanity";
-import styles from "./experienceCard.module.scss";
 
 type Props = {
   experience: Experience;
@@ -22,7 +25,7 @@ export default function ExperienceCard({ experience }: Props) {
       </div>
       <article className={styles.experienceCardWrapper}>
         {experience?.companyImage && (
-          <motion.img
+          <motion.div
             initial={{
               y: -100,
               opacity: 0,
@@ -37,10 +40,16 @@ export default function ExperienceCard({ experience }: Props) {
             viewport={{
               once: true,
             }}
-            src={urlFor(experience?.companyImage).url()}
-            alt={`work experience at ${experience?.company}`}
-            className={styles.companyLogo}
-          />
+            className={styles.companyLogoContainer}
+          >
+            <Image
+              src={urlFor(experience?.companyImage).url()}
+              alt={`work experience at ${experience?.company}`}
+              width={300}
+              height={300}
+              className={styles.companyLogo}
+            />
+          </motion.div>
         )}
 
         <div className={styles.contentContainerUnderLogo}>
@@ -48,10 +57,12 @@ export default function ExperienceCard({ experience }: Props) {
           <p className={styles.companyName}>{experience?.company}</p>
           <div className={styles.techContainer}>
             {experience?.technologies?.map((tech) => (
-              <img
+              <Image
                 key={tech?._id}
                 src={urlFor(tech.image).url()}
                 alt={tech.title}
+                width={100}
+                height={100}
                 className={styles.techLogo}
               />
             ))}

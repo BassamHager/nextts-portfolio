@@ -1,11 +1,16 @@
 import React, { useState } from "react";
-import { motion } from "framer-motion";
-import ExperienceCard from "./ExperienceCard";
-import { Experience } from "../../types/typings";
+import Image from "next/image";
 import styles from "./experience.module.scss";
+// typings
+import { Experience } from "../../types/typings";
+// utils
+import { urlFor } from "../../sanity";
+// components
+import ExperienceCard from "./ExperienceCard";
+// packages
 import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
 import { RxDotFilled } from "react-icons/rx";
-import { urlFor } from "../../sanity";
+import { motion } from "framer-motion";
 
 type Props = {
   experiences: Experience[];
@@ -62,9 +67,11 @@ export default function WorkExperience({ experiences }: Props) {
               onClick={() => goToSlide(index)}
             >
               {slide?.companyImage ? (
-                <img
+                <Image
                   src={urlFor(slide.companyImage).url()}
-                  alt={slide.company}
+                  alt={slide.company || "company name"}
+                  width={100}
+                  height={100}
                 />
               ) : (
                 <RxDotFilled />

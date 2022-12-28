@@ -26,8 +26,10 @@
     border-right: 1.5rem inset black;
     border-left: 1.5rem inset black;
 
-    .companyLogo {
-      @apply w-32 h-32 rounded-full xl:w-[15rem] xl:h-[15rem] object-contain m-auto bg-black object-center;
+    .companyLogoContainer {
+      .companyLogo {
+        @apply w-32 h-32 rounded-full xl:w-[15rem] xl:h-[15rem] object-contain m-auto bg-black object-center;
+      }
     }
 
     .contentContainerUnderLogo {

@@ -1,4 +1,5 @@
 import styles from "./about.module.scss";
+import Image from "next/image";
 // external libs & packages
 import { motion } from "framer-motion";
 import { PageInfo } from "../../types/typings";
@@ -25,7 +26,7 @@ export default function About({ pageInfo }: Props) {
       <h3 className={styles.mainTitle}>About</h3>
       <>
         {pageInfo?.profilePic && (
-          <motion.img
+          <motion.div
             initial={{
               x: -200,
               opacity: 0,
@@ -35,10 +36,15 @@ export default function About({ pageInfo }: Props) {
             transition={{
               duration: 1.2,
             }}
-            src={urlFor(pageInfo?.profilePic).url()}
-            alt={"Bassam"}
-            className={styles.aboutImage}
-          />
+          >
+            <Image
+              src={urlFor(pageInfo?.profilePic).url()}
+              alt={"Bassam"}
+              width={300}
+              height={300}
+              className={styles.aboutImage}
+            />
+          </motion.div>
         )}
         <div className={styles.textContainer}>
           <h4 className={styles.subtitle}>
