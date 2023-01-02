@@ -6,7 +6,6 @@ import { motion } from "framer-motion";
 // typings
 import { Experience } from "../../types/typings";
 // utils
-import { urlFor } from "../../sanity";
 
 type Props = {
   experience: Experience;

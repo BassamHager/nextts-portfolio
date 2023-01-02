@@ -3,7 +3,6 @@ import Image from "next/image";
 // external libs & packages
 import { motion } from "framer-motion";
 import { PageInfo } from "../../types/typings";
-import { urlFor } from "../../sanity";
 import { useEffect, useState } from "react";
 
 type Props = { pageInfo: PageInfo };

@@ -4,7 +4,6 @@ import styles from "./experience.module.scss";
 // typings
 import { Experience } from "../../types/typings";
 // utils
-import { urlFor } from "../../sanity";
 // components
 import ExperienceCard from "./ExperienceCard";
 // packages

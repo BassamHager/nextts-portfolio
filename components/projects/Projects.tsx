@@ -7,7 +7,6 @@ import { motion } from "framer-motion";
 // typings
 import { Project } from "../../types/typings";
 // utils
-import { urlFor } from "../../sanity";
 
 type Props = {
   projects: Project[];

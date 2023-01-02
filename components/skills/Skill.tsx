@@ -2,7 +2,6 @@ import React /* , { useState } */ from "react";
 import styles from "./skill.module.scss";
 // external libs & packages
 import { motion } from "framer-motion";
-import { urlFor } from "../../sanity";
 // typings
 import { Skill as SkillType } from "../../types/typings";
 
