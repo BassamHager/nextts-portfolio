@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import styles from "./header.module.scss";
 // libs & packages
-import { MdEmail } from "react-icons/Md";
+import { MdEmail } from "react-icons/md";
 import { SocialIcon } from "react-social-icons";
 import { motion } from "framer-motion";
 // types

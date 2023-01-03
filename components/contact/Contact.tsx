@@ -3,8 +3,8 @@ import styles from "./contact.module.scss";
 // external libs & packages
 import { useForm, Resolver } from "react-hook-form";
 // icons
-import { MdWifiCalling3, MdMarkEmailRead } from "react-icons/Md";
-import { SiGooglemaps } from "react-icons/Si";
+import { MdWifiCalling3, MdMarkEmailRead } from "react-icons/md";
+import { SiGooglemaps } from "react-icons/si";
 type FormValues = {
   name: string;
   email: string;
