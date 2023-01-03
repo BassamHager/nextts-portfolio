@@ -27,7 +27,7 @@ export default function Projects({ projects }: Props) {
         {projects?.map((project, index) => {
           return (
             <div key={index} className={styles.projectContainer}>
-              <motion.img
+              <motion.div
                 initial={{
                   y: -300,
                   opacity: 0,
@@ -42,11 +42,15 @@ export default function Projects({ projects }: Props) {
                 viewport={{
                   once: true,
                 }}
-                src={urlFor(project?.image).url()}
-                alt={project?.title || "case study"}
-                className={styles.projectImage}
-              />
-
+              >
+                <Image
+                  src={project?.image}
+                  alt={project?.title || "case study"}
+                  width={300}
+                  height={300}
+                  className={styles.projectImage}
+                />
+              </motion.div>
               <div className={styles.projectContentBelowImage}>
                 <h4 className={styles.projectTitle}>
                   Case Study {++index}/{projects.length + " "}
@@ -61,8 +65,8 @@ export default function Projects({ projects }: Props) {
                   {project?.technologies?.map((tech) => {
                     return (
                       <Image
-                        key={tech?._id}
-                        src={urlFor(tech?.image).url()}
+                        key={tech?.image}
+                        src={tech?.image}
                         alt={tech?.title || "tech"}
                         width={100}
                         height={100}

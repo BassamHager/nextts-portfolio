@@ -1,8 +1,9 @@
 import React from "react";
-import Skill from "./Skill"; // fix naming @TODO:
+import Skill from "./SkillCard"; // fix naming @TODO:
 import styles from "./skills.module.scss";
 // typings
 import { Skill as SkillType } from "../../types/typings";
+import SkillCard from "./SkillCard";
 
 type Props = {
   skills: SkillType[];
@@ -19,7 +20,11 @@ export default function Skills({ skills }: Props) {
       <div className={styles.skillsContainer}>
         {skills?.map((skill, i) => {
           return (
-            <Skill key={skill?._id} skill={skill} directionLeft={i % 2 === 0} />
+            <SkillCard
+              key={skill?.image + i}
+              skill={skill}
+              directionLeft={i % 2 === 0}
+            />
           );
         })}
       </div>

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React /* , { useState } */ from "react";
 import styles from "./skill.module.scss";
 // external libs & packages
@@ -10,13 +11,13 @@ type Props = {
   directionLeft?: boolean;
 };
 
-export default function Skill({ directionLeft, skill }: Props) {
+export default function SkillCard({ directionLeft, skill }: Props) {
   // const [src, setSrc] = useState(urlFor(skill.image).url());
 
   return (
     <div className={`group ${styles.skillWrapper}`}>
       {skill?.image ? (
-        <motion.img
+        <motion.div
           initial={{
             x: directionLeft ? -200 : 200,
             opacity: 0,
@@ -24,13 +25,17 @@ export default function Skill({ directionLeft, skill }: Props) {
           transition={{ duration: 1 }}
           viewport={{ once: true }}
           whileInView={{ opacity: 1, x: 0 }}
-          src={urlFor(skill.image).url()}
-          alt={skill?.title || "tech skill"}
-          className={`group ${styles.skillImage} group-hover:object-cover group-hover:p-0 group-hover:grayscale-0`}
-          // onError={() => setSrc("/assets/images/not-found-img.png")}
-        />
+        >
+          <Image
+            src={skill.image}
+            width={200}
+            height={200}
+            className={`group ${styles.skillImage} group-hover:object-cover group-hover:p-0 group-hover:grayscale-0`}
+            alt={skill?.title || "tech skill"}
+          />
+        </motion.div>
       ) : (
-        <motion.img
+        <motion.div
           initial={{
             x: directionLeft ? -200 : 200,
             opacity: 0,
@@ -38,14 +43,17 @@ export default function Skill({ directionLeft, skill }: Props) {
           transition={{ duration: 1 }}
           viewport={{ once: true }}
           whileInView={{ opacity: 1, x: 0 }}
-          src={"/assets/images/not-found-img.png"}
-          alt={skill?.title || "tech skill"}
-          className={`group ${styles.skillImage} group-hover:object-cover group-hover:p-0 group-hover:grayscale-0`}
-        />
+        >
+          <Image
+            src={"/../public/assets/images/not-found-img.png"}
+            alt={skill?.title || "tech skill"}
+            className={`group ${styles.skillImage} group-hover:object-cover group-hover:p-0 group-hover:grayscale-0`}
+          />
+        </motion.div>
       )}
 
       <h1 className={`${styles.skillTitle} group-hover:text-yellow-300`}>
-        {skill.title}
+        {skill?.title}
       </h1>
 
       {/* @TODO: <div className="">

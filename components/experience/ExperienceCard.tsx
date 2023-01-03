@@ -25,24 +25,24 @@ export default function ExperienceCard({ experience }: Props) {
       <article className={styles.experienceCardWrapper}>
         {experience?.companyImage && (
           <motion.div
-            initial={{
-              y: -100,
-              opacity: 0,
-            }}
-            transition={{
-              duration: 1.2,
-            }}
-            whileInView={{
-              opacity: 1,
-              y: 0,
-            }}
-            viewport={{
-              once: true,
-            }}
+            // initial={{
+            //   y: -100,
+            //   opacity: 0,
+            // }}
+            // transition={{
+            //   duration: 1.2,
+            // }}
+            // whileInView={{
+            //   opacity: 1,
+            //   y: 0,
+            // }}
+            // viewport={{
+            //   once: true,
+            // }}
             className={styles.companyLogoContainer}
           >
             <Image
-              src={urlFor(experience?.companyImage).url()}
+              src={experience?.companyImage}
               alt={`work experience at ${experience?.company}`}
               width={300}
               height={300}
@@ -57,9 +57,9 @@ export default function ExperienceCard({ experience }: Props) {
           <div className={styles.techContainer}>
             {experience?.technologies?.map((tech) => (
               <Image
-                key={tech?._id}
-                src={urlFor(tech.image).url()}
-                alt={tech.title}
+                key={tech?.image}
+                src={tech?.image}
+                alt={tech.title || "technology"}
                 width={100}
                 height={100}
                 className={styles.techLogo}

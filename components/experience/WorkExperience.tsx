@@ -67,7 +67,7 @@ export default function WorkExperience({ experiences }: Props) {
             >
               {slide?.companyImage ? (
                 <Image
-                  src={urlFor(slide.companyImage).url()}
+                  src={slide.companyImage}
                   alt={slide.company || "company name"}
                   width={100}
                   height={100}

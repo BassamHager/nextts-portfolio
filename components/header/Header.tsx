@@ -53,8 +53,8 @@ export default function Header({ socials }: Props) {
         >
           {socials?.map((social, ind) => (
             <SocialIcon
-              key={social?._id}
-              id={social?._id}
+              key={social?.url}
+              id={social?.url}
               url={social?.url}
               fgColor={setIconColor(ind)}
               bgColor={setIconBg(ind)}

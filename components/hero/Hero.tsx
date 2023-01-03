@@ -30,7 +30,7 @@ export default function Hero({ pageInfo }: Props) {
       <BgCircles />
       {pageInfo?.heroImage && (
         <Image
-          src={urlFor(pageInfo?.heroImage).url()}
+          src={pageInfo.heroImage}
           alt={"Bassam"}
           width={500}
           height={500}

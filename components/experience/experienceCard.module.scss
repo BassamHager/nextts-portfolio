@@ -34,7 +34,7 @@
 
     .contentContainerUnderLogo {
       .jobTitle {
-        @apply text-4xl font-light text-center mt-[2rem];
+        @apply text-4xl font-light text-center mt-[2rem] text-gray-400;
       }
 
       .companyName {

@@ -10,12 +10,12 @@ import Projects from "../components/projects/Projects";
 import Contact from "../components/contact/Contact";
 // typings
 import { PageInfo, Skill, Social, Experience, Project } from "../types/typings";
-// utils
-import { fetchSocials } from "../utils/fetchSocials";
-import { fetchPageInfo } from "../utils/fetchPageInfo";
-import { fetchSkills } from "../utils/fetchSkills";
-import { fetchExperiences } from "../utils/fetchExperiences";
-import { fetchProjects } from "../utils/fetchProjects";
+// mocked data
+import { socials } from "../data/socials";
+import { pageInfo } from "../data/pageInfo";
+import { skills } from "../data/skills";
+import { experiences } from "../data/experiences";
+import { projects } from "../data/projects";
 
 type Props = {
   socials: Social[];
@@ -49,22 +49,19 @@ export default function Home({
         <About pageInfo={pageInfo} />
         <Skills skills={skills} />
         <WorkExperience experiences={experiences} />
+
         <Projects projects={projects} />
-        <Contact />
       </main>
 
-      <footer>{/* contact */}</footer>
+      <footer>
+        <Contact />
+      </footer>
     </>
   );
 }
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
-  const socials = (await fetchSocials()) ?? ([] as Social[]);
-  const pageInfo = (await fetchPageInfo()) ?? ({} as PageInfo);
-  const skills = (await fetchSkills()) ?? ([] as Skill[]);
-  const experiences = (await fetchExperiences()) ?? ([] as Experience[]);
-  const projects = (await fetchProjects()) ?? ([] as Project[]);
-
+  // fetch from a CMS
   return {
     props: {
       socials,

@@ -37,7 +37,7 @@ export default function About({ pageInfo }: Props) {
             }}
           >
             <Image
-              src={urlFor(pageInfo?.profilePic).url()}
+              src={pageInfo.profilePic}
               alt={"Bassam"}
               width={300}
               height={300}
