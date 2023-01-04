@@ -13,14 +13,14 @@ import { PageInfo, Skill, Social, Experience, Project } from "../types/typings";
 // mocked data
 import { socials } from "../data/socials";
 import { pageInfo } from "../data/pageInfo";
-import { skills } from "../data/skills";
+import { skillsData } from "../data/skills";
 import { experiences } from "../data/experiences";
 import { projects } from "../data/projects";
 
 type Props = {
   socials: Social[];
   pageInfo: PageInfo;
-  skills: Skill[];
+  skillsData: Skill[];
   experiences: Experience[];
   projects: Project[];
 };
@@ -29,7 +29,7 @@ export default function Home({
   socials,
   pageInfo,
   experiences,
-  skills,
+  skillsData,
   projects,
 }: Props) {
   return (
@@ -47,7 +47,7 @@ export default function Home({
         <Header socials={socials} />
         <Hero pageInfo={pageInfo} />
         <About pageInfo={pageInfo} />
-        <Skills skills={skills} />
+        <Skills skills={skillsData} />
         <WorkExperience experiences={experiences} />
 
         <Projects projects={projects} />
@@ -66,7 +66,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
     props: {
       socials,
       pageInfo,
-      skills,
+      skillsData,
       experiences,
       projects,
     },

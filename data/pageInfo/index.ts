@@ -1,5 +1,6 @@
 import { PageInfo } from "../../types/typings";
-import HERO_IMG from "../../public/assets/images/BH_IMG.jpeg";
+import ABOUT_IMG from "../../public/assets/images/self/BH_IMG.webp";
+import HERO_IMG from "../../public/assets/images/self/BH_FB.webp";
 
 export const pageInfo: PageInfo = {
   address: "Leiden, Nico Van Der Horstpark 14",
@@ -22,8 +23,8 @@ export const pageInfo: PageInfo = {
   ],
   email: "b2dndr1@gmail.com",
   role: "Software Developer",
-  heroImage: "/../public/assets/images/self/BH_FB.webp",
+  heroImage: HERO_IMG,
   name: "Bassam",
   phoneNumber: "+31 6 8587 2817",
-  profilePic: "/../public/assets/images/self/BH_IMG.webp",
+  profilePic: ABOUT_IMG,
 };

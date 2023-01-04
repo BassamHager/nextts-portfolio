@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
 import { PageInfo } from "../../types/typings";
 import BgCircles from "./BgCircles";
+import { imageLoader } from "../../utils/urlBuilder";
 
 type Props = {
   pageInfo: PageInfo;

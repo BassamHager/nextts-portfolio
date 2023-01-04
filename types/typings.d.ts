@@ -14,27 +14,27 @@ export interface PageInfo {
   bgInformation: string[];
   email: string;
   role: string;
-  heroImage: string;
+  heroImage: string | StaticImageData;
   name: string;
   phoneNumber: string;
-  profilePic: string;
+  profilePic: string | StaticImageData;
 }
 
 export interface Technology {
-  image: string;
+  image: string | StaticImageData;
   progress?: number;
   title?: string;
 }
 
 export interface Skill {
-  image: string;
+  image: string | StaticImageData;
   progress?: number;
   title?: string;
 }
 
 export interface Experience {
   company: string;
-  companyImage: string;
+  companyImage: string | StaticImageData;
   dateStarted: Date | string;
   dateEnded: Date | string;
   isCurrentlyWorkingHere: boolean;
@@ -45,7 +45,7 @@ export interface Experience {
 
 export interface Project {
   title: string;
-  image: string;
+  image: string | StaticImageData;
   summary: string;
   technologies: Technology[];
   linkToBuild: string;

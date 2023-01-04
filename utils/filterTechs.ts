@@ -1,7 +1,9 @@
-import { imagesNames } from "../data/skills";
 import { Technology } from "../types/typings";
 
-export const filterTechs = (techs: string[]): Technology[] => {
+export const filterTechs = (
+  techs: string[],
+  imagesNames: string[]
+): Technology[] => {
   let techImages = [""];
 
   techImages = imagesNames.filter(
