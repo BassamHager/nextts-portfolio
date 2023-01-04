@@ -55,9 +55,9 @@ export default function ExperienceCard({ experience }: Props) {
           <h4 className={styles.jobTitle}>{experience?.jobTitle}</h4>
           <p className={styles.companyName}>{experience?.company}</p>
           <div className={styles.techContainer}>
-            {experience?.technologies?.map((tech) => (
+            {experience?.technologies?.map((tech, ind) => (
               <Image
-                key={tech?.image}
+                key={tech?.image + ind}
                 src={tech?.image}
                 alt={tech.title || "technology"}
                 width={100}

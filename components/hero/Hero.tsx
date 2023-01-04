@@ -27,7 +27,7 @@ export default function Hero({ pageInfo }: Props) {
   });
 
   return (
-    <div className={styles.heroWrapper}>
+    <div className={styles.heroWrapper} id="hero">
       <BgCircles />
       {pageInfo?.heroImage && (
         <Image

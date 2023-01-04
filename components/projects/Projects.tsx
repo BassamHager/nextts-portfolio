@@ -62,10 +62,10 @@ export default function Projects({ projects }: Props) {
                 </h4>
 
                 <div className={styles.techsContainer}>
-                  {project?.technologies?.map((tech) => {
+                  {project?.technologies?.map((tech, ind) => {
                     return (
                       <Image
-                        key={tech?.image}
+                        key={tech?.image + ind}
                         src={tech?.image}
                         alt={tech?.title || "tech"}
                         width={100}

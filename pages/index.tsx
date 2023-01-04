@@ -49,7 +49,6 @@ export default function Home({
         <About pageInfo={pageInfo} />
         <Skills skills={skillsData} />
         <WorkExperience experiences={experiences} />
-
         <Projects projects={projects} />
       </main>
 
