@@ -66,7 +66,11 @@ export default function About({ pageInfo }: Props) {
           <ul className={styles.textLinesContainer}>
             {pageInfo?.bgInformation?.map((line: string, ind: number) => {
               return linesCounter >= ind ? (
-                <li key={ind} className={`${styles.textLine}`}>
+                <li
+                  key={ind}
+                  id={`line-${ind}`}
+                  className={`${styles.textLine}`}
+                >
                   <div className={styles.bullet}>{ind + 1}</div> {line}
                 </li>
               ) : null;
@@ -80,7 +84,9 @@ export default function About({ pageInfo }: Props) {
               <button>reset</button>
             </Link>
             {linesCounter < pageInfo.bgInformation.length - 1 ? (
-              <button onClick={showNext}> next</button>
+              <Link href={`#line-${linesCounter - 1}`}>
+                <button onClick={showNext}>next</button>
+              </Link>
             ) : null}
           </div>
         </div>
