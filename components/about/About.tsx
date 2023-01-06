@@ -4,11 +4,23 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { PageInfo } from "../../types/typings";
 import { useEffect, useState } from "react";
+import React from "react";
+import Link from "next/link";
 
 type Props = { pageInfo: PageInfo };
 
 export default function About({ pageInfo }: Props) {
   const [isSsg, setIsSsg] = useState(false);
+  const [linesCounter, setLinesCounter] = useState(0);
+  const showNext = () =>
+    setLinesCounter(
+      linesCounter !== pageInfo?.bgInformation.length - 1 ? (pre) => pre + 1 : 0
+    );
+  const resetLines = () => {
+    const aboutImage = document.querySelector(".aboutImage");
+
+    setLinesCounter(0);
+  };
 
   useEffect(() => {
     setIsSsg(true);
@@ -42,6 +54,7 @@ export default function About({ pageInfo }: Props) {
               width={300}
               height={300}
               className={styles.aboutImage}
+              id="aboutImage"
             />
           </motion.div>
         )}
@@ -50,13 +63,26 @@ export default function About({ pageInfo }: Props) {
             {`Here's a `}
             <span className={styles.wordDecoration}>little background</span>
           </h4>
-          <ul className={styles.textsContainer}>
-            {pageInfo?.bgInformation?.map((line: string, ind: number) => (
-              <li key={ind} className={`${styles.mainText}`}>
-                <div className={styles.bullet}>{ind + 1}</div> {line}
-              </li>
-            ))}
+          <ul className={styles.textLinesContainer}>
+            {pageInfo?.bgInformation?.map((line: string, ind: number) => {
+              return linesCounter >= ind ? (
+                <li key={ind} className={`${styles.textLine}`}>
+                  <div className={styles.bullet}>{ind + 1}</div> {line}
+                </li>
+              ) : null;
+            })}
           </ul>
+          <h2 className={styles.linesCount}>
+            {linesCounter + 1} / {pageInfo?.bgInformation?.length}
+          </h2>
+          <div className={styles.linesActionButton}>
+            <Link href={"#aboutImage"} onClick={() => setLinesCounter(0)}>
+              <button>reset</button>
+            </Link>
+            {linesCounter < pageInfo.bgInformation.length - 1 ? (
+              <button onClick={showNext}> next</button>
+            ) : null}
+          </div>
         </div>
       </>
     </motion.div>

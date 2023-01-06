@@ -29,8 +29,11 @@
   .headerScrolling {
     @apply bg-[var(--darker)] py-0 transition-all hover:bg-gray-800 duration-500 ease-linear hover:p-5 hover:shadow-xl;
   }
+  .toTopButtonContainer {
+    @apply relative max-w-[var(--max-w)] mx-auto h-0;
 
-  .toTopButton {
-    @apply fixed bottom-[3rem] right-[3rem] bg-transparent text-gray-600 flex justify-center items-center border border-dashed border-gray-600 rounded-full text-3xl md:text-5xl w-[5rem] md:w-[7rem] h-[5rem] md:h-[7rem] hover:bg-[var(--clr-neon)] hover:text-white hover:border-none hover:shadow-xl hover:shadow-black;
+    .toTopButton {
+      @apply absolute top-[5rem] right-[3rem] bg-transparent text-gray-600 flex justify-center items-center border border-dashed border-gray-600 rounded-full text-3xl md:text-5xl w-[5rem] md:w-[7rem] h-[5rem] md:h-[7rem] hover:bg-[var(--clr-neon)] hover:text-white hover:border-none hover:shadow-xl hover:shadow-black;
+    }
   }
 }

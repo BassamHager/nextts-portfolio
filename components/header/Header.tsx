@@ -103,11 +103,13 @@ export default function Header({ socials }: Props) {
       </header>
 
       {headerShadow && (
-        <Link href="#hero">
-          <button className={styles.toTopButton}>
-            <MdOutlineVerticalAlignTop />
-          </button>
-        </Link>
+        <div className={styles.toTopButtonContainer}>
+          <Link href="#hero">
+            <button className={styles.toTopButton}>
+              <MdOutlineVerticalAlignTop />
+            </button>
+          </Link>
+        </div>
       )}
     </div>
   );

@@ -1,45 +1,30 @@
 .aboutWrapper {
-  /* @TODO: convert to tailwind classes */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  margin-top: 30rem;
-  gap: 15rem;
-  background: rgba(0, 0, 0, 0.5);
-  border-radius: 15rem;
-  padding: 15rem 0;
+  @apply max-w-[var(--max-w)] mx-auto flex flex-col justify-center items-center mt-[30rem] gap-[15rem] bg-[#00000080] rounded-[15rem] py-[15rem];
 
   .mainTitle {
-    @apply uppercase tracking-[2rem] text-gray-500 text-2xl;
-    padding: 3rem;
+    @apply uppercase tracking-[2rem] text-gray-500 text-2xl p-[3rem];
   }
 
   .aboutImage {
-    width: 40%;
-    max-width: 50rem;
-    min-width: 30rem;
-    margin: auto;
-    border-radius: 50%;
+    @apply max-w-[50rem] min-w-[30rem] mx-auto rounded-[50%];
   }
 
   .textContainer {
-    @apply space-y-10 px-0 md:px-10;
+    @apply px-10 mx-auto w-full;
 
     .subtitle {
-      @apply text-4xl text-gray-500 font-semibold mb-[7rem];
+      @apply text-4xl text-gray-500 font-semibold mb-[7rem] text-center;
 
       .wordDecoration {
-        color: var(--clr-neon);
+        @apply text-[var(--clr-neon)];
         text-shadow: 0 0 0.025em hsl(0, 0, 100/0.3), 0 0 0.5em currentColor;
       }
     }
-    .textsContainer {
-      @apply flex flex-wrap gap-5 items-center;
+    .textLinesContainer {
+      @apply flex flex-wrap gap-5 items-center w-full;
 
-      .mainText {
-        @apply text-2xl my-3 text-left w-[90vw] md:w-[40vw] rounded-lg p-5 bg-[var(--darker)] bg-gray-800 text-gray-400 min-h-[15rem];
-        margin: auto;
+      .textLine {
+        @apply text-2xl my-3 text-left rounded-lg p-5 bg-[var(--darker)] bg-gray-800 text-gray-400 min-h-[10rem] flex items-center mx-auto;
         line-height: 3rem;
         letter-spacing: 1.25px;
 
@@ -53,6 +38,18 @@
           font-size: 2rem;
           font-weight: bold;
         }
+      }
+    }
+
+    .linesCount {
+      @apply w-[50%] mx-auto p-3 text-gray-300 text-3xl text-center;
+    }
+
+    .linesActionButton {
+      @apply flex justify-center gap-2;
+
+      button {
+        @apply bg-gray-500 p-7 w-[15rem] text-3xl rounded-lg hover:bg-[var(--clr-neon)] duration-500 hover:text-white hover:shadow-sm hover:shadow-gray-400;
       }
     }
   }
