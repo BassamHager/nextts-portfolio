@@ -1,5 +1,5 @@
 .contactWrapper {
-  @apply min-h-screen flex relative overflow-hidden flex-col text-left md:flex-row justify-evenly mx-auto items-center mt-[30rem] text-gray-500 px-2 border;
+  @apply min-h-screen flex relative overflow-hidden flex-col text-left md:flex-row justify-evenly mx-auto items-center mt-[30rem] text-gray-500 px-2;
 
   .sectionTitle {
     @apply absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl;
