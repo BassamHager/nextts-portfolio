@@ -5,6 +5,8 @@ import styles from "./skill.module.scss";
 import { motion } from "framer-motion";
 // typings
 import { Skill as SkillType } from "../../types/typings";
+// data
+import { CATEGORIES } from "../../data/skills";
 
 type Props = {
   skill: SkillType;
@@ -12,8 +14,6 @@ type Props = {
 };
 
 export default function SkillCard({ directionLeft, skill }: Props) {
-  // const [src, setSrc] = useState(urlFor(skill.image).url());
-
   return (
     <div className={`group ${styles.skillWrapper}`}>
       {skill?.image ? (

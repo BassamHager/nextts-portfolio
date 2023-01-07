@@ -1,15 +1,31 @@
 .skillsWrapper {
-  @apply text-center max-w-[1000px] xl:p-10 min-h-screen justify-center xl:space-y-0 mx-auto items-center mt-[30rem] pt-[30rem];
+  @apply text-center max-w-[var(--max-w)] p-10 min-h-screen justify-center mx-auto items-center mt-[30rem] pt-[30rem];
 
   .sectionTitle {
     @apply top-24 uppercase tracking-[20px] text-gray-500 text-2xl mb-[15rem];
   }
 
-  .explanationText {
-    @apply top-36 uppercase tracking-[3px] text-gray-500 text-sm pb-[5rem];
+  .skillCategories {
+    @apply text-gray-500 text-4xl flex justify-between flex-wrap space-y-8;
+
+    li {
+      @apply border border-gray-800 min-w-[30rem] mx-auto rounded-lg cursor-pointer hover:shadow-sm hover:shadow-gray-400 hover:bg-[var(--clr-neon)] hover:text-white duration-500;
+
+      &:nth-child(1) {
+        @apply mt-8;
+      }
+
+      button {
+        @apply w-full h-full py-8;
+      }
+    }
+
+    .selectedCategory {
+      @apply bg-gray-800 shadow-md shadow-[var(--clr-neon)] text-[var(--clr-neon)] font-bold;
+    }
   }
 
   .skillsContainer {
-    @apply flex flex-wrap gap-5;
+    @apply flex flex-wrap gap-5 mt-[12rem];
   }
 }

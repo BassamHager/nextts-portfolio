@@ -1,3 +1,4 @@
+import { CATEGORIES } from "../data/skills/index";
 // interface SanityBody {
 //   _createdAt: string;
 //   _id: string;
@@ -28,6 +29,7 @@ export interface Technology {
 
 export interface Skill {
   image: string | StaticImageData;
+  cat: Category;
   progress?: number;
   title?: string;
 }
@@ -60,3 +62,5 @@ export type SocialIconType = {
   index: number;
   isHovered: boolean;
 };
+
+export type Category = typeof CATEGORIES[number];

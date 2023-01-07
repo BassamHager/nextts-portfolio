@@ -36,6 +36,24 @@ import redux from "../../public/assets/images/skills/redux.webp";
 import web3 from "../../public/assets/images/skills/web3.webp";
 import jquery from "../../public/assets/images/skills/jquery.webp";
 import sanity from "../../public/assets/images/skills/sanity.webp";
+import elasticsearch from "../../public/assets/images/skills/elasticsearch.webp";
+import firebase from "../../public/assets/images/skills/firebase.webp";
+import mysql from "../../public/assets/images/skills/mysql.webp";
+import sqlserver from "../../public/assets/images/skills/sqlserver.webp";
+import eslint from "../../public/assets/images/skills/eslint.webp";
+import figma from "../../public/assets/images/skills/figma.webp";
+import git from "../../public/assets/images/skills/git.webp";
+import gitlab from "../../public/assets/images/skills/gitlab.webp";
+import jira from "../../public/assets/images/skills/jira.webp";
+import notion from "../../public/assets/images/skills/notion.webp";
+import postman from "../../public/assets/images/skills/postman.webp";
+import slack from "../../public/assets/images/skills/slack.webp";
+import swagger from "../../public/assets/images/skills/swagger.webp";
+import vs from "../../public/assets/images/skills/vs.webp";
+import vscode from "../../public/assets/images/skills/vscode.webp";
+// os
+import macos from "../../public/assets/images/skills/macos.webp";
+import windows from "../../public/assets/images/skills/windows.webp";
 // companies
 import hyf from "../../public/assets/images/experiences/hyf-logo.webp";
 import exact from "../../public/assets/images/experiences/Exact-logo.webp";
@@ -92,4 +110,21 @@ export const techImages = {
   web3,
   jquery,
   sanity,
+  macos,
+  windows,
+  elasticsearch,
+  firebase,
+  mysql,
+  sqlserver,
+  eslint,
+  figma,
+  git,
+  gitlab,
+  jira,
+  notion,
+  postman,
+  slack,
+  swagger,
+  vs,
+  vscode,
 };
