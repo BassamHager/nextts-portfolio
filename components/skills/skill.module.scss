@@ -1,17 +1,23 @@
 .skillWrapper {
-  @apply relative flex cursor-zoom-in m-auto border border-dashed border-gray-800 rounded-lg w-[28rem] items-center justify-between gap-4 hover:bg-[var(--clr-neon)] hover:border-transparent duration-700;
+  @apply rounded-full w-[25rem] cursor-pointer flex justify-center items-center overflow-hidden transition-all duration-1000 my-[1rem] h-[10rem];
+
   &:hover {
+    @apply bg-gray-800 shadow-md shadow-[var(--clr-neon)] gap-[2rem];
+
     .skillImage {
-      width: 100%; /* @TODO: */
+      @apply border-[1rem] border-gray-800 grid-cols-none rounded-full;
+    }
+
+    .skillTitle {
+      @apply block text-[var(--clr-neon)];
     }
   }
 
   .skillImage {
-    @apply object-contain h-24 xl:w-32 xl:h-32 filter grayscale transition duration-300 ease-in-out rounded-lg p-1;
-    // max-width: 20%;
+    @apply rounded-md grayscale;
   }
 
   .skillTitle {
-    @apply text-gray-500 text-4xl pr-3;
+    @apply pr-[1rem] text-4xl hidden;
   }
 }

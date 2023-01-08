@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 import { Skill as SkillType } from "../../types/typings";
 // data
 import { CATEGORIES } from "../../data/skills";
+import Link from "next/link";
 
 type Props = {
   skill: SkillType;
@@ -15,21 +16,24 @@ type Props = {
 
 export default function SkillCard({ directionLeft, skill }: Props) {
   return (
-    <div className={`group ${styles.skillWrapper}`}>
+    <Link
+      href={skill.link}
+      className={`group ${styles.skillWrapper}`}
+      target="_blank"
+    >
       {skill?.image ? (
         <motion.div
-          initial={{
-            x: directionLeft ? -200 : 200,
-            opacity: 0,
-          }}
-          transition={{ duration: 1 }}
-          viewport={{ once: true }}
-          whileInView={{ opacity: 1, x: 0 }}
+        // initial={{
+        //   x: directionLeft ? -200 : 200,
+        //   opacity: 0,
+        // }}
+        // transition={{ duration: 1 }}
+        // viewport={{ once: true }}
+        // whileInView={{ opacity: 1, x: 0 }}
         >
           <Image
             src={skill.image}
-            width={200}
-            height={200}
+            width={100}
             className={`group ${styles.skillImage} group-hover:object-cover group-hover:p-0 group-hover:grayscale-0`}
             alt={skill?.title || "tech skill"}
           />
@@ -63,6 +67,6 @@ export default function SkillCard({ directionLeft, skill }: Props) {
           </p>
         </div>
       </div> */}
-    </div>
+    </Link>
   );
 }

@@ -32,6 +32,7 @@ export interface Skill {
   cat: Category;
   progress?: number;
   title?: string;
+  link: string;
 }
 
 export interface Experience {
