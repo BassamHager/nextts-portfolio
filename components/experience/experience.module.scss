@@ -1,6 +1,6 @@
 .experienceWrapper {
   @apply relative overflow-hidden max-w-full w-full mx-auto items-center 
-  min-h-screen h-auto mt-[30rem] pb-[10rem];
+  min-h-screen h-auto mt-[30rem] py-[15rem] bg-[var(--dark-bg)] rounded-[15rem];
 
   .mainTitle {
     @apply uppercase tracking-[2rem] text-gray-500 text-2xl text-center py-[3rem] pl-[1rem];

@@ -1,5 +1,5 @@
 .aboutWrapper {
-  @apply max-w-[var(--max-w)] mx-auto flex flex-col justify-center items-center mt-[30rem] gap-[15rem] bg-[#00000080] rounded-[15rem] py-[15rem];
+  @apply max-w-[var(--max-w)] mx-auto flex flex-col justify-center items-center mt-[30rem] gap-[15rem] bg-[var(--dark-bg)] rounded-[15rem] py-[15rem];
 
   .mainTitle {
     @apply uppercase tracking-[2rem] text-gray-500 text-2xl p-[3rem];

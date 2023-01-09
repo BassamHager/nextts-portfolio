@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import styles from "./experienceCard.module.scss";
 // external libs & packages
 import { motion } from "framer-motion";
+import useSWR from "swr";
 // typings
-import { Experience } from "../../types/typings";
+import { Experience, Skill } from "../../types/typings";
+import Link from "next/link";
 // utils
 
 type Props = {
@@ -12,6 +14,11 @@ type Props = {
 };
 
 export default function ExperienceCard({ experience }: Props) {
+  const { data: techName, mutate: setTechName } = useSWR<string>({
+    key: "techName",
+    initial: "hola",
+  });
+
   const dateOptions = {
     year: "numeric",
     month: "short",
@@ -19,9 +26,12 @@ export default function ExperienceCard({ experience }: Props) {
   return (
     <div className={styles.cardBg}>
       <div className={styles.anime}>
-        <div className={styles.animeFive}></div>
-        <div className={styles.animeOne}></div>
+        <div className={styles.redSaber}></div>
+        <div className={styles.goldSaber}></div>
+        <div className={styles.solidBg}></div>
+        {/* <div className={styles.glass}></div> */}
       </div>
+
       <article className={styles.experienceCardWrapper}>
         {experience?.companyImage && (
           <motion.div
@@ -41,19 +51,24 @@ export default function ExperienceCard({ experience }: Props) {
             // }}
             className={styles.companyLogoContainer}
           >
-            <Image
-              src={experience?.companyImage}
-              alt={`work experience at ${experience?.company}`}
-              width={300}
-              height={300}
-              className={styles.companyLogo}
-            />
+            <Link href={experience.companyLink} target="_blank">
+              <Image
+                src={experience?.companyImage}
+                alt={`work experience at ${experience?.company}`}
+                width={100}
+                className={styles.companyLogo}
+              />
+            </Link>
           </motion.div>
         )}
 
         <div className={styles.contentContainerUnderLogo}>
           <h4 className={styles.jobTitle}>{experience?.jobTitle}</h4>
-          <p className={styles.companyName}>{experience?.company}</p>
+
+          <Link href={experience.companyLink} target="_blank">
+            <p className={styles.companyName}>{experience?.company}</p>
+          </Link>
+
           <div className={styles.techContainer}>
             {experience?.technologies?.map((tech, ind) => (
               <Image
@@ -63,10 +78,24 @@ export default function ExperienceCard({ experience }: Props) {
                 width={100}
                 height={100}
                 className={styles.techLogo}
+                onMouseOver={() => setTechName(tech.title ? tech.title : "")}
+                onMouseLeave={() => setTechName("")}
               />
             ))}
           </div>
-          <button className={styles.readButton}>Read More</button>
+
+          {
+            <h3
+              className={`${styles.techName} ${
+                techName ? styles.showTech : ""
+              }`}
+            >
+              {techName}
+            </h3>
+          }
+
+          {/* <button className={styles.readButton}>Read More</button> */}
+
           <p className={styles.date}>
             {new Date(experience?.dateStarted).toLocaleDateString(
               "en-US",

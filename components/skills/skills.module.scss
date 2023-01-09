@@ -9,7 +9,7 @@
     @apply text-gray-500 text-4xl flex justify-between flex-wrap space-y-8;
 
     li {
-      @apply border border-gray-800 min-w-[30rem] mx-auto rounded-lg cursor-pointer hover:shadow-sm hover:shadow-gray-400 hover:bg-[var(--clr-neon)] hover:text-white duration-500;
+      @apply border border-gray-800 w-full max-w-[30rem] mx-auto rounded-lg cursor-pointer hover:shadow-sm hover:shadow-gray-400 hover:bg-[var(--clr-neon)] hover:text-white duration-500;
 
       &:nth-child(1) {
         @apply mt-8;

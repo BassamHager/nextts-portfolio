@@ -1,18 +1,8 @@
-import { Technology } from "../types/typings";
+import { skillsData } from "../data/skills";
+import { Skill } from "../types/typings";
 
-export const filterTechs = (
-  techs: string[],
-  imagesNames: string[]
-): Technology[] => {
-  let techImages = [""];
-
-  techImages = imagesNames.filter(
-    (imgName) => techs.filter((tech) => imgName.startsWith(tech)).length
+export const filterTechs = (techs: string[]): Skill[] => {
+  return skillsData.filter(
+    (skill) => techs.filter((tech) => skill.title === tech).length
   );
-
-  return techImages.map((img) => {
-    return {
-      image: `/../public/assets/images/skills/${img}`,
-    };
-  });
 };

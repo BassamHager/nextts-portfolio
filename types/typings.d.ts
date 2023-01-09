@@ -30,9 +30,9 @@ export interface Technology {
 export interface Skill {
   image: string | StaticImageData;
   cat: Category;
-  progress?: number;
-  title?: string;
+  title: string;
   link: string;
+  progress?: number;
 }
 
 export interface Experience {
@@ -43,7 +43,8 @@ export interface Experience {
   isCurrentlyWorkingHere: boolean;
   jobTitle: string;
   points: string[];
-  technologies: Technology[];
+  technologies: Skill[];
+  companyLink: string;
 }
 
 export interface Project {

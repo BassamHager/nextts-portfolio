@@ -36,6 +36,7 @@ export default function Hero({ pageInfo }: Props) {
           width={500}
           height={500}
           className={styles.heroImage}
+          priority
         />
       )}
       <div className={styles.contentContainerBelowImage}>

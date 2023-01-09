@@ -55,6 +55,7 @@ export default function About({ pageInfo }: Props) {
               height={300}
               className={styles.aboutImage}
               id="aboutImage"
+              priority
             />
           </motion.div>
         )}

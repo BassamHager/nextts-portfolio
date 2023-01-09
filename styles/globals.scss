@@ -5,6 +5,13 @@
 :root {
   --primary: #242424;
   --max-w: 1200px;
+  --dark-bg: #00000080;
+  --main-bg: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 1) 0%,
+    darkblue 51%,
+    rgba(0, 0, 0, 1) 100%
+  );
 }
 
 html {
@@ -20,12 +27,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: var(--primary);
-  background: linear-gradient(
-    90deg,
-    rgba(0, 0, 0, 1) 0%,
-    darkblue 51%,
-    rgba(0, 0, 0, 1) 100%
-  );
+  background: var(--main-bg);
 }
 
 a {

@@ -1,34 +1,44 @@
 .cardBg {
-  @apply max-w-[600px] xl:w-[900] m-auto min-h-[40rem] overflow-hidden rounded-xl relative flex justify-center items-center;
+  @apply max-w-[600px] xl:w-[900] m-auto min-h-[50rem] overflow-hidden rounded-xl relative flex justify-center items-center;
 
   .anime {
-    @apply relative w-full h-full flex justify-center items-center;
-    .animeOne {
-      @apply absolute h-[90rem] w-[40rem] rounded-full rotate-[70deg];
-      background: linear-gradient(220deg, transparent 0%, #000 100%);
-      background: rgb(0, 0, 0);
+    @apply relative w-full h-full flex justify-center items-center border-transparent border-[.5rem] border-t-0 pt-0 rounded-full;
+
+    .solidBg {
+      @apply absolute min-h-[60rem] w-[60rem] rounded-xl rotate-[45deg] bg-[var(--dark-bg)];
+      background: linear-gradient(
+        45deg,
+        rgba(0, 0, 0, 1) 0%,
+        darkblue 51%,
+        rgba(0, 0, 0, 1) 100%
+      );
     }
-    .animeFive {
-      @apply absolute h-[.5rem] w-[100rem] animate-spin-21 bg-[var(--clr-neon)];
+    .redSaber {
+      @apply absolute h-[.5rem] w-[100rem] animate-spin-144 bg-[var(--clr-neon)] border border-red-500;
       background: var(--clr-neon);
       box-shadow: 1rem 1rem 5rem 1rem var(--clr-neon);
+    }
+    .goldSaber {
+      @apply absolute h-[35rem] w-[62rem] animate-spin-34 bg-indigo-500 border-[.5rem] border-[var(--clr-neon)] border-dotted rounded-full;
+      background: transparent;
+      box-shadow: 1rem 1rem 5rem 1rem purple;
+    }
+    .glass {
+      @apply bg-[var(--dark-bg)] z-40 w-full h-[50rem];
     }
   }
 
   .experienceCardWrapper {
-    @apply md:w-[600px] xl:w-[900] p-[1rem] overflow-hidden rounded-xl relative;
-    background: rgba($color: #000000, $alpha: 0.3);
+    @apply md:w-[600px] xl:w-[900] p-[2rem] overflow-hidden relative rounded-xl border-y-[1rem] border-gray-800;
     position: absolute;
     width: calc(100% - 1rem);
-    height: calc(100% - 1rem);
+    height: calc(100%);
     z-index: 32;
     margin: 0.5rem;
-    border-right: 1.5rem inset black;
-    border-left: 1.5rem inset black;
 
     .companyLogoContainer {
       .companyLogo {
-        @apply w-32 h-32 rounded-full xl:w-[15rem] xl:h-[15rem] object-contain m-auto bg-black object-center;
+        @apply w-[10rem] h-auto min-h-[10rem] rounded-full object-contain m-auto bg-black object-center cursor-pointer hover:shadow-lg hover:shadow-gray-600;
       }
     }
 
@@ -38,23 +48,33 @@
       }
 
       .companyName {
-        @apply font-bold text-2xl mt-[2rem] text-gray-400;
+        @apply font-bold text-2xl mt-[2rem] text-gray-400 cursor-pointer;
         width: max-content;
-        border: solid transparent;
         border-bottom: solid var(--clr-neon);
+
+        &:hover {
+          @apply text-[var(--clr-neon)];
+        }
       }
 
       .date {
-        @apply uppercase py-5 text-gray-300 text-right;
+        @apply uppercase py-5 text-gray-300 text-right my-[2rem];
         letter-spacing: 1.5px;
       }
 
       .techContainer {
-        @apply flex gap-[1rem] mt-[2rem] flex-wrap;
+        @apply flex gap-[1rem] mt-[4rem] flex-wrap;
 
         .techLogo {
-          @apply w-10 rounded-xl object-contain;
+          @apply w-10 rounded-xl object-contain  hover:border cursor-zoom-in;
         }
+      }
+
+      .techName {
+        @apply mt-[2rem] text-white text-3xl text-center bg-gray-800 w-fit min-w-[.2rem] min-h-[4.5rem];
+      }
+      .showTech {
+        @apply block p-[1rem];
       }
 
       .readButton {
