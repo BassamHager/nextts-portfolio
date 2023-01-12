@@ -32,10 +32,10 @@
         }
 
         .projectTechContainer {
-          @apply techContainer justify-center;
+          @apply flex gap-[1rem] mt-[4rem] flex-wrap justify-center;
 
           .projectTechLogo {
-            @apply techLogo;
+            @apply w-10 rounded-xl object-contain  hover:border cursor-zoom-in;
           }
         }
 
