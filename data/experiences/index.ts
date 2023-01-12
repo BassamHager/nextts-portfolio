@@ -78,7 +78,7 @@ export const experiences: Experience[] = [
       "Visual basic",
       "Dotnet",
       "Azure",
-      "React",
+      "React.js",
       "React_Hooks",
       "jQuery",
       "CI/CD",

@@ -31,11 +31,11 @@
           }
         }
 
-        .techsContainer {
-          @apply flex items-center space-x-2 justify-center;
+        .projectTechContainer {
+          @apply techContainer justify-center;
 
-          .techImage {
-            @apply w-10 h-10 rounded-xl;
+          .projectTechLogo {
+            @apply techLogo;
           }
         }
 

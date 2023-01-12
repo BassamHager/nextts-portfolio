@@ -209,7 +209,7 @@ export const skillsData: Skill[] = [
   {
     image: react_hooks,
     cat: CATEGORIES[2],
-    title: "React-Hooks",
+    title: "React_Hooks",
     link: "https://reactjs.org/docs/hooks-intro.html",
   },
   {

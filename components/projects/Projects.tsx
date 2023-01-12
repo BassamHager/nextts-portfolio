@@ -61,7 +61,7 @@ export default function Projects({ projects }: Props) {
                   </Link>
                 </h4>
 
-                <div className={styles.techsContainer}>
+                <div className={styles.projectTechContainer}>
                   {project?.technologies?.map((tech, ind) => {
                     return (
                       <Image
@@ -69,8 +69,7 @@ export default function Projects({ projects }: Props) {
                         src={tech?.image}
                         alt={tech?.title || "tech"}
                         width={100}
-                        height={100}
-                        className={styles.techImage}
+                        className={styles.projectTechLogo}
                       />
                     );
                   })}

@@ -69,7 +69,7 @@ export default function ExperienceCard({ experience }: Props) {
             <p className={styles.companyName}>{experience?.company}</p>
           </Link>
 
-          <div className={styles.techContainer}>
+          <div className={styles.expCardTechContainer}>
             {experience?.technologies?.map((tech, ind) => (
               <Image
                 key={tech?.image + ind}
@@ -77,7 +77,7 @@ export default function ExperienceCard({ experience }: Props) {
                 alt={tech.title || "technology"}
                 width={100}
                 height={100}
-                className={styles.techLogo}
+                className={styles.expCardTechLogo}
                 onMouseOver={() => setTechName(tech.title ? tech.title : "")}
                 onMouseLeave={() => setTechName("")}
               />

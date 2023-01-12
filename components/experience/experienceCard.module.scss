@@ -62,11 +62,11 @@
         letter-spacing: 1.5px;
       }
 
-      .techContainer {
-        @apply flex gap-[1rem] mt-[4rem] flex-wrap;
+      .expCardTechContainer {
+        @apply techContainer;
 
-        .techLogo {
-          @apply w-10 rounded-xl object-contain  hover:border cursor-zoom-in;
+        .expCardTechLogo {
+          @apply techLogo;
         }
       }
 

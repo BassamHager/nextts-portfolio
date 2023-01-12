@@ -13,7 +13,7 @@
       @apply flex justify-center items-center my-8 gap-12;
 
       .navArrowContainer {
-        @apply text-4xl p-2 bg-black/20 cursor-pointer hover:bg-[var(--clr-neon)] w-[10rem] duration-700 text-gray-500 hover:text-white;
+        @apply text-4xl p-2 bg-white/10 cursor-pointer hover:bg-[var(--clr-neon)] w-[10rem] duration-700 text-gray-500 hover:text-white;
         &:nth-child(1) {
           @apply rounded-l-full rounded-r-lg;
         }
@@ -24,7 +24,7 @@
     }
 
     .dotsContainer {
-      @apply flex items-center gap-[1rem] mt-[3rem] justify-center p-[1rem] text-4xl bg-black/30 w-fit m-auto rounded-full;
+      @apply flex items-center gap-[2rem] mt-[3rem] justify-center p-[1rem] text-4xl bg-white/10 w-fit m-auto rounded-full;
     }
   }
 }

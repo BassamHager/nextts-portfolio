@@ -79,4 +79,10 @@ p {
 }
 
 @layer components {
+  .techContainer {
+    @apply flex gap-[1rem] mt-[4rem] flex-wrap;
+  }
+  .techLogo {
+    @apply w-10 rounded-xl object-contain  hover:border cursor-zoom-in;
+  }
 }
