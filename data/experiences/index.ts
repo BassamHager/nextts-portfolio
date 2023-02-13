@@ -91,7 +91,7 @@ export const experiences: Experience[] = [
     dateStarted: "2019-04-01",
     dateEnded: "",
     isCurrentlyWorkingHere: true,
-    jobTitle: "Blockchain Frontend Developer",
+    jobTitle: "Blockchain FE Dev",
     points: [],
     technologies: filterTechs([
       "HTML",
