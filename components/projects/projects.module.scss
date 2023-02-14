@@ -1,49 +1,12 @@
 .projectsWrapper {
-  @apply relative flex flex-col overflow-hidden md:flex-row max-w-full justify-evenly mx-auto items-center z-0 mt-[30rem];
+  @apply my-[30rem];
+
+  .mainTitle {
+    @apply uppercase tracking-[2rem] text-gray-500 text-2xl text-center py-[3rem] pl-[1rem];
+  }
 
   .decoratedBg {
     @apply w-full absolute top-[30%] bg-[var(--clr-neon)] left-0 h-[500px] -skew-y-12 opacity-20;
     z-index: -1;
-  }
-
-  .sectionTitle {
-    @apply absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl;
-  }
-
-  .projectsContainer {
-    @apply relative w-full flex overflow-x-hidden overflow-y-hidden snap-x snap-mandatory;
-
-    .projectContainer {
-      @apply w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen;
-
-      .projectImage {
-        @apply w-[30rem] md:w-[50rem];
-      }
-
-      .projectContentBelowImage {
-        @apply space-y-10 px-0 md:px-10 max-w-6xl;
-
-        .projectTitle {
-          @apply text-4xl font-semibold text-center text-gray-500;
-
-          .decoratedSpan {
-            @apply underline decoration-[#f7ab0a]/50 hover:text-[var(--clr-neon)] hover:decoration-[var(--clr-neon)] cursor-pointer;
-          }
-        }
-
-        .projectTechContainer {
-          @apply flex gap-[1rem] mt-[4rem] flex-wrap justify-center;
-
-          .projectTechLogo {
-            @apply w-10 rounded-xl object-contain  hover:border cursor-zoom-in;
-          }
-        }
-
-        .projectSummary {
-          @apply text-xl text-gray-500;
-          letter-spacing: 1.25px;
-        }
-      }
-    }
   }
 }

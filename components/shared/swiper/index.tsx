@@ -8,15 +8,26 @@ import { RxDotFilled } from "react-icons/rx";
 import { motion } from "framer-motion";
 // hooks
 import useSwiper from "../../../hooks/useSwiper";
+// types
+import { Experience, Project } from "../../../types/typings";
 
 type Props = {
   cardComponent: ReactNode;
-  items: any[];
+  items: Experience[] | Project[];
+  useSwipeKey: "exp" | "proj";
   dotsImages: string[];
 };
 
-export default function Swiper({ cardComponent, items, dotsImages }: Props) {
-  const { currentIndex, goToNext, goToPrev, goToSlide } = useSwiper();
+export default function Swiper({
+  cardComponent,
+  items,
+  dotsImages,
+  useSwipeKey,
+}: Props) {
+  // hooks
+  const { currentIndex, goToNext, goToPrev, goToSlide } = useSwiper({
+    stateKey: useSwipeKey,
+  });
 
   return (
     <motion.div
@@ -24,7 +35,6 @@ export default function Swiper({ cardComponent, items, dotsImages }: Props) {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.5 }}
       className={styles.swiperWrapper}
-      id="experience"
     >
       <div className={`group ${styles.itemsContainer}`}>
         {cardComponent}
@@ -52,12 +62,7 @@ export default function Swiper({ cardComponent, items, dotsImages }: Props) {
               className={index === currentIndex ? styles.selected : ""}
             >
               {image ? (
-                <Image
-                  src={image}
-                  alt={image || "item image"}
-                  width={100}
-                  height={100}
-                />
+                <Image src={image} alt={"company"} width={100} height={100} />
               ) : (
                 <RxDotFilled />
               )}

@@ -20,7 +20,7 @@
   }
 
   .dotsContainer {
-    @apply flex items-center gap-[1.5rem] mt-[3rem] justify-between text-4xl  w-fit m-auto rounded-full  min-w-[25rem] hover:bg-white/10 duration-300;
+    @apply flex items-center gap-[1.5rem] mt-[3rem] justify-center text-4xl  w-fit m-auto rounded-full  min-w-[25rem] hover:bg-white/10 duration-300;
 
     div {
       @apply hover:text-[var(--clr-neon)] cursor-pointer border-[.5rem] border-transparent rounded-full overflow-hidden w-[5rem] h-[5rem] grid items-center hover:border-[var(--clr-neon)] hover:shadow-sm hover:shadow-[var(--clr-neon)];

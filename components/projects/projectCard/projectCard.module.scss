@@ -1,0 +1,57 @@
+.projectCardWrapper {
+  @apply w-full h-full;
+
+  .projectNav {
+    ul {
+      @apply flex gap-[2rem] justify-evenly items-center;
+
+      li {
+        @apply w-full text-center py-[.5rem] text-3xl font-light hover:bg-[var(--clr-neon)] hover:text-white duration-300  text-gray-500 cursor-pointer border-b border-gray-600 tracking-[0.3rem];
+      }
+
+      .selected {
+        @apply hover:bg-[var(--clr-neon)] text-[var(--clr-neon)] font-bold border-b-[var(--clr-neon)];
+      }
+    }
+  }
+
+  .demoImageContainer {
+    @apply p-[1rem] grid place-items-center;
+
+    .projectImage {
+      @apply w-full;
+    }
+  }
+
+  .projectDetailsContainer {
+    @apply h-full p-[2rem];
+
+    .projectTitle {
+      @apply text-4xl font-semibold text-center text-gray-500;
+    }
+
+    .projectLinksContainer {
+      @apply mt-[1rem] flex justify-center gap-[2rem];
+
+      li {
+        @apply border border-gray-600 text-gray-600 w-fit px-[2rem] py-[1rem] hover:border-[var(--clr-neon)] hover:text-[var(--clr-neon)] duration-300 cursor-pointer text-2xl;
+      }
+    }
+
+    .projectTechContainer {
+      @apply flex gap-[1rem] mt-[4rem] flex-wrap justify-center;
+
+      .projectTechLogo {
+        @apply w-[3.3rem] rounded-xl object-contain  hover:border cursor-zoom-in;
+      }
+    }
+
+    .techName {
+      @apply mt-[2rem] text-center text-3xl tracking-[.2rem] h-[4rem];
+    }
+
+    .projectSummary {
+      @apply text-center text-2xl text-gray-400 mt-[3rem];
+    }
+  }
+}

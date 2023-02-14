@@ -1,5 +1,5 @@
 import { Experience } from "../../types/typings";
-import { techImages, companyImages } from "../images/index";
+import { companyImages } from "../images/index";
 import { filterTechs } from "../../utils/filterTechs";
 // const {
 //   azure,

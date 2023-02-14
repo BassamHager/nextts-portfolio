@@ -15,11 +15,11 @@ type Props = {
 
 export default function WorkExperience({ experiences }: Props) {
   // hooks
-  const { currentIndex } = useSwiper();
+  const { currentIndex } = useSwiper({ stateKey: "exp" });
   // internal state
   const [expImages, setExpImages] = useState<string[]>([]);
 
-  const mapExperienceImages = (objects: Experience[]) =>
+  const mapExperienceImages = (objects: Experience[]): string[] =>
     objects.map((obj) => obj.companyImage);
 
   useEffect(() => {
@@ -28,13 +28,14 @@ export default function WorkExperience({ experiences }: Props) {
   }, [experiences]);
 
   return (
-    <div className={styles.experiencesWrapper}>
+    <div className={styles.experiencesWrapper} id="experience">
       <h3 className={styles.mainTitle}>Experience</h3>
 
       <Swiper
         cardComponent={
           <ExperienceCard experience={experiences?.[currentIndex]} />
         }
+        useSwipeKey="exp"
         items={experiences}
         dotsImages={expImages}
       />

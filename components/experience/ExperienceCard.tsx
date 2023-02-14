@@ -23,12 +23,13 @@ export default function ExperienceCard({ experience }: Props) {
     year: "numeric",
     month: "short",
   } as const;
+
   return (
     <Card
       cardDetails={
         <article className={styles.experienceCardWrapper}>
           {/* company logo */}
-          {experience?.companyImage && (
+          {experience?.companyLink && (
             <motion.div className={styles.companyLogoContainer}>
               <Link href={experience?.companyLink} target="_blank">
                 <Image
