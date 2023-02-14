@@ -1,31 +1,21 @@
-import React, { useState } from "react";
+import React, { ReactNode } from "react";
 import Image from "next/image";
+// styles
+import styles from "../../../components/experience/experience.module.scss";
 // packages
 import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
 import { RxDotFilled } from "react-icons/rx";
 import { motion } from "framer-motion";
-// styles
-import styles from "./swiper.module.scss";
+// hooks
+import useSwiper from "../../../hooks/useSwiper";
 
 type Props = {
+  cardComponent: ReactNode;
   items: any[];
 };
 
-export default function Swiper({ items }: Props) {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const goToPrev = (slides: any[]) => {
-    const isFirstSlide = currentIndex === 0;
-    const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1;
-    setCurrentIndex(newIndex);
-  };
-  const goToNext = (slides: any[]) => {
-    const isLastSlide = currentIndex === slides.length - 1;
-    const newIndex = isLastSlide ? 0 : currentIndex + 1;
-    setCurrentIndex(newIndex);
-  };
-  const goToSlide = (ind: number) => {
-    setCurrentIndex(ind);
-  };
+export default function Swiper({ cardComponent, items }: Props) {
+  const { currentIndex, goToNext, goToPrev, goToSlide } = useSwiper();
 
   return (
     <motion.div
@@ -38,7 +28,7 @@ export default function Swiper({ items }: Props) {
       <h3 className={styles.mainTitle}>Experience</h3>
 
       <div className={`group ${styles.experiencesContainer}`}>
-        {/* <ExperienceCard experience={experiences?.[currentIndex]} /> */}
+        {cardComponent}
 
         <div className={styles.navArrowsContainer}>
           <div
@@ -59,8 +49,8 @@ export default function Swiper({ items }: Props) {
           {items?.map((slide, index) => (
             <div
               key={index}
-              className="hover:text-[var(--clr-neon)] cursor-pointer border border-transparent rounded-full overflow-hidden w-[3rem] h-[3rem] grid items-center hover:border-[var(--clr-neon)] hover:shadow-xl hover:shadow-[var(--clr-neon)]"
               onClick={() => goToSlide(index)}
+              className={index === currentIndex ? styles.selected : ""}
             >
               {slide?.companyImage ? (
                 <Image

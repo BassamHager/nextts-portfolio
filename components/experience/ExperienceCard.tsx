@@ -30,7 +30,7 @@ export default function ExperienceCard({ experience }: Props) {
           {/* company logo */}
           {experience?.companyImage && (
             <motion.div className={styles.companyLogoContainer}>
-              <Link href={experience.companyLink} target="_blank">
+              <Link href={experience?.companyLink} target="_blank">
                 <Image
                   src={experience?.companyImage}
                   alt={`work experience at ${experience?.company}`}
@@ -46,9 +46,11 @@ export default function ExperienceCard({ experience }: Props) {
             <h4 className={styles.jobTitle}>{experience?.jobTitle}</h4>
 
             {/* company name */}
-            <Link href={experience.companyLink} target="_blank">
-              <p className={styles.companyName}>{experience?.company}</p>
-            </Link>
+            {experience?.companyLink && (
+              <Link href={experience?.companyLink} target="_blank">
+                <p className={styles.companyName}>{experience?.company}</p>
+              </Link>
+            )}
 
             {/* techs used in company */}
             <div className={styles.expCardTechContainer}>
