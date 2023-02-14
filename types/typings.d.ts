@@ -42,7 +42,7 @@ export interface Experience {
   dateEnded: Date | string;
   isCurrentlyWorkingHere: boolean;
   jobTitle: string;
-  points: string[];
+  responsibilities: string[];
   technologies: Skill[];
   companyLink: string;
 }

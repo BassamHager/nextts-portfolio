@@ -48,7 +48,12 @@ export const experiences: Experience[] = [
     dateEnded: "2019-07-31",
     isCurrentlyWorkingHere: false,
     jobTitle: "Jr.Frontend Developer",
-    points: [],
+    responsibilities: [
+      "Built HackYourSocial a full-stack application built with the MERN stack plus Redux.",
+      "It’s been basically my class graduation project & a simulation to the workflow & to the communications should be conducted among the teammates.",
+      "Live URL:",
+      "https://stormy-garden-42594.herokuapp.com/",
+    ],
     technologies: filterTechs([
       "HTML",
       "CSS",
@@ -69,7 +74,13 @@ export const experiences: Experience[] = [
     dateEnded: "2021-12-31",
     isCurrentlyWorkingHere: false,
     jobTitle: "Software Engineer",
-    points: [],
+    responsibilities: [
+      "joined the FE team with a plan to convert codes from jQuery into React.js",
+      "Joined a task force to convert projects from VB.NET into C#.NET",
+      "Worked within a team on a new version of endpoints that improved the API traffic",
+      "Migrated branches from TFS to AzureDevOps server",
+      "Worked with different agile methods (Scrum/Kanban) in several teams within a department of (500+ people)",
+    ],
     technologies: filterTechs([
       "HTML",
       "CSS",
@@ -92,7 +103,13 @@ export const experiences: Experience[] = [
     dateEnded: "",
     isCurrentlyWorkingHere: true,
     jobTitle: "Blockchain FE Dev",
-    points: [],
+    responsibilities: [
+      "Converted/upgraded the code from JS into TS, took part in UX",
+      "Connected crypto wallets across browsers to the smart contracts on ETH Blockchain using Web3.js, ethers.js, Truffle & Solidity.",
+      "Added unit tests (jest) & E2E tests (Cypress)",
+      "I Was updating the contact list of the newsletter service",
+      "Was connecting the realtime DB to Sendinblue.",
+    ],
     technologies: filterTechs([
       "HTML",
       "CSS",
@@ -123,7 +140,13 @@ export const experiences: Experience[] = [
     dateEnded: "2022-06-30",
     isCurrentlyWorkingHere: false,
     jobTitle: "Frontend Developer",
-    points: [],
+    responsibilities: [
+      "Took part in building the website pages (static & dynamic)",
+      "Added & updated the components/stacks in the component library (storybook)",
+      "Followed summits & courses to improve our codes with the best practices.",
+      "Increased unit tests coverage from 40% to 80% & maintained CI jobs accordingly",
+      "Implemented the SEARCH feature across the app, including the unit testing, E2E testing, the documentation & the needed storybooks.",
+    ],
     technologies: filterTechs([
       "HTML",
       "CSS",
@@ -151,7 +174,11 @@ export const experiences: Experience[] = [
     dateEnded: "",
     isCurrentlyWorkingHere: true,
     jobTitle: "Web Developer",
-    points: [],
+    responsibilities: [
+      "Participated in building the new website pages (static & dynamic)",
+      "Added & updated our components & stacks in our component library (storybook)",
+      "Added unit tests covering files with a percentage of 80%.",
+    ],
     technologies: filterTechs([
       "HTML",
       "CSS",
