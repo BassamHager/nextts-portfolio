@@ -1,12 +1,12 @@
 import Image from "next/image";
 import React /* , { useState } */ from "react";
-import styles from "./skill.module.scss";
+import styles from "./skillCard.module.scss";
 // external libs & packages
 import { motion } from "framer-motion";
 // typings
-import { Skill as SkillType } from "../../types/typings";
+import { Skill as SkillType } from "../../../types/typings";
 // data
-import { CATEGORIES } from "../../data/skills";
+import { CATEGORIES } from "../../../data/skills";
 import Link from "next/link";
 
 type Props = {
@@ -18,7 +18,7 @@ export default function SkillCard({ directionLeft, skill }: Props) {
   return (
     <Link
       href={skill.link}
-      className={`group ${styles.skillWrapper}`}
+      className={`group ${styles.skillCardWrapper}`}
       target="_blank"
     >
       {skill?.image ? (

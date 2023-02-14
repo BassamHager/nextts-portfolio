@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { Experience } from "../../types/typings";
 // components
 import Swiper from "../shared/swiper";
-import ExperienceCard from "./ExperienceCard";
+import ExperienceCard from "./experienceCard";
 // hooks
 import useSwiper from "../../hooks/useSwiper";
 // styles

@@ -1,13 +1,13 @@
 import Head from "next/head";
 import { GetStaticProps } from "next";
 // components
-import Header from "../components/header/Header";
-import Hero from "../components/hero/Hero";
-import About from "../components/about/About";
-import Skills from "../components/skills/Skills";
-import WorkExperience from "../components/experience/WorkExperience";
-import Projects from "../components/projects/Projects";
-import Contact from "../components/contact/Contact";
+import Header from "../components/header";
+import Hero from "../components/hero";
+import About from "../components/about";
+import Skills from "../components/skills";
+import WorkExperience from "../components/experiences";
+import Projects from "../components/projects";
+import Contact from "../components/contact";
 // typings
 import { PageInfo, Skill, Social, Experience, Project } from "../types/typings";
 // mocked data

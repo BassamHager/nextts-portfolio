@@ -4,7 +4,7 @@ import Link from "next/link";
 // external libs & packages
 import { Cursor, useTypewriter } from "react-simple-typewriter";
 import { PageInfo } from "../../types/typings";
-import BgCircles from "./BgCircles";
+import BgCircles from "./bgCircles";
 import { imageLoader } from "../../utils/urlBuilder";
 
 type Props = {

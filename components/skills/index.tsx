@@ -3,7 +3,7 @@ import styles from "./skills.module.scss";
 // typings
 import { Category, Skill as SkillType } from "../../types/typings";
 // components
-import SkillCard from "./SkillCard";
+import SkillCard from "./skillCard";
 // data
 import { CATEGORIES } from "../../data/skills/index";
 

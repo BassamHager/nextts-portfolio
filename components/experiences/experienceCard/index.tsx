@@ -5,9 +5,9 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import useSWR from "swr";
 // typings
-import { Experience } from "../../types/typings";
+import { Experience } from "../../../types/typings";
 // components
-import Card from "../shared/card";
+import Card from "../../shared/card";
 
 type Props = {
   experience: Experience;
