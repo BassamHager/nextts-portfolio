@@ -1,38 +1,7 @@
-.experienceWrapper {
-  @apply flex flex-col mt-[30rem];
+.experiencesWrapper {
+  @apply mt-[30rem];
 
   .mainTitle {
     @apply uppercase tracking-[2rem] text-gray-500 text-2xl text-center py-[3rem] pl-[1rem];
   }
-
-  .experiencesContainer {
-    @apply py-[5rem];
-
-    .navArrowsContainer {
-      @apply flex justify-center items-center my-8 gap-12;
-
-      .navArrowContainer {
-        @apply text-6xl p-2 bg-gray-800 cursor-pointer hover:bg-[var(--clr-neon)] w-[10rem] duration-700 text-gray-600 hover:text-white;
-        &:nth-child(1) {
-          @apply rounded-l-full rounded-r-lg;
-        }
-        &:nth-child(2) {
-          @apply flex justify-end rounded-r-full;
-        }
-      }
-    }
-  }
-
-  .dotsContainer {
-    @apply flex items-center gap-[2rem] mt-[3rem] justify-between text-4xl  w-fit m-auto rounded-full  min-w-[29rem] hover:bg-white/10 duration-300;
-
-    div {
-      @apply hover:text-[var(--clr-neon)] cursor-pointer border-[.5rem] border-transparent rounded-full overflow-hidden w-[5rem] h-[5rem] grid items-center hover:border-[var(--clr-neon)] hover:shadow-sm hover:shadow-[var(--clr-neon)];
-    }
-
-    .selected {
-      @apply border-[var(--clr-neon)];
-    }
-  }
-  // }
 }

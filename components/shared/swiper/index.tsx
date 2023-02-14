@@ -1,7 +1,7 @@
 import React, { ReactNode } from "react";
 import Image from "next/image";
 // styles
-import styles from "../../../components/experience/experience.module.scss";
+import styles from "./swiper.module.scss";
 // packages
 import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
 import { RxDotFilled } from "react-icons/rx";
@@ -12,9 +12,10 @@ import useSwiper from "../../../hooks/useSwiper";
 type Props = {
   cardComponent: ReactNode;
   items: any[];
+  dotsImages: string[];
 };
 
-export default function Swiper({ cardComponent, items }: Props) {
+export default function Swiper({ cardComponent, items, dotsImages }: Props) {
   const { currentIndex, goToNext, goToPrev, goToSlide } = useSwiper();
 
   return (
@@ -22,12 +23,10 @@ export default function Swiper({ cardComponent, items }: Props) {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.5 }}
-      className={styles.experienceWrapper}
+      className={styles.swiperWrapper}
       id="experience"
     >
-      <h3 className={styles.mainTitle}>Experience</h3>
-
-      <div className={`group ${styles.experiencesContainer}`}>
+      <div className={`group ${styles.itemsContainer}`}>
         {cardComponent}
 
         <div className={styles.navArrowsContainer}>
@@ -46,16 +45,16 @@ export default function Swiper({ cardComponent, items }: Props) {
         </div>
 
         <div className={styles.dotsContainer}>
-          {items?.map((slide, index) => (
+          {dotsImages?.map((image, index) => (
             <div
               key={index}
               onClick={() => goToSlide(index)}
               className={index === currentIndex ? styles.selected : ""}
             >
-              {slide?.companyImage ? (
+              {image ? (
                 <Image
-                  src={slide.companyImage}
-                  alt={slide.company || "company name"}
+                  src={image}
+                  alt={image || "item image"}
                   width={100}
                   height={100}
                 />
