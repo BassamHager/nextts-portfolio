@@ -48,9 +48,11 @@ export default function ExperienceCard({ experience }: Props) {
 
             {/* company name */}
             {experience?.companyLink && (
-              <Link href={experience?.companyLink} target="_blank">
-                <p className={styles.companyName}>{experience?.company}</p>
-              </Link>
+              <p className={styles.companyName}>
+                <Link href={experience?.companyLink} target="_blank">
+                  <span>@</span> {experience?.company}
+                </Link>
+              </p>
             )}
 
             {/* techs used in company */}

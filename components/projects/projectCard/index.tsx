@@ -69,11 +69,13 @@ export default function ProjectCard({ project }: Props) {
                     github
                   </Link>
                 </li>
-                <li>
-                  <Link href={project?.linkToBuild} target="_blank">
-                    deployed
-                  </Link>
-                </li>
+                {project.liveUrl && (
+                  <li>
+                    <Link href={project?.liveUrl} target="_blank">
+                      deployed
+                    </Link>
+                  </li>
+                )}
               </ul>
 
               <div className={styles.projectTechContainer}>

@@ -2,6 +2,10 @@
   .companyLogoContainer {
     .companyLogo {
       @apply w-[10rem] h-auto min-h-[10rem] rounded-full object-contain m-auto bg-black object-center cursor-pointer hover:shadow-lg hover:shadow-[var(--clr-neon)];
+
+      &:hover {
+        @apply animate-spin-34;
+      }
     }
   }
 
@@ -11,13 +15,14 @@
     }
 
     .companyName {
-      @apply font-bold text-3xl mt-[2rem] text-gray-400 cursor-pointer;
-      width: max-content;
-      border-bottom: dashed var(--clr-neon);
+      @apply font-bold text-3xl mt-[2rem] text-gray-400 cursor-pointer max-w-fit border-b-[0.2rem] border-dashed border-[var(--clr-neon)];
+
+      span {
+        @apply text-[var(--clr-neon)];
+      }
 
       &:hover {
-        @apply text-[var(--clr-neon)] duration-500;
-        border-bottom: solid;
+        @apply text-[var(--clr-neon)] duration-500 border-solid animate-pulse;
       }
     }
   }
@@ -44,7 +49,7 @@
       @apply border w-[20rem] border-gray-600 p-[1rem]  rounded-xl text-2xl text-[var(--clr-neon)] cursor-pointer;
 
       &:hover {
-        @apply bg-[var(--clr-neon)] text-white duration-300;
+        @apply bg-[var(--clr-neon)] text-white duration-300 animate-pulse;
       }
     }
 

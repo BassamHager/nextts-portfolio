@@ -1,5 +1,6 @@
 import abn from "../../public/assets/images/projects/abn_amro_tech_assignment.webp";
 import portfolio from "../../public/assets/images/projects/portfolio.webp";
+import poll from "../../public/assets/images/projects/poll-app.webp";
 // techs
 import azure from "../../public/assets/images/skills/azure.webp";
 import cicd from "../../public/assets/images/skills/cicd.webp";
@@ -65,6 +66,7 @@ import syt from "../../public/assets/images/experiences/SYT-logo.webp";
 export const projectImages = {
   abn,
   portfolio,
+  poll,
 };
 
 export const companyImages = {

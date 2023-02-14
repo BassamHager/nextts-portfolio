@@ -53,6 +53,7 @@ export interface Project {
   summary: string;
   technologies: Technology[];
   linkToBuild: string;
+  liveUrl?: string;
 }
 
 export interface Social {

@@ -15,6 +15,10 @@
         &:nth-child(2) {
           @apply flex justify-end rounded-r-full;
         }
+
+        &:hover {
+          @apply animate-pulse;
+        }
       }
     }
   }
@@ -24,6 +28,10 @@
 
     div {
       @apply hover:text-[var(--clr-neon)] cursor-pointer border-[.5rem] border-transparent rounded-full overflow-hidden w-[5rem] h-[5rem] grid items-center hover:border-[var(--clr-neon)] hover:shadow-sm hover:shadow-[var(--clr-neon)];
+
+      &:hover {
+        @apply animate-pulse;
+      }
     }
 
     .selected {
