@@ -40,7 +40,7 @@ export default function Skills({ skills }: Props) {
       <h3 className={styles.sectionTitle}>Skills</h3>
 
       <ul className={styles.skillCategories}>
-        {CATEGORIES.map((cat, ind) => {
+        {CATEGORIES.map((cat) => {
           return (
             <li
               key={cat}

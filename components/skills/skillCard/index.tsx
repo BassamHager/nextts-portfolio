@@ -1,13 +1,13 @@
 import Image from "next/image";
-import React /* , { useState } */ from "react";
+import Link from "next/link";
+// styles
 import styles from "./skillCard.module.scss";
 // external libs & packages
 import { motion } from "framer-motion";
 // typings
 import { Skill as SkillType } from "../../../types/typings";
-// data
-import { CATEGORIES } from "../../../data/skills";
-import Link from "next/link";
+// components
+import ProgressBar from "./progressBar";
 
 type Props = {
   skill: SkillType;
@@ -16,57 +16,41 @@ type Props = {
 
 export default function SkillCard({ directionLeft, skill }: Props) {
   return (
-    <Link
-      href={skill.link}
-      className={`group ${styles.skillCardWrapper}`}
-      target="_blank"
-    >
-      {skill?.image ? (
-        <motion.div
-        // initial={{
-        //   x: directionLeft ? -200 : 200,
-        //   opacity: 0,
-        // }}
-        // transition={{ duration: 1 }}
-        // viewport={{ once: true }}
-        // whileInView={{ opacity: 1, x: 0 }}
-        >
-          <Image
-            src={skill.image}
-            width={100}
-            className={`group ${styles.skillImage} group-hover:object-cover group-hover:p-0 group-hover:grayscale-0`}
-            alt={skill?.title || "tech skill"}
-          />
-        </motion.div>
-      ) : (
-        <motion.div
-          initial={{
-            x: directionLeft ? -200 : 200,
-            opacity: 0,
-          }}
-          transition={{ duration: 1 }}
-          viewport={{ once: true }}
-          whileInView={{ opacity: 1, x: 0 }}
-        >
-          <Image
-            src={"/../public/assets/images/not-found-img.png"}
-            alt={skill?.title || "tech skill"}
-            className={`group ${styles.skillImage} group-hover:object-cover group-hover:p-0 group-hover:grayscale-0`}
-          />
-        </motion.div>
-      )}
+    <li className={styles.skillCardWrapper}>
+      <div className={styles.skillInnerContainer}>
+        <Link href={skill.link} target="_blank">
+          <h1 className={styles.skillTitle}>{skill?.title}</h1>
+        </Link>
 
-      <h1 className={`${styles.skillTitle} group-hover:text-yellow-300`}>
-        {skill?.title}
-      </h1>
+        {skill?.image ? (
+          <motion.div>
+            <Image
+              src={skill.image}
+              width={100}
+              className={styles.skillImage}
+              alt={skill?.title || "tech skill"}
+            />
+          </motion.div>
+        ) : (
+          <motion.div
+            initial={{
+              x: directionLeft ? -200 : 200,
+              opacity: 0,
+            }}
+            transition={{ duration: 1 }}
+            viewport={{ once: true }}
+            whileInView={{ opacity: 1, x: 0 }}
+          >
+            <Image
+              src={"/../public/assets/images/not-found-img.png"}
+              alt={skill?.title || "tech skill"}
+              className={styles.skillImage}
+            />
+          </motion.div>
+        )}
 
-      {/* @TODO: <div className="">
-        <div className="flex items-center justify-center h-full">
-          <p className="text-3xl font-bold text-black">
-            {skill?.progress || "100"}
-          </p>
-        </div>
-      </div> */}
-    </Link>
+        {true && <ProgressBar progress={50} /* @TODO: update */ />}
+      </div>
+    </li>
   );
 }

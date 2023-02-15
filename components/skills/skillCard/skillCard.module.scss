@@ -1,23 +1,35 @@
 .skillCardWrapper {
-  @apply rounded-full w-[25rem] cursor-pointer flex justify-center items-center overflow-hidden transition-all duration-1000 my-[1rem] h-[10rem];
+  @apply w-[25rem] h-[25rem] grid place-items-center;
 
-  &:hover {
-    @apply bg-gray-800 shadow-md shadow-[var(--clr-neon)] gap-[2rem];
-
-    .skillImage {
-      @apply border-[1rem] border-gray-800 grid-cols-none rounded-full;
-    }
+  .skillInnerContainer {
+    @apply w-[70%] h-[70%] rounded-full flex flex-col justify-center items-center opacity-40;
 
     .skillTitle {
-      @apply block text-[var(--clr-neon)];
+      @apply text-4xl opacity-0 text-blue-500 underline;
+
+      &:hover {
+        @apply duration-300 animate-pulse;
+      }
     }
-  }
 
-  .skillImage {
-    @apply rounded-md grayscale;
-  }
+    &:hover {
+      * {
+        @apply duration-500;
+      }
 
-  .skillTitle {
-    @apply pr-[1rem] text-4xl hidden;
+      @apply w-full h-full duration-700 gap-[1.5rem] bg-white/10 opacity-100 border-[var(--dark-bg)] border-dashed border-[0.2rem];
+
+      .skillTitle {
+        @apply opacity-100 duration-1000;
+      }
+
+      .skillImage {
+        @apply w-[10rem] h-[10rem] grayscale-0 rounded-full duration-1000;
+      }
+    }
+
+    .skillImage {
+      @apply rounded-md grayscale w-[25rem];
+    }
   }
 }

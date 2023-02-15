@@ -1,0 +1,12 @@
+.progressBarWrapper {
+  @apply text-4xl text-gray-300 w-[15rem] border border-[var(--clr-neon)] rounded-full mt-[1rem];
+
+  .progress {
+    @apply border border-white h-[1rem] rounded-full bg-white;
+  }
+
+  .hovered {
+    /* @TODO: update */
+    @apply border-[var(--clr-neon)] bg-[var(--clr-neon)];
+  }
+}

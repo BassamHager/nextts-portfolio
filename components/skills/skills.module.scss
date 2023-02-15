@@ -21,11 +21,15 @@
     }
 
     .selectedCategory {
-      @apply bg-gray-800 shadow-md shadow-[var(--clr-neon)] text-[var(--clr-neon)] font-bold;
+      @apply bg-[var(--dark-bg)] shadow-md shadow-[var(--clr-neon)] text-[var(--clr-neon)] font-bold;
     }
   }
 
   .skillsContainer {
-    @apply flex flex-wrap gap-5 mt-[12rem] justify-center;
+    @apply flex flex-wrap mt-[5rem] justify-center py-[3rem] bg-[var(--dark-bg)];
+
+    &:hover {
+      @apply duration-300;
+    }
   }
 }
