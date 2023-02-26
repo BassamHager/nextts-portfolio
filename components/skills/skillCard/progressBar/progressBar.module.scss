@@ -2,7 +2,7 @@
   @apply text-4xl text-gray-300 w-[15rem] border border-[var(--clr-neon)] rounded-full mt-[1rem];
 
   .progress {
-    @apply border border-white h-[1rem] rounded-full bg-white;
+    @apply border border-white h-[1rem] rounded-full bg-white w-[50%];
   }
 
   .hovered {
