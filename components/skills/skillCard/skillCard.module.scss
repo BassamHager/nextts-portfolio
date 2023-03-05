@@ -2,7 +2,8 @@
   @apply w-[25rem] h-[25rem] grid place-items-center;
 
   .skillInnerContainer {
-    @apply w-[70%] h-[70%] rounded-full flex flex-col justify-center items-center opacity-40;
+    /* transparent border added to remove the shaking on hover */
+    @apply w-[70%] h-[70%] rounded-full flex flex-col justify-center items-center opacity-40 border-[1.5rem] border-transparent;
 
     .skillTitle {
       @apply text-4xl opacity-0 text-blue-500 underline;

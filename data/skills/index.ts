@@ -65,6 +65,7 @@ const {
   swagger,
   vs,
   vscode,
+  vitest,
 } = techImages;
 
 export const skillsData: Skill[] = [
@@ -385,5 +386,11 @@ export const skillsData: Skill[] = [
     cat: CATEGORIES[3],
     title: "VS Code",
     link: "https://code.visualstudio.com/",
+  },
+  {
+    image: vitest,
+    cat: CATEGORIES[2],
+    title: "Vitest",
+    link: "https://vitest.dev/",
   },
 ];
