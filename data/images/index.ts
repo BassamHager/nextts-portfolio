@@ -1,6 +1,8 @@
+// projects
 import abn from "../../public/assets/images/projects/abn_amro_tech_assignment.webp";
 import portfolio from "../../public/assets/images/projects/portfolio.webp";
 import poll from "../../public/assets/images/projects/poll-app.webp";
+import bank from "../../public/assets/images/projects/bank-dashboard.webp";
 // techs
 import azure from "../../public/assets/images/skills/azure.webp";
 import cicd from "../../public/assets/images/skills/cicd.webp";
@@ -53,6 +55,7 @@ import slack from "../../public/assets/images/skills/slack.webp";
 import swagger from "../../public/assets/images/skills/swagger.webp";
 import vs from "../../public/assets/images/skills/vs.webp";
 import vscode from "../../public/assets/images/skills/vscode.webp";
+import vitest from "../../public/assets/images/skills/vitest.webp";
 // os
 import macos from "../../public/assets/images/skills/macos.webp";
 import windows from "../../public/assets/images/skills/windows.webp";
@@ -67,6 +70,7 @@ export const projectImages = {
   abn,
   portfolio,
   poll,
+  bank,
 };
 
 export const companyImages = {
@@ -131,4 +135,5 @@ export const techImages = {
   swagger,
   vs,
   vscode,
+  vitest,
 };

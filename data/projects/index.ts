@@ -1,7 +1,7 @@
 import { Project } from "../../types/typings";
 import { projectImages } from "../images/index";
 import { filterTechs } from "../../utils/filterTechs";
-const { abn, portfolio, poll } = projectImages;
+const { abn, portfolio, poll, bank } = projectImages;
 
 export const projects: Project[] = [
   {
@@ -51,5 +51,23 @@ export const projects: Project[] = [
     ]),
     linkToBuild: "https://github.com/BassamHager/poll-app",
     liveUrl: "https://poll-app-pearl.vercel.app/poll",
+  },
+  {
+    title: "Bank Account Dashboard - TA",
+    image: bank,
+    summary:
+      "Is a mini Vue3 application applies most of the basic/common Vue concepts, uses vue-router for routing, vitest & testing-library/vue for unit testing, & styled with plain css & sass.",
+    technologies: filterTechs([
+      "Vue.js",
+      "SASS",
+      "Vitest",
+      "Testing Library",
+      "TypeScript",
+      "HTML",
+      "CSS",
+      "Vercel",
+    ]),
+    linkToBuild: "https://github.com/BassamHager/bank-account-dashboard-ta",
+    liveUrl: "https://bank-account-dashboard-ta.vercel.app/",
   },
 ];
