@@ -39,7 +39,7 @@ import { filterTechs } from "../../utils/filterTechs";
 //   jquery,
 //   sanity,
 // } = techImages;
-const { hyf, exact, cc, mws, syt } = companyImages;
+const { hyf, exact, spicyfi, mws, syt } = companyImages;
 export const experiences: Experience[] = [
   {
     company: "HackYourFuture",
@@ -98,7 +98,7 @@ export const experiences: Experience[] = [
   },
   {
     company: "SpicyFi - CryptoChefs",
-    companyImage: cc,
+    companyImage: spicyfi,
     dateStarted: "2019-04-01",
     dateEnded: "",
     isCurrentlyWorkingHere: true,

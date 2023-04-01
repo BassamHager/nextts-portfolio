@@ -62,7 +62,7 @@ import windows from "../../public/assets/images/skills/windows.webp";
 // companies
 import hyf from "../../public/assets/images/experiences/hyf-logo.webp";
 import exact from "../../public/assets/images/experiences/Exact-logo.webp";
-import cc from "../../public/assets/images/experiences/CC-logo.webp";
+import spicyfi from "../../public/assets/images/experiences/spicyfi-logo.webp";
 import mws from "../../public/assets/images/experiences/MWS.logo.webp";
 import syt from "../../public/assets/images/experiences/SYT-logo.webp";
 
@@ -76,7 +76,7 @@ export const projectImages = {
 export const companyImages = {
   hyf,
   exact,
-  cc,
+  spicyfi,
   mws,
   syt,
 };

@@ -16,9 +16,9 @@ export default function Hero({ pageInfo }: Props) {
     words: [
       "Hi, my name is Bassam🤙",
       "cats 😸😻😽 are my l❤ve",
-      "⌨coding is my lust💓",
+      "👨‍💻coding is my lust💓",
       "perfection💯 is my sin😎",
-      "Let's build🏗 great apps💪",
+      "Let's build🏗️ great apps💪",
       // "*  *  *  *  *  *  *  *",
       " 🎆  🎆  🎆  🎆  🎆",
     ],
