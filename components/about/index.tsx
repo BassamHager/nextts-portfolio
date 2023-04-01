@@ -67,12 +67,8 @@ export default function About({ pageInfo }: Props) {
           <ul className={styles.textLinesContainer}>
             {pageInfo?.bgInformation?.map((line: string, ind: number) => {
               return linesCounter >= ind ? (
-                <li
-                  key={ind}
-                  id={`line-${ind}`}
-                  className={`${styles.textLine}`}
-                >
-                  <div className={styles.bullet}>{ind + 1}</div> {line}
+                <li key={ind} id={`line-${ind}`} className={styles.textLine}>
+                  <div className={styles.bullet}>{ind + 1}</div> <p>{line}</p>
                 </li>
               ) : null;
             })}

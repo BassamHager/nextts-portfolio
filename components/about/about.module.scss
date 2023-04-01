@@ -24,19 +24,20 @@
       @apply flex flex-wrap gap-5 items-center w-full;
 
       .textLine {
-        @apply text-2xl my-3 text-left rounded-lg p-5 bg-[var(--darker)] bg-gray-800 text-gray-400 min-h-[10rem] flex items-center mx-auto;
-        line-height: 3rem;
-        letter-spacing: 1.25px;
+        @apply text-2xl my-3 rounded-lg bg-gray-800 text-gray-400 mx-auto tracking-[0.125rem] leading-[3rem] hover:text-[#ddd] hover:bg-gray-900;
 
         .bullet {
-          background: #222;
-          display: inline-block;
-          border-radius: 5rem;
-          padding: 0.3rem;
-          margin-right: 1rem;
-          color: var(--clr-neon);
-          font-size: 2rem;
-          font-weight: bold;
+          @apply h-full rounded-xl p-[1rem] float-left mr-[1rem] bg-gray-700;
+        }
+
+        p {
+          @apply p-[1rem];
+        }
+
+        &:hover {
+          .bullet {
+            background: linear-gradient(to bottom, var(--clr-neon), purple);
+          }
         }
       }
     }
