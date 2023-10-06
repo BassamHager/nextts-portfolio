@@ -3,7 +3,7 @@ import Image from "next/image";
 // external libs & packages
 import { motion } from "framer-motion";
 import { PageInfo } from "../../types/typings";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import React from "react";
 import Link from "next/link";
 
@@ -12,19 +12,22 @@ type Props = { pageInfo: PageInfo };
 export default function About({ pageInfo }: Props) {
   const [isSsg, setIsSsg] = useState(false);
   const [linesCounter, setLinesCounter] = useState(0);
-  const showNext = () =>
+  const actionButtonsRef = useRef<HTMLDivElement>(null);
+  const showNext = () => {
     setLinesCounter(
       linesCounter !== pageInfo?.bgInformation.length - 1 ? (pre) => pre + 1 : 0
     );
-  const resetLines = () => {
-    const aboutImage = document.querySelector(".aboutImage");
-
-    setLinesCounter(0);
   };
 
   useEffect(() => {
     setIsSsg(true);
   }, [isSsg]);
+
+  useEffect(() => {
+    if (actionButtonsRef.current && linesCounter > 1) {
+      actionButtonsRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [linesCounter]);
 
   return (
     <motion.div
@@ -73,17 +76,23 @@ export default function About({ pageInfo }: Props) {
               ) : null;
             })}
           </ul>
+
           <h2 className={styles.linesCount}>
             {linesCounter + 1} / {pageInfo?.bgInformation?.length}
           </h2>
           <div className={styles.linesActionButton}>
+            <div
+              ref={actionButtonsRef}
+              id="refActionButton"
+              className={styles.refActionButton}
+            ></div>
             <Link href={"#aboutImage"} onClick={() => setLinesCounter(0)}>
               <button>reset</button>
             </Link>
             {linesCounter < pageInfo.bgInformation.length - 1 ? (
-              <Link href={`#line-${linesCounter - 1}`}>
-                <button onClick={showNext}>next</button>
-              </Link>
+              <button id="next-button" onClick={showNext}>
+                next
+              </button>
             ) : null}
           </div>
         </div>
