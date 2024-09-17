@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 // data
 import { workExperience } from "@/data";
 // components
@@ -34,7 +35,7 @@ const Challenges = () => {
             className="flex-1 text-black dark:text-white border-[3px] border-neutral-200 dark:border-slate-800 shadow-xl shadow-black hover:shadow-none hover:border-transparent"
           >
             <div className="flex lg:flex-row flex-col lg:items-center p-3 py-6 md:p-5 lg:p-10 gap-2">
-              <img
+              <Image
                 src={card.thumbnail}
                 alt={card.thumbnail}
                 className="lg:w-32 md:w-20 w-16"

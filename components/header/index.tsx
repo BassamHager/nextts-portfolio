@@ -41,7 +41,7 @@ const Header = ({ socials }: Props) => {
 
     window.addEventListener("scroll", handleHeaderShadow);
     return () => window.removeEventListener("scroll", handleHeaderShadow);
-  }, [isSsg, isSsg && window?.scrollY]);
+  }, [isSsg, isSsg && window?.scrollY, isScrolling]);
 
   const setIconFgColor = (index: number): string => {
     /* contact icon */

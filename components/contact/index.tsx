@@ -60,7 +60,7 @@ const Contact = () => {
       <div className={styles.contactContainer}>
         <h4 className={styles.descriptionText}>
           I have got just what you need.{` `}
-          <span className={styles.decoratedText}>Let's Talk.</span>
+          <span className={styles.decoratedText}>Let&apos;s Talk.</span>
         </h4>
 
         <div className={styles.contactInfoContainer}>

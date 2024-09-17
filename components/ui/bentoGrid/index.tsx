@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 // styles
 import styles from "./bentoGrid.module.scss";
@@ -71,7 +72,7 @@ export const BentoGridItem = ({
       <div className={`${id === 6 && "flex justify-center"} h-full`}>
         {/* laptop img */}
         {img && (
-          <img
+          <Image
             src={img}
             alt={img}
             className={cn(
@@ -87,7 +88,7 @@ export const BentoGridItem = ({
           }`}
         >
           {spareImg && (
-            <img
+            <Image
               src={spareImg}
               alt={spareImg}
               className="object-cover object-center w-full h-full"

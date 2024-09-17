@@ -1,3 +1,4 @@
+import Image from "next/image";
 // styles
 import styles from "./footer.module.scss";
 // external libs
@@ -35,7 +36,7 @@ const Footer = () => {
         <div className={styles.iconsContainer}>
           {socialMedia.map((info) => (
             <div key={info.id} className={styles.iconContainer}>
-              <img src={info.img} alt="social icon" width={20} height={20} />
+              <Image src={info.img} alt="social icon" width={20} height={20} />
             </div>
           ))}
         </div>

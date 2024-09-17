@@ -23,6 +23,7 @@ export const TextGenerateEffect = ({
         delay: stagger(0.2),
       }
     );
+    // react-hooks/exhaustive-deps
   }, [scope.current]);
 
   const renderWords = () => {
