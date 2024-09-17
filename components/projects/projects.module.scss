@@ -1,8 +1,8 @@
 .projectsWrapper {
-  @apply my-[30rem];
+  @apply mt-96 min-w-[350px] w-full overflow-hidden;
 
   .mainTitle {
-    @apply uppercase tracking-[2rem] text-gray-500 text-2xl text-center py-[3rem] pl-[1rem];
+    @apply uppercase tracking-widest text-gray-500 text-2xl text-center py-12;
   }
 
   .decoratedBg {

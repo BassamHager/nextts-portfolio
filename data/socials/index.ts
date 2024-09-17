@@ -1,4 +1,4 @@
-import { Social } from "../../types/typings";
+import { Social } from "@/types";
 
 export const socials: Social[] = [
   {
@@ -15,10 +15,10 @@ export const socials: Social[] = [
   },
   {
     title: "Twitter",
-    url: "https://twitter.com/BassamHajar2",
+    url: "https://x.com/hajar_bassam",
   },
   {
     title: "Instagram",
-    url: "https://www.instagram.com/bassam.hajar1/",
+    url: "https://www.instagram.com/bassam.hager/",
   },
 ];

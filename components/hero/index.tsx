@@ -1,64 +1,60 @@
+"use client";
+
 import Image from "next/image";
+// styles
 import styles from "./hero.module.scss";
-import Link from "next/link";
-// external libs & packages
+// external libs
 import { Cursor, useTypewriter } from "react-simple-typewriter";
-import { PageInfo } from "../../types/typings";
-import BgCircles from "./bgCircles";
-import { imageLoader } from "../../utils/urlBuilder";
+// components
+import BgCircles from "@/components/ui/bgCircles";
+// types
+import { PageInfo } from "@/types";
 
 type Props = {
   pageInfo: PageInfo;
 };
 
-export default function Hero({ pageInfo }: Props) {
+const Hero = ({ pageInfo }: Props) => {
   const [text] = useTypewriter({
     words: [
-      "Hi, my name is Bassam🤙",
-      "cats 😸😻😽 are my l❤ve",
-      "👨‍💻coding is my lust💓",
-      "perfection💯 is my sin😎",
-      "Let's build🏗️ great apps💪",
-      // "*  *  *  *  *  *  *  *",
-      " 🎆  🎆  🎆  🎆  🎆",
+      "Hi, my name is Bassam 🤙",
+      "Cats 😸😻😽 are my l❤️ve",
+      "👨‍💻 Coding is my ❤️ 🔥 💃",
+      "Perfection 💯 is my sin 😎",
+      "Let's build 🏗️ great apps 💪",
+      "🚀 🎆 🚀 🎆 🚀 🎆 🌍",
     ],
     loop: true,
     delaySpeed: 2000,
   });
 
   return (
-    <div className={styles.heroWrapper} id="hero">
-      <BgCircles />
-      {pageInfo?.heroImage && (
-        <Image
-          src={pageInfo.heroImage}
-          alt={"Bassam"}
-          width={500}
-          height={500}
-          className={styles.heroImage}
-          priority
-        />
-      )}
-      <div className={styles.contentContainerBelowImage}>
-        <h2 className={styles.role}>{pageInfo?.role}</h2>
-        <h1 className={styles.heroText}>
-          <span className="mr-3">{text}</span> <Cursor cursorColor="red" />
-        </h1>
-        <div className={styles.linksContainer}>
-          <Link href={"#about"}>
-            <button className={styles.neonButton}>About</button>
-          </Link>
-          <Link href={"#experience"}>
-            <button className={styles.neonButton}>Experience</button>
-          </Link>
-          <Link href={"#skills"}>
-            <button className={styles.neonButton}>Skills</button>
-          </Link>
-          <Link href={"#projects"}>
-            <button className={styles.neonButton}>Projects</button>
-          </Link>
+    <>
+      <div className={styles.heroWrapper}>
+        <BgCircles />
+
+        {/* @todo: update image placeholder */}
+        {pageInfo?.heroImage && (
+          <Image
+            src={pageInfo.heroImage}
+            alt={"Bassam"}
+            width={500}
+            height={500}
+            className={styles.heroImage}
+            priority
+          />
+        )}
+
+        <div className={styles.contentContainerBelowImage}>
+          <h2 className={styles.role}>{pageInfo?.role}</h2>
+
+          <h2 className={styles.heroText}>
+            <span className="">{text}</span> <Cursor cursorColor="#ff0000" />
+          </h2>
         </div>
       </div>
-    </div>
+    </>
   );
-}
+};
+
+export default Hero;

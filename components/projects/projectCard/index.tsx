@@ -5,23 +5,20 @@ import useSWR from "swr";
 // styles
 import styles from "./projectCard.module.scss";
 // typings
-import { Project } from "../../../types/typings";
+import { Project } from "@/types";
 // components
-import Card from "../../shared/card";
-import useSWRGlobalState from "../../../hooks/useSWRGlobalState";
+import Card from "@/components/ui/card";
+import useSWRGlobalState from "@/utils/hooks/useSWRGlobalState";
+import { useState } from "react";
 
 type Props = {
   project: Project;
 };
 
 export default function ProjectCard({ project }: Props) {
-  // hook
-  const { state: navItem, setState: setNavItem } = useSWRGlobalState({
-    key: "projectNavItem",
-    initialData: "details",
-  });
-
   // internal state
+  const [projectTab, setProjectTab] = useState("details");
+  // @todo: update below
   const { data: techName, mutate: setTechName } = useSWR<string>({
     key: "techName",
     initial: "",
@@ -31,51 +28,45 @@ export default function ProjectCard({ project }: Props) {
     <Card
       cardDetails={
         <article className={styles.projectCardWrapper}>
-          <div className={styles.projectNav}>
-            <ul>
-              <li
-                onClick={() => setNavItem("details")}
-                className={navItem === "details" ? styles.selected : ""}
+          <ul className={styles.projectNav}>
+            <li>
+              <button
+                onClick={() => setProjectTab("details")}
+                className={projectTab === "details" ? styles.selected : ""}
               >
-                <h2>Details</h2>
-              </li>
-              <li
-                onClick={() => setNavItem("demo")}
-                className={navItem === "demo" ? styles.selected : ""}
+                Details
+              </button>
+            </li>
+            <li>
+              <button
+                onClick={() => setProjectTab("demo")}
+                className={projectTab === "demo" ? styles.selected : ""}
               >
-                <h2>Demo</h2>
-              </li>
-            </ul>
-          </div>
+                Demo
+              </button>
+            </li>
+          </ul>
 
-          {navItem === "demo" && (
-            <div className={styles.demoImageContainer}>
-              <Image
-                src={project?.image}
-                alt={project?.title || "case study"}
-                width={100}
-                className={styles.projectImage}
-              />
-            </div>
-          )}
-
-          {navItem === "details" && (
+          {projectTab === "details" && (
             <div className={styles.projectDetailsContainer}>
               <h4 className={styles.projectTitle}>{project?.title}</h4>
 
               <ul className={styles.projectLinksContainer}>
-                <li>
-                  <Link href={project?.linkToBuild} target="_blank">
-                    github
-                  </Link>
-                </li>
-                {project.liveUrl && (
+                {project?.linkToBuild ? (
+                  <li>
+                    <Link href={project?.linkToBuild} target="_blank">
+                      github
+                    </Link>
+                  </li>
+                ) : null}
+
+                {project?.liveUrl ? (
                   <li>
                     <Link href={project?.liveUrl} target="_blank">
                       deployed
                     </Link>
                   </li>
-                )}
+                ) : null}
               </ul>
 
               <div className={styles.projectTechContainer}>
@@ -86,7 +77,7 @@ export default function ProjectCard({ project }: Props) {
                       src={tech?.image}
                       alt={tech?.title || "tech"}
                       width={100}
-                      className={styles.projectTechLogo}
+                      className={styles.techLogo}
                       onMouseOver={() => setTechName(tech.title)}
                       onMouseOut={() => setTechName("")}
                     />
@@ -104,6 +95,17 @@ export default function ProjectCard({ project }: Props) {
               </h3>
 
               <p className={styles.projectSummary}>{project?.summary}</p>
+            </div>
+          )}
+
+          {projectTab === "demo" && (
+            <div className={styles.demoImageContainer}>
+              <Image
+                src={project?.image}
+                alt={project?.title || "case study"}
+                width={100}
+                className={styles.projectImage}
+              />
             </div>
           )}
         </article>

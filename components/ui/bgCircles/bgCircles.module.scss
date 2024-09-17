@@ -1,0 +1,51 @@
+.bgCirclesWrapper {
+  @apply relative flex justify-center items-center h-0;
+
+  * {
+    @apply absolute border-r-[1px] rounded-full h-32 w-[450px] top-40;
+  }
+
+  .aaa {
+    @apply animate-spin-34 border-indigo-700 bg-indigo-700/[.1] hover:bg-indigo-600;
+  }
+  .bbb {
+    @apply animate-spin-55 border-red-700 bg-red-700/[.1] hover:bg-gradient-to-r from-pink-700 to-stone-700;
+  }
+  .ccc {
+    @apply animate-spin-89 border-yellow-700 bg-yellow-700/[.1] hover:bg-gradient-to-r from-yellow-500 to-yellow-900;
+  }
+  .ddd {
+    @apply animate-spin-144 border-green-700 bg-green-700/[.1] hover:bg-green-600;
+  }
+  .eee {
+    @apply animate-spin-233 border-black bg-gradient-to-r from-orange-600 to-red-700;
+  }
+
+  // @todo: clean up
+
+  // .spin34 {
+  //   @apply absolute h-60 w-[550px] top-0 animate-spin-34 flex justify-between text-red-500;
+  // }
+  // .spin55 {
+  //   @apply absolute h-60 w-[550px] top-5  animate-spin-34 flex justify-between text-blue-500;
+  // }
+  // .spin89 {
+  //   @apply absolute h-60 w-[550px] top-9  animate-spin-34 flex justify-between text-green-500;
+  // }
+  // .spin144 {
+  //   @apply absolute h-60 w-[550px] top-14 animate-spin-34 flex justify-between;
+  // }
+
+  // .spin34 {
+  //   @apply absolute rounded-full h-40 w-[750px] top-0  animate-spin-89 flex justify-between text-red-500;
+  // }
+  // .spin55 {
+  //   @apply absolute rounded-full h-52 w-[850px] top-5  animate-spin-144 flex justify-between text-blue-500;
+  // }
+  // .spin89 {
+  //   @apply absolute rounded-full h-60 w-[1050px] top-9  animate-spin-89 flex justify-between text-green-500;
+  // }
+  // .spin144 {
+  //   @apply absolute rounded-full h-72 w-[950px] top-14  animate-spin-144 flex justify-between ;
+  // }
+}

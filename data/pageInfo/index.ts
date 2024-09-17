@@ -1,6 +1,6 @@
-import { PageInfo } from "../../types/typings";
-import ABOUT_IMG from "../../public/assets/images/self/BH_IMG.webp";
-import HERO_IMG from "../../public/assets/images/self/BH_FB.webp";
+import { PageInfo } from "@/types";
+import ABOUT_IMG from "@/public/assets/images/BH_IMG.webp";
+import HERO_IMG from "@/public/assets/images/BH_IMG.webp";
 
 export const pageInfo: PageInfo = {
   address: "Leiden, Nico Van Der Horstpark 14",

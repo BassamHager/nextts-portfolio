@@ -1,0 +1,34 @@
+.cardWrapper {
+  @apply relative w-full min-w-[400px] m-auto max-w-[1200px] min-h-[800px] flex items-center justify-center border-[10px] border-[#000033] rounded-full shadow-black shadow-xl  overflow-hidden bg-[#222];
+
+  .anime {
+    @apply absolute top-0 left-0 w-full h-full flex items-center justify-center;
+
+    .fixedBg {
+      @apply absolute min-h-[800px] w-full rounded-full rotate-[45deg] bg-gradient-to-b from-black via-[darkblue] to-black shadow-xl shadow-black/[.5] border-[10px] border-black/[.7];
+    }
+
+    .spinningBg {
+      @apply absolute h-[800px] w-[1200px] animate-spin-89 rounded-full bg-black shadow-md shadow-black/[.5];
+    }
+
+    .purpleSaber {
+      @apply absolute h-1 min-w-[2000px] top-80 right-3 animate-spin-144 bg-[var(--clr-neon)] rounded-full;
+      box-shadow: 0 16px 80px 16px var(--clr-neon);
+    }
+
+    .purpleSaber2 {
+      @apply absolute h-1 top-80 left-0 min-w-[2000px] animate-spin-144 bg-[var(--clr-neon)] rounded-full;
+      box-shadow: 0 16px 80px 16px var(--clr-neon);
+    }
+  }
+
+  .cardContentWrapper {
+    @apply relative w-full h-[800px];
+    // @apply relative border-[2rem] sm:border-[3rem] border-[var(--dark-bg)] w-full h-[55.5rem] sm:h-[56.5rem] text-white py-[1rem] z-[40];
+
+    article {
+      @apply min-w-[400px] w-full h-full m-auto overflow-hidden;
+    }
+  }
+}

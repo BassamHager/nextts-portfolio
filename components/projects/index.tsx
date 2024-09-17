@@ -1,29 +1,29 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 // styles
 import styles from "./projects.module.scss";
-// typings
-import { Project } from "../../types/typings";
+// types
+import { Project } from "@/types";
 // components
-import Swiper from "../shared/swiper";
+import SwipingTool from "@/components/ui/swipingTool";
 import ProjectCard from "./projectCard";
 // hooks
-import useSwiper from "../../hooks/useSwiper";
+import useSwipe from "@/utils/hooks/useSwipe";
 
 type Props = {
   projects: Project[];
 };
 
-export default function Projects({ projects }: Props) {
+const Projects = ({ projects }: Props) => {
   // hooks
-  const { currentIndex } = useSwiper({ stateKey: "proj" });
+  const { currentIndex } = useSwipe();
   // internal state
   const [projImages, setProjImages] = useState<string[]>([]);
 
-  const mapProjectsImages = (objects: Project[]): string[] =>
+  const projectsImages = (objects: Project[]): string[] =>
     objects.map((obj) => obj.image);
 
   useEffect(() => {
-    const images = mapProjectsImages(projects);
+    const images = projectsImages(projects);
     setProjImages(images);
   }, [projects]);
 
@@ -31,7 +31,7 @@ export default function Projects({ projects }: Props) {
     <div className={styles.projectsWrapper} id="projects">
       <h3 className={styles.mainTitle}>Projects</h3>
 
-      <Swiper
+      <SwipingTool
         cardComponent={<ProjectCard project={projects?.[currentIndex]} />}
         useSwipeKey="proj"
         items={projects}
@@ -41,4 +41,6 @@ export default function Projects({ projects }: Props) {
       <div className={styles.decoratedBg} />
     </div>
   );
-}
+};
+
+export default Projects;

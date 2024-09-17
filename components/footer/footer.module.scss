@@ -1,0 +1,35 @@
+.footerWrapper {
+  @apply mt-96 rounded-t-full lg:bg-black/50 w-full p-10;
+
+  .textAndButtonContainer {
+    @apply flex flex-col items-center;
+
+    h1 {
+      @apply text-2xl lg:text-3xl lg:w-[400px] text-center;
+
+      span {
+        @apply text-purple;
+      }
+    }
+
+    p {
+      @apply text-white-200 md:mt-10 my-5 text-center;
+    }
+  }
+
+  .copyrightAndIconsContainer {
+    @apply flex mt-16 md:flex-row flex-col justify-between items-center;
+
+    p {
+      @apply md:text-base text-sm md:font-normal font-light;
+    }
+
+    .iconsContainer {
+      @apply flex items-center md:gap-3 gap-6 mt-10 md:mt-0;
+
+      .iconContainer {
+        @apply w-10 h-10 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg  bg-opacity-75 bg-black-200 rounded-lg border border-black-300;
+      }
+    }
+  }
+}

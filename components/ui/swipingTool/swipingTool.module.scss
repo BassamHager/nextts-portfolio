@@ -1,0 +1,52 @@
+.swipingToolWrapper {
+  @apply flex flex-col;
+
+  .itemsContainer {
+    .linkingLine {
+      @apply h-10 w-10 bg-[#000033] mx-auto shadow-lg shadow-black;
+    }
+
+    .arrowsContainer {
+      @apply w-full max-w-[350px] mx-auto flex justify-center items-center gap-12 border-[10px] rounded-full shadow-xl shadow-black border-[#000033] bg-[#000033];
+
+      .arrowContainer {
+        @apply text-6xl p-2 bg-gray-700 text-gray-400 cursor-pointer w-[10rem] duration-500;
+
+        button {
+          @apply shadow-lg shadow-black;
+        }
+
+        &:nth-child(1) {
+          @apply rounded-full;
+        }
+        &:nth-child(2) {
+          @apply flex justify-end rounded-full;
+        }
+
+        &:hover {
+          @apply animate-pulse bg-[var(--clr-neon)] text-white;
+        }
+      }
+    }
+  }
+
+  .projectLogosContainer {
+    @apply w-[350px] md:w-fit flex items-center flex-wrap gap-3 md:gap-5 mt-16 justify-center text-4xl m-auto rounded-full min-w-[400px] transition duration-300 p-7;
+
+    button {
+      @apply border-[10px] border-gray-700 bg-gray-700 rounded-full overflow-hidden w-14 h-14 md:w-20 md:h-20 grid place-items-center shadow-xl shadow-black;
+
+      img{
+        @apply w-full h-full object-contain rounded-full;
+      }
+
+      &:hover {
+        @apply text-[var(--clr-neon)] animate-pulse border-[var(--clr-neon)] shadow-none;
+      }
+    }
+
+    .selected {
+      @apply border-[var(--clr-neon)] shadow-none;
+    }
+  }
+}
