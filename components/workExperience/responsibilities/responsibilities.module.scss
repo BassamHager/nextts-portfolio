@@ -1,0 +1,28 @@
+.responsibilitiesWrapper {
+  @apply pt-20 text-gray-400 flex flex-col items-center w-full h-full;
+
+  .title {
+    @apply text-4xl tracking-wider;
+  }
+
+  ul {
+    @apply w-full px-7 lg:px-12 mt-10 md:mt-20 flex flex-col justify-center gap-4 lg:gap-7 overflow-auto p-2;
+
+    li {
+      @apply xl:text-xl max-w-[800px];
+
+      span {
+        @apply mr-3 md:mr-7;
+      }
+    }
+  }
+
+  .backButton {
+    @apply mt-auto mb-20 border border-gray-600  w-[300px] py-3 rounded-xl text-2xl text-[var(--clr-neon)];
+
+    &:hover {
+      @apply bg-[var(--clr-neon)] text-white  animate-pulse;
+    }
+  }
+  // }
+}

@@ -1,39 +1,63 @@
 .headerWrapper {
-  @apply fixed top-0 w-full z-20;
+  @apply fixed top-0 left-0 lg:inset-x-0 w-[100%] max-w-7xl z-30 mx-auto;
 
+  // default on landing
   .header {
-    @apply p-5 flex mx-auto justify-between max-w-7xl items-center rounded-full;
-
-    .socialIconsContainer {
-      @apply flex grid-flow-row items-center;
-    }
-
-    .contactContainer {
-      @apply flex gap-[1rem] items-center text-gray-500 hover:text-white;
-
-      .emailIcon {
-        @apply rounded-md cursor-pointer text-5xl;
-      }
-      .contactText {
-        @apply uppercase hidden md:inline-flex border-b-2 border-transparent;
-      }
-    }
-    .contactContainer:hover .contactText {
-      @apply border-b-2 border-orange-500;
-    }
-
-    .socialIcon {
-      @apply border border-transparent hover:border-none;
-    }
+    @apply p-5 flex mx-auto justify-between max-w-7xl items-center rounded-full lg:bg-transparent transition-all duration-500;
   }
-  .headerScrolling {
-    @apply bg-[var(--darker)] py-0 transition-all hover:bg-gray-800 duration-500 ease-linear hover:p-5 hover:shadow-xl;
+
+  // on scrolling down
+  .headerChevron {
+    @apply bg-black/[.3] h-10 grid place-items-center text-[30px] text-gray-500 shadow-xl shadow-black relative transition-all duration-500 rounded-br-full rounded-bl-full;
+    @apply hover:bg-gradient-to-b from-black to-black-200 hover:shadow-md hover:shadow-black;
   }
+
+  // on scrolling down & hovering on the chevron icon
+  .scrollingHeader {
+    @apply w-full h-80 md:h-44 px-2 bg-zinc-900 flex justify-between transition-all duration-500 shadow-xl shadow-black rounded-br-xl rounded-bl-xl p-2;
+  }
+
+  // toTop button
   .toTopButtonContainer {
-    @apply relative max-w-[var(--max-w)] mx-auto h-0;
+    @apply relative h-0 hidden lg:block;
 
     .toTopButton {
-      @apply absolute top-[5rem] right-[3rem] bg-transparent text-gray-600 flex justify-center items-center border border-dashed border-gray-600 rounded-full text-3xl md:text-5xl w-[5rem] md:w-[7rem] h-[5rem] md:h-[7rem] hover:bg-[var(--clr-neon)] hover:text-white hover:border-none hover:shadow-xl hover:shadow-black;
+      @apply absolute top-[50vh] right-[5rem] bg-transparent text-gray-600 flex justify-center items-center border border-dashed border-gray-600 rounded-full text-3xl md:text-5xl w-[5rem] md:w-[7rem] h-[5rem] md:h-[7rem];
+      // hover
+      @apply hover:bg-[var(--clr-neon)] hover:text-white hover:border-none hover:shadow-xl hover:shadow-black;
     }
   }
+}
+
+.socialIconsContainer {
+  @apply flex justify-between;
+}
+
+.contactContainer {
+  @apply flex gap-[1rem] items-center text-gray-500 hover:text-white pr-2 pt-1;
+
+  .emailIcon {
+    @apply rounded-md cursor-pointer text-4xl;
+  }
+  .contactText {
+    @apply uppercase hidden md:inline-flex border-b-2 border-transparent hover:border-orange-500 [text-shadow:_3px_4px_1px_black];
+  }
+
+  &:hover {
+    .emailIcon {
+      @apply fill-orange-500;
+    }
+    .contactText {
+      @apply border-b-orange-500;
+    }
+  }
+}
+
+.socialIcon {
+  @apply border border-transparent hover:border-none;
+}
+
+.overlay {
+  // @todo: update or remove
+  // @apply absolute w-full h-screen bg-black/[.5] z-10;
 }

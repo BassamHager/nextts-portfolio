@@ -1,0 +1,7 @@
+.bentoGridWrapper {
+  @apply grid grid-cols-1 md:grid-cols-6 lg:grid-cols-5 gap-4 lg:gap-8 mx-auto;
+}
+
+.gridItemsWrapper {
+  @apply relative row-span-1 overflow-hidden rounded-3xl border border-black/[0.3] transition duration-300 justify-between flex flex-col shadow-lg shadow-black bg-gradient-to-br from-[rgba(4,7,29,1)] to-[rgba(12,14,35,1)];
+}

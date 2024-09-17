@@ -1,0 +1,77 @@
+.experienceCardWrapper {
+  @apply flex flex-col justify-start w-full h-full;
+
+  .jobTitle {
+    @apply mt-20 w-[350px] mx-auto md:w-full text-center text-2xl lg:text-4xl font-light text-gray-400;
+  }
+
+  .workplace {
+    @apply mt-10 lg:mt-20 flex items-center lg:ml-[20vw] w-fit lg:justify-start gap-5 lg:gap-10 mx-auto;
+
+    .companyLogoContainer {
+      @apply w-fit shadow-xl shadow-black rounded-full;
+
+      .companyLogo {
+        @apply w-[75px] md:w-[150px] h-auto min-h-[75px] md:min-h-[150px] max-h-[150px] rounded-full object-contain;
+      }
+
+      &:hover {
+        @apply shadow-[var(--clr-neon)] shadow-lg;
+      }
+    }
+
+    .companyName {
+      @apply font-bold text-2xl md:text-3xl text-gray-400 cursor-pointer max-w-fit border-b-[2px] border-dashed border-[var(--clr-neon)];
+
+      span {
+        @apply text-[var(--clr-neon)];
+      }
+
+      &:hover {
+        @apply text-[var(--clr-neon)] duration-500 border-solid animate-pulse;
+      }
+    }
+
+    &:hover {
+      .companyLogoContainer {
+        .companyLogo {
+          @apply animate-spin-55;
+        }
+      }
+    }
+  }
+
+  .dateAndPlaceContainer {
+    @apply mt-20 md:ml-40 flex flex-col items-center md:flex-row gap-5 uppercase text-gray-400 tracking-wider lg:ml-[20vw] text-center;
+
+    .date {
+      .calenderEmoji {
+        @apply text-2xl px-2;
+      }
+    }
+
+    .separator {
+      @apply hidden md:block;
+    }
+
+    .place {
+      @apply flex items-center;
+
+      .flagEmoji {
+        @apply text-4xl px-2;
+      }
+    }
+  }
+
+  .buttonsContainer {
+    @apply mt-auto mb-28 flex flex-col gap-1 md:flex-row lg:gap-5 md:justify-center;
+
+    button {
+      @apply w-[350px] md:w-[200px] m-auto md:m-0 p-2 text-center transition-all duration-300 border-[5px] rounded-xl border-black/[.1] text-gray-400 bg-gray-700 shadow-lg shadow-black tracking-wide;
+
+      &:hover {
+        @apply shadow-sm shadow-black text-white bg-[var(--clr-neon)];
+      }
+    }
+  }
+}

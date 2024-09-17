@@ -1,0 +1,39 @@
+.technologiesWrapper {
+  @apply mt-20 h-[calc(100%-200px)] text-gray-400 flex flex-col items-center;
+
+  .title {
+    @apply text-4xl tracking-wider;
+  }
+
+  ul {
+    @apply w-[350px] md:w-[600px]  mt-10 md:mt-20 flex flex-wrap justify-center gap-2 md:gap-5;
+
+    li {
+      @apply w-[50px] h-[50px] md:w-[75px] md:h-[75px] rounded-full overflow-hidden shadow-xl shadow-black border-[5px] border-black transition duration-300;
+
+      img {
+        @apply w-full h-full rounded-full object-contain;
+      }
+
+      &:hover {
+        @apply shadow-md shadow-[var(--clr-neon)] border-transparent;
+      }
+    }
+  }
+
+  .techName {
+    @apply mt-20 p-7 text-xl;
+  }
+
+  .backButtonContainer {
+    @apply mt-auto;
+
+    .backButton {
+      @apply border w-[20rem] border-gray-600 p-[1rem]  rounded-xl text-2xl text-[var(--clr-neon)] cursor-pointer;
+
+      &:hover {
+        @apply bg-[var(--clr-neon)] text-white animate-pulse;
+      }
+    }
+  }
+}

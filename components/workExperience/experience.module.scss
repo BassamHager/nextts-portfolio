@@ -1,0 +1,7 @@
+.experiencesWrapper {
+  @apply mt-96 w-full;
+
+  .mainTitle {
+    @apply uppercase tracking-widest md:tracking-[32px] text-gray-500 text-2xl text-center py-12;
+  }
+}

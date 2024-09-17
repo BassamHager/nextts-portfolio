@@ -1,0 +1,15 @@
+.navItemsWrapper {
+  // xs
+  @apply flex flex-col items-center justify-between gap-3 fixed inset-x-0 mx-auto rounded-lg top-20 md:top-28 px-10 min-w-[400px];
+
+  // md
+  @apply md:flex-row md:max-w-[1200px];
+
+  .link {
+    @apply w-full p-2 text-center transition-all duration-300 border-[5px] rounded-xl border-black/[.1] text-gray-500 bg-black/[.3] shadow-lg shadow-black;
+    // hover
+    &:hover {
+      @apply shadow-sm shadow-black text-white bg-black/[.5] border-transparent;
+    }
+  }
+}
