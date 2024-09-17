@@ -1,10 +1,10 @@
-import React from "react";
+// styles
 import styles from "./contact.module.scss";
 // external libs & packages
 import { useForm, Resolver } from "react-hook-form";
-// icons
 import { MdWifiCalling3, MdMarkEmailRead } from "react-icons/md";
-import { SiGooglemaps } from "react-icons/si";
+import { SiGooglemaps, SiWhatsapp, SiTelegram } from "react-icons/si";
+// types
 type FormValues = {
   name: string;
   email: string;
@@ -41,9 +41,7 @@ const resolver: Resolver<FormValues> = async (values) => {
   };
 };
 
-type Props = {};
-
-export default function Contact({}: Props) {
+const Contact = () => {
   const {
     register,
     handleSubmit,
@@ -54,6 +52,7 @@ export default function Contact({}: Props) {
     ${data.email}
     `;
   });
+
   return (
     <div className={styles.contactWrapper} id="contact">
       <h3 className={styles.sectionTitle}>Contact</h3>
@@ -61,55 +60,64 @@ export default function Contact({}: Props) {
       <div className={styles.contactContainer}>
         <h4 className={styles.descriptionText}>
           I have got just what you need.{` `}
-          <span className={styles.decoratedText}>Lets Talk.</span>
+          <span className={styles.decoratedText}>Let's Talk.</span>
         </h4>
 
-        <div className={styles.contactLinesContainer}>
-          <div className={styles.contactLineContainer}>
-            <MdWifiCalling3 className={styles.contactIcon} />
+        <div className={styles.contactInfoContainer}>
+          <div className={styles.contactInfo}>
+            <SiWhatsapp className={styles.contactIcon} />
             <p className={styles.contactText}>+31 6 8587 2817</p>
           </div>
+          <div className={styles.contactInfo}>
+            <MdWifiCalling3 className={styles.contactIcon} />
+            <p className={styles.contactText}>+971 58 520 3114</p>
+          </div>
+          <div className={styles.contactInfo}>
+            <SiTelegram className={styles.contactIcon} />
+            <p className={styles.contactText}>@BassamHager</p>
+          </div>
 
-          <div className={styles.contactLineContainer}>
+          <div className={styles.contactInfo}>
             <MdMarkEmailRead className={styles.contactIcon} />
             <p className={styles.contactText}>b2dndr1@gmail.com</p>
           </div>
 
-          <div className={styles.contactLineContainer}>
-            <SiGooglemaps className={styles.contactIcon} />
-            <p className={styles.contactText}>2324AW Leiden, The Netherlands</p>
+          <div className={styles.addressContainer}>
+            <div className={styles.contactInfo}>
+              <SiGooglemaps className={styles.contactIcon} />
+              <p className={styles.contactText}>
+                2324AW, Leiden, <span> The Netherlands </span>
+              </p>
+            </div>
+
+            <div className={styles.contactInfo}>
+              <SiGooglemaps className={styles.contactIcon} />
+              <p className={styles.contactText}>
+                AlKhan, Sharjah, <span>UAE</span>
+                {` `}{" "}
+                <u>
+                  <em>
+                    <small>(CURRENT)</small>
+                  </em>
+                </u>
+              </p>
+            </div>
           </div>
         </div>
 
         <form onSubmit={onSubmit} className={styles.contactForm}>
-          <div className={styles.firstRowInputsContainer}>
-            <input
-              {...register("name")}
-              placeholder="Name"
-              className={styles.contactInput}
-            />
-            <input
-              {...register("email")}
-              placeholder="Email"
-              type="email"
-              className={styles.contactInput}
-            />
-          </div>
+          <input {...register("name")} placeholder="Name" />
+          <input {...register("email")} placeholder="Email" type="email" />
 
-          <input
-            {...register("subject")}
-            placeholder="Subject"
-            className={styles.contactInput}
-          />
+          <input {...register("subject")} placeholder="Subject" />
 
-          <textarea
-            {...register("message")}
-            placeholder="Message"
-            className={styles.contactInput}
-          />
+          <textarea {...register("message")} placeholder="Message" />
+
           <button className={styles.submitButton}>Submit</button>
         </form>
       </div>
     </div>
   );
-}
+};
+
+export default Contact;

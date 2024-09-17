@@ -1,5 +1,5 @@
-import { Project } from "../../types/typings";
-import { projectImages } from "../images/index";
+import { Project } from "@/types";
+import { projectImages } from "@/data/assets/images/index";
 import { filterTechs } from "../../utils/filterTechs";
 const { abn, portfolio, poll, bank } = projectImages;
 

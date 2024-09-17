@@ -1,5 +1,5 @@
-import { Skill } from "../../types/typings";
-import { techImages } from "../images/index";
+import { Skill } from "@/types";
+import { techImages } from "../assets/images";
 
 export const CATEGORIES = [
   "all",
