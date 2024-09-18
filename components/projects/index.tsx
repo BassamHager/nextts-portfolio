@@ -18,6 +18,7 @@ const Projects = ({ projects }: Props) => {
   const { currentIndex } = useSwipe();
   // internal state
   const [projImages, setProjImages] = useState<string[]>([]);
+  const [currentProjectIndex, setCurrentProjectIndex] = useState(0);
 
   const projectsImages = (objects: Project[]): string[] =>
     objects.map((obj) => obj.image);
@@ -27,15 +28,23 @@ const Projects = ({ projects }: Props) => {
     setProjImages(images);
   }, [projects]);
 
+  useEffect(() => {
+    if (currentIndex > 3) {
+      setCurrentProjectIndex(3);
+    }
+  }, [currentIndex]);
+
   return (
     <div className={styles.projectsWrapper} id="projects">
       <h3 className={styles.mainTitle}>Projects</h3>
 
       <SwipingTool
-        cardComponent={<ProjectCard project={projects?.[currentIndex]} />}
-        useSwipeKey="proj"
+        cardComponent={
+          <ProjectCard project={projects?.[currentProjectIndex]} />
+        }
+        useSwipeCategory="project"
         items={projects}
-        dotsImages={projImages}
+        logos={projImages}
       />
 
       <div className={styles.decoratedBg} />

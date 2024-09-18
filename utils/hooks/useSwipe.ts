@@ -1,6 +1,6 @@
 "use client";
 
-import { useContext } from "react";
+import { useContext, useState } from "react";
 // hooks
 import { AppContext } from "@/context";
 
@@ -24,5 +24,11 @@ export default function useSwipe() {
     setCurrentIndex(ind);
   };
 
-  return { currentIndex, setCurrentIndex, goToNext, goToPrev, goToSlide };
+  return {
+    currentIndex,
+    setCurrentIndex,
+    goToNext,
+    goToPrev,
+    goToSlide,
+  };
 }

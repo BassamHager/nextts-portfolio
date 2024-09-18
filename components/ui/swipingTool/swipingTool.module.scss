@@ -36,7 +36,7 @@
     button {
       @apply border-[10px] border-gray-700 bg-gray-700 rounded-full overflow-hidden w-14 h-14 md:w-20 md:h-20 grid place-items-center shadow-xl shadow-black;
 
-      img{
+      img {
         @apply w-full h-full object-contain rounded-full;
       }
 
