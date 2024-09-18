@@ -38,9 +38,9 @@ const WorkExperience = ({ experiences }: Props) => {
         cardComponent={
           <ExperienceCard experience={experiences?.[currentIndex]} />
         }
-        useSwipeKey="exp"
+        useSwipeCategory="experience"
         items={experiences}
-        dotsImages={expImages}
+        logos={expImages}
       />
     </div>
   );

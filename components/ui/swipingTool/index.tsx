@@ -1,6 +1,6 @@
 "use client";
 
-import React, { ReactNode } from "react";
+import { ReactNode } from "react";
 import Image from "next/image";
 // styles
 import styles from "./swipingTool.module.scss";
@@ -16,15 +16,15 @@ import { Experience, Project } from "@/types";
 type Props = {
   cardComponent: ReactNode;
   items: Experience[] | Project[];
-  useSwipeKey: "exp" | "proj";
-  dotsImages: string[];
+  useSwipeCategory: "experience" | "project";
+  logos: string[];
 };
 
 const SwipingTool = ({
   cardComponent,
   items,
-  dotsImages,
-  useSwipeKey,
+  logos,
+  useSwipeCategory,
 }: Props) => {
   // hooks
   const { currentIndex, goToNext, goToPrev, goToSlide } = useSwipe();
@@ -44,27 +44,37 @@ const SwipingTool = ({
         <div className={styles.arrowsContainer}>
           <button
             className={`${styles.arrowContainer} group-hover:block`}
-            onClick={() => goToPrev(items)}
+            onClick={() => {
+              goToPrev(items);
+            }}
           >
             <BsChevronCompactLeft />
           </button>
           <button
             className={`${styles.arrowContainer} group-hover:block`}
-            onClick={() => goToNext(items)}
+            onClick={() => {
+              goToNext(items);
+            }}
           >
             <BsChevronCompactRight />
           </button>
         </div>
 
         <div className={styles.projectLogosContainer}>
-          {dotsImages?.map((image, index) => (
+          {logos?.map((image, index) => (
             <button
               key={index}
               onClick={() => goToSlide(index)}
-              className={index === currentIndex ? styles.selected : ""}
+              className={`${index === currentIndex ? styles.selected : ""} ${
+                useSwipeCategory === "project" &&
+                currentIndex > 2 &&
+                index === 3
+                  ? styles.selected
+                  : ""
+              }`}
             >
               {image ? (
-                <Image src={image} alt={"company"} className={styles.img} />
+                <Image src={image} alt={"logo"} className={styles.img} />
               ) : (
                 <RxDotFilled />
               )}
