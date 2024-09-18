@@ -56,6 +56,18 @@ import swagger from "@/public/assets/images/skills/swagger.webp";
 import vs from "@/public/assets/images/skills/vs.webp";
 import vscode from "@/public/assets/images/skills/vscode.webp";
 import vitest from "@/public/assets/images/skills/vitest.webp";
+import npm from "@/public/assets/images/skills/npm.webp";
+import rest from "@/public/assets/images/skills/rest.webp";
+import aria from "@/public/assets/images/skills/aria.webp";
+import testCafe from "@/public/assets/images/skills/testCafe.webp";
+import nest from "@/public/assets/images/skills/nest.webp";
+import mongoose from "@/public/assets/images/skills/mongoose.webp";
+import postgresql from "@/public/assets/images/skills/postgresql.webp";
+import prisma from "@/public/assets/images/skills/prisma.webp";
+import supabase from "@/public/assets/images/skills/supabase.webp";
+import yarn from "@/public/assets/images/skills/yarn.webp";
+import discordjs from "@/public/assets/images/skills/discordjs.webp";
+import discord from "@/public/assets/images/skills/discord.webp";
 // os
 import macos from "@/public/assets/images/skills/macos.webp";
 import windows from "@/public/assets/images/skills/windows.webp";
@@ -135,8 +147,8 @@ export const techImages = {
   eslint,
   figma,
   git,
-  gitlab,
   jira,
+  gitlab,
   notion,
   postman,
   slack,
@@ -144,4 +156,16 @@ export const techImages = {
   vs,
   vscode,
   vitest,
+  npm,
+  rest,
+  aria,
+  testCafe,
+  nest,
+  mongoose,
+  postgresql,
+  prisma,
+  supabase,
+  yarn,
+  discordjs,
+  discord,
 };
