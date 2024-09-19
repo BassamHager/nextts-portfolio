@@ -1,6 +1,6 @@
 "use client";
 
-import { useContext, useState } from "react";
+import { useContext } from "react";
 // hooks
 import { AppContext } from "@/context";
 
@@ -10,12 +10,23 @@ export default function useSwipe() {
 
   const goToPrev = (slides: any[]) => {
     const isFirstSlide = currentIndex === 0;
-    const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1;
-    setCurrentIndex(newIndex);
+    const lastSlide = slides.length - 1;
+
+    if (isFirstSlide) {
+      setCurrentIndex(lastSlide);
+      return;
+    }
+
+    if (currentIndex > lastSlide) {
+      setCurrentIndex(lastSlide - 1);
+      return;
+    }
+
+    setCurrentIndex(currentIndex - 1);
   };
 
   const goToNext = (slides: any[]) => {
-    const isLastSlide = currentIndex === slides.length - 1;
+    const isLastSlide = currentIndex >= slides.length - 1;
     const newIndex = isLastSlide ? 0 : currentIndex + 1;
     setCurrentIndex(newIndex);
   };
