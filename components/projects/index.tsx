@@ -31,6 +31,8 @@ const Projects = ({ projects }: Props) => {
   useEffect(() => {
     if (currentIndex > 3) {
       setCurrentProjectIndex(3);
+    } else {
+      setCurrentProjectIndex(currentIndex);
     }
   }, [currentIndex]);
 
