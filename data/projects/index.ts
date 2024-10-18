@@ -1,7 +1,7 @@
 import { Project } from "@/types";
 import { projectImages } from "@/data/assets/images/index";
 import { filterTechs } from "../../utils/filterTechs";
-const { abn, portfolio, poll, bank } = projectImages;
+const { abn, portfolio, poll, bank, ryde } = projectImages;
 
 export const projects: Project[] = [
   {
@@ -70,4 +70,23 @@ export const projects: Project[] = [
     linkToBuild: "https://github.com/BassamHager/bank-account-dashboard-ta",
     liveUrl: "https://bank-account-dashboard-ta.vercel.app/",
   },
+  {
+    title: "Ryde - Uber Clone",
+    image: ryde,
+    summary:
+      "Is a React Native app - Create a full-stack Uber Clone app using the latest features of Expo and a high-speed, edge-optimized Postgres database",
+    technologies: filterTechs([
+      "React-Native",
+      "tailwind",
+      "TypeScript",
+      "HTML",
+      "CSS",
+      "neon",
+      "clerk",
+    ]),
+    linkToBuild: "https://github.com/BassamHager/uber",
+    liveUrl: "",
+  },
 ];
+
+export const projectsCount = projects.length;

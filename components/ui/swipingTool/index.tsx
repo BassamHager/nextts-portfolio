@@ -12,6 +12,7 @@ import { motion } from "framer-motion";
 import useSwipe from "@/utils/hooks/useSwipe";
 // types
 import { Experience, Project } from "@/types";
+import { projectsCount } from "@/data/projects";
 
 type Props = {
   cardComponent: ReactNode;
@@ -67,8 +68,8 @@ const SwipingTool = ({
               onClick={() => goToSlide(index)}
               className={`${index === currentIndex ? styles.selected : ""} ${
                 useSwipeCategory === "project" &&
-                currentIndex > 2 &&
-                index === 3
+                currentIndex > projectsCount - 2 &&
+                index === projectsCount - 1
                   ? styles.selected
                   : ""
               }`}

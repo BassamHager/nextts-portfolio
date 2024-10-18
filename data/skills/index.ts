@@ -85,6 +85,9 @@ const {
   yarn,
   discordjs,
   discord,
+  react_native,
+  neon,
+  clerk,
 } = techImages;
 
 export const skillsData: Skill[] = [
@@ -477,5 +480,23 @@ export const skillsData: Skill[] = [
     cat: CATEGORIES.platforms,
     title: "Discord",
     link: "https://discord.com/",
+  },
+  {
+    image: react_native,
+    cat: CATEGORIES.technologies,
+    title: "React-Native",
+    link: "https://reactnative.dev/",
+  },
+  {
+    image: neon,
+    cat: CATEGORIES.technologies,
+    title: "Neon",
+    link: "https://console.neon.tech/",
+  },
+  {
+    image: clerk,
+    cat: CATEGORIES.technologies,
+    title: "Clerk",
+    link: "https://clerk.com/docs/",
   },
 ];

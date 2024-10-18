@@ -3,6 +3,7 @@ import abn from "@/public/assets/images/projects/abn_amro_tech_assignment.webp";
 import portfolio from "@/public/assets/images/projects/portfolio.webp";
 import poll from "@/public/assets/images/projects/poll-app.webp";
 import bank from "@/public/assets/images/projects/bank-dashboard.webp";
+import ryde from "@/public/assets/images/projects/ryde.webp";
 // techs
 import azure from "@/public/assets/images/skills/azure.webp";
 import cicd from "@/public/assets/images/skills/cicd.webp";
@@ -68,6 +69,9 @@ import supabase from "@/public/assets/images/skills/supabase.webp";
 import yarn from "@/public/assets/images/skills/yarn.webp";
 import discordjs from "@/public/assets/images/skills/discordjs.webp";
 import discord from "@/public/assets/images/skills/discord.webp";
+import react_native from "@/public/assets/images/skills/react_native.webp";
+import neon from "@/public/assets/images/skills/neon.webp";
+import clerk from "@/public/assets/images/skills/clerk.webp";
 // os
 import macos from "@/public/assets/images/skills/macos.webp";
 import windows from "@/public/assets/images/skills/windows.webp";
@@ -87,6 +91,7 @@ export const projectImages = {
   portfolio,
   poll,
   bank,
+  ryde,
 };
 
 export const companyImages = {
@@ -168,4 +173,7 @@ export const techImages = {
   yarn,
   discordjs,
   discord,
+  react_native,
+  neon,
+  clerk,
 };
