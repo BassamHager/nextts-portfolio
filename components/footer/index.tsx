@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 // styles
 import styles from "./footer.module.scss";

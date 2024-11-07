@@ -1,3 +1,5 @@
+"use client";
+
 // styles
 import styles from "./contact.module.scss";
 // external libs & packages

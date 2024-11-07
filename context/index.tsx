@@ -13,7 +13,6 @@ export function AppContextProvider({ children }: { children: ReactNode }) {
   const [experienceDetails, setExperienceDetails] =
     useState<ExperienceDetails>();
   const [currentIndex, setCurrentIndex] = useState(0);
-  // @todo: implement to simplify swiping process
   const [isExperienceCard, setIsExperienceCard] = useState(false);
 
   // value

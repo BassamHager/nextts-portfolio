@@ -1,15 +1,14 @@
 "use client";
-
 import { useState, useEffect, useContext } from "react";
 // styles
 import styles from "./experience.module.scss";
-// typings
-import { Experience } from "@/types";
 // components
 import SwipingTool from "@/components/ui/swipingTool";
 import ExperienceCard from "./experienceCard";
 // hooks
 import { AppContext } from "@/context";
+// types
+import { Experience } from "@/types";
 
 type Props = {
   experiences: Experience[];
@@ -39,7 +38,7 @@ const WorkExperience = ({ experiences }: Props) => {
           <ExperienceCard experience={experiences?.[currentIndex]} />
         }
         useSwipeCategory="experience"
-        items={experiences}
+        items={experiences.length}
         logos={expImages}
       />
     </div>
