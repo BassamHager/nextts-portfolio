@@ -88,6 +88,8 @@ const {
   react_native,
   neon,
   clerk,
+  shadcn,
+  cloudflare_pages
 } = techImages;
 
 export const skillsData: Skill[] = [
@@ -498,5 +500,17 @@ export const skillsData: Skill[] = [
     cat: CATEGORIES.technologies,
     title: "Clerk",
     link: "https://clerk.com/docs/",
+  },
+  {
+    image: shadcn,
+    cat: CATEGORIES.platforms,
+    title: "ShadCN",
+    link: "https://ui.shadcn.com/",
+  },
+  {
+    image: cloudflare_pages,
+    cat: CATEGORIES.platforms,
+    title: "Cloudflare-Pages",
+    link: "https://pages.cloudflare.com/",
   },
 ];

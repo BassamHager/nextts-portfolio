@@ -8,6 +8,8 @@ import SwipingTool from "@/components/ui/swipingTool";
 import ProjectCard from "./projectCard";
 // hooks
 import useSwipe from "@/utils/hooks/useSwipe";
+// data
+import { projectsCount } from "@/data/projects";
 
 type Props = {
   projects: Project[];
@@ -29,8 +31,8 @@ const Projects = ({ projects }: Props) => {
   }, [projects]);
 
   useEffect(() => {
-    if (currentIndex > 4) {
-      setCurrentProjectIndex(4);
+    if (currentIndex > projectsCount) {
+      setCurrentProjectIndex(projectsCount);
     } else {
       setCurrentProjectIndex(currentIndex);
     }

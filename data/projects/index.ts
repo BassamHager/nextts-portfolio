@@ -1,7 +1,7 @@
 import { Project } from "@/types";
 import { projectImages } from "@/data/assets/images/index";
 import { filterTechs } from "../../utils/filterTechs";
-const { abn, portfolio, poll, bank, ryde } = projectImages;
+const { abn, portfolio, poll, bank, ryde, pikameals } = projectImages;
 
 export const projects: Project[] = [
   {
@@ -69,6 +69,27 @@ export const projects: Project[] = [
     ]),
     linkToBuild: "https://github.com/BassamHager/bank-account-dashboard-ta",
     liveUrl: "https://bank-account-dashboard-ta.vercel.app/",
+  },
+  {
+    title: "Pika Meals",
+    image: pikameals,
+    summary:
+      "Light Nuxt-3 app to practice the latest updates & the new modules.",
+    technologies: filterTechs([
+      "vue.js",
+      "nuxt.js",
+      "typescript",
+      "javascript",
+      "html",
+      "css",
+      "pinia",
+      "tailwind",
+      "git",
+      "shadcn",
+      "cloudflare-pages",
+    ]),
+    linkToBuild: "https://github.com/BassamHager/pika_meals",
+    liveUrl: "https://86f888a6.pikameals.pages.dev/",
   },
   {
     title: "Ryde - Uber Clone",
