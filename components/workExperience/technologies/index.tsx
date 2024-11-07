@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useContext, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -25,13 +27,13 @@ const Responsibilities = ({ technologies }: Props) => {
       <ul>
         {technologies.map((technology, ind) => (
           <li key={ind} onMouseEnter={() => setTechName(technology.title)}>
-            <Link href={technology.link} target="_blank" >
+            <Link href={technology.link} target="_blank">
               <Image src={technology.image} alt="tech" />
             </Link>
           </li>
         ))}
       </ul>
-      <h3 className={styles.techName} >{techName}</h3>
+      <h3 className={styles.techName}>{techName}</h3>
 
       <div className={styles.backButtonContainer}>
         <button

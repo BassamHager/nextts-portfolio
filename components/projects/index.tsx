@@ -1,15 +1,17 @@
-import { useEffect, useState } from "react";
+"use client";
+
+import { useContext, useEffect, useState } from "react";
 // styles
 import styles from "./projects.module.scss";
-// types
-import { Project } from "@/types";
 // components
 import SwipingTool from "@/components/ui/swipingTool";
 import ProjectCard from "./projectCard";
-// hooks
-import useSwipe from "@/utils/hooks/useSwipe";
+// context
+import { AppContext } from "@/context";
 // data
 import { projectsCount } from "@/data/projects";
+// types
+import { Project } from "@/types";
 
 type Props = {
   projects: Project[];
@@ -17,7 +19,8 @@ type Props = {
 
 const Projects = ({ projects }: Props) => {
   // hooks
-  const { currentIndex } = useSwipe();
+  const { currentIndex } = useContext(AppContext);
+
   // internal state
   const [projImages, setProjImages] = useState<string[]>([]);
   const [currentProjectIndex, setCurrentProjectIndex] = useState(0);
@@ -31,12 +34,11 @@ const Projects = ({ projects }: Props) => {
   }, [projects]);
 
   useEffect(() => {
-    if (currentIndex > projectsCount) {
-      setCurrentProjectIndex(projectsCount);
-    } else {
-      setCurrentProjectIndex(currentIndex);
-    }
-  }, [currentIndex]);
+    const projectsLastIndex = projectsCount - 1;
+    setCurrentProjectIndex(
+      projectsLastIndex < currentIndex ? projectsLastIndex : currentIndex
+    );
+  }, [currentIndex, currentProjectIndex]);
 
   return (
     <div className={styles.projectsWrapper} id="projects">
@@ -47,7 +49,7 @@ const Projects = ({ projects }: Props) => {
           <ProjectCard project={projects?.[currentProjectIndex]} />
         }
         useSwipeCategory="project"
-        items={projects}
+        items={projects.length}
         logos={projImages}
       />
 

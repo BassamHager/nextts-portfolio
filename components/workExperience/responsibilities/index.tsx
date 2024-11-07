@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useContext } from "react";
 // style
 import styles from "./responsibilities.module.scss";

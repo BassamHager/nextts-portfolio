@@ -1,5 +1,4 @@
 "use client";
-
 import { ReactNode } from "react";
 import Image from "next/image";
 // styles
@@ -10,13 +9,12 @@ import { RxDotFilled } from "react-icons/rx";
 import { motion } from "framer-motion";
 // hooks
 import useSwipe from "@/utils/hooks/useSwipe";
-// types
-import { Experience, Project } from "@/types";
+// data
 import { projectsCount } from "@/data/projects";
 
 type Props = {
   cardComponent: ReactNode;
-  items: Experience[] | Project[];
+  items: number;
   useSwipeCategory: "experience" | "project";
   logos: string[];
 };
@@ -28,7 +26,7 @@ const SwipingTool = ({
   useSwipeCategory,
 }: Props) => {
   // hooks
-  const { currentIndex, goToNext, goToPrev, goToSlide } = useSwipe();
+  const { currentIndex, goToNext, goToPrev, goToSlide } = useSwipe(items);
 
   return (
     <motion.div
@@ -45,17 +43,13 @@ const SwipingTool = ({
         <div className={styles.arrowsContainer}>
           <button
             className={`${styles.arrowContainer} group-hover:block`}
-            onClick={() => {
-              goToPrev(items);
-            }}
+            onClick={() => goToPrev()}
           >
             <BsChevronCompactLeft />
           </button>
           <button
             className={`${styles.arrowContainer} group-hover:block`}
-            onClick={() => {
-              goToNext(items);
-            }}
+            onClick={() => goToNext()}
           >
             <BsChevronCompactRight />
           </button>

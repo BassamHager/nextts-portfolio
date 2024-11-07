@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+"use client";
+
 import styles from "./bgCircles.module.scss";
 // external libs & packages
 import { motion } from "framer-motion";
