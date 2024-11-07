@@ -4,6 +4,7 @@ import portfolio from "@/public/assets/images/projects/portfolio.webp";
 import poll from "@/public/assets/images/projects/poll-app.webp";
 import bank from "@/public/assets/images/projects/bank-dashboard.webp";
 import ryde from "@/public/assets/images/projects/ryde.webp";
+import pikameals from "@/public/assets/images/projects/pikameals.webp";
 // techs
 import azure from "@/public/assets/images/skills/azure.webp";
 import cicd from "@/public/assets/images/skills/cicd.webp";
@@ -72,6 +73,8 @@ import discord from "@/public/assets/images/skills/discord.webp";
 import react_native from "@/public/assets/images/skills/react_native.webp";
 import neon from "@/public/assets/images/skills/neon.webp";
 import clerk from "@/public/assets/images/skills/clerk.webp";
+import shadcn from "@/public/assets/images/skills/shadcn.webp";
+import cloudflare_pages from "@/public/assets/images/skills/cloudflare_pages.webp";
 // os
 import macos from "@/public/assets/images/skills/macos.webp";
 import windows from "@/public/assets/images/skills/windows.webp";
@@ -92,6 +95,7 @@ export const projectImages = {
   poll,
   bank,
   ryde,
+  pikameals,
 };
 
 export const companyImages = {
@@ -176,4 +180,6 @@ export const techImages = {
   react_native,
   neon,
   clerk,
+  shadcn,
+  cloudflare_pages,
 };
