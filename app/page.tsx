@@ -23,7 +23,7 @@ import { AppContextProvider } from "@/context";
 
 export default function Home() {
   return (
-    <main className="relative flex flex-col justify-center items-center mx-auto px-3 sm:px-10  overflow-clip">
+    <main className="relative flex flex-col justify-center items-center mx-auto px-3 sm:px-5  overflow-clip">
       <AppContextProvider>
         <div className="max-w-7xl w-full">
           <Header socials={socials} />

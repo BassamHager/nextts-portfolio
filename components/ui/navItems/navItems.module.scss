@@ -1,6 +1,8 @@
 .navItemsWrapper {
   // xs
-  @apply flex flex-col items-center justify-between gap-3 fixed inset-x-0 mx-auto rounded-lg top-20 md:top-28 px-10 min-w-[400px];
+  @apply w-full flex flex-col items-center gap-3 mx-auto rounded-lg mt-auto;
+  // md
+  @apply md:h-[calc(100%-64px)] md:flex-row md:flex-wrap md:content-end;
 
   // md
   @apply md:flex-row md:max-w-[1200px];

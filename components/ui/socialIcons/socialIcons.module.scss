@@ -1,0 +1,7 @@
+.socialIconsContainer {
+  @apply flex justify-between;
+
+  .socialIcon {
+    @apply border border-transparent hover:border-none;
+  }
+}

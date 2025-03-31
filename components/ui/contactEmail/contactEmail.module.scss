@@ -1,0 +1,40 @@
+.emailLinkContainer {
+  @apply text-gray-500 pr-2;
+
+  .emailIconAndTextContainer {
+    @apply flex justify-between items-center gap-2;
+  }
+
+  .emailIcon {
+    @apply rounded-md cursor-pointer text-4xl text-gray-500;
+  }
+  .contactText {
+    @apply uppercase hidden md:inline-flex border-b-2 border-transparent;
+
+    &:hover {
+      @apply border-orange-500 [text-shadow:_3px_4px_1px_black];
+    }
+  }
+
+  &:hover {
+    @apply text-white;
+
+    .emailIcon {
+      @apply fill-orange-500;
+    }
+    .contactText {
+      @apply border-b-orange-500;
+    }
+  }
+}
+
+.centeredEmailLinkContainer {
+  @apply flex justify-center w-full md:w-fit;
+
+  .contactText {
+    @apply block;
+  }
+  .emailIcon {
+    @apply text-fuchsia-950/50;
+  }
+}

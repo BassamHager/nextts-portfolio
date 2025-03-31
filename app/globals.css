@@ -89,7 +89,7 @@
     user-select: none;
   }
   body {
-    @apply text-foreground min-w-[400px];
+    @apply text-foreground min-w-[320px];
     background: #222;
   }
   button {
