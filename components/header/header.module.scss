@@ -19,9 +19,9 @@
 
 // fixed
 .chevronButton {
-  @apply fixed bottom-0 left-0 xl:left-[calc(50%-640px)] w-[50%] md:w-1/4 max-w-3xl h-14 bg-black/[.3] grid place-items-center text-[30px] text-gray-500 shadow-xl shadow-black transition-all duration-500 rounded-tr-full z-30;
+  @apply fixed bottom-0 left-0 xl:left-[calc(50%-640px)] w-[50%] md:w-1/4 max-w-3xl h-14 bg-black/50 grid place-items-center text-[30px] text-gray-500 shadow-xl shadow-black transition-all duration-500 rounded-tr-full z-50;
   &:hover {
-    @apply shadow-sm shadow-black text-white bg-black/[.5] border-transparent;
+    @apply shadow-sm shadow-black text-white bg-black/90 border-transparent;
   }
 }
 .clickedChevronButton {
@@ -30,8 +30,20 @@
 
 // on clicking chevron button
 .navMenu {
-  @apply fixed bottom-0 left-0 xl:left-[calc(50%-640px)] w-full max-w-7xl h-full flex flex-col gap-4 px-1 pb-20 transition-all duration-500 shadow-xl shadow-black rounded-br-xl rounded-bl-xl bg-zinc-900;
+  @apply fixed bottom-0 left-0 xl:left-[calc(50%-640px)] w-full max-w-7xl h-full flex flex-col gap-4 px-1 pb-20 transition-all duration-500 shadow-xl shadow-black rounded-br-xl rounded-bl-xl bg-zinc-900 z-40 bg-black/40;
 
   // md
   @apply md:flex-row md:flex-wrap md:justify-between md:items-center;
+}
+
+.navOverlay {
+  @apply fixed top-0 left-0 w-full h-screen bg-black/50 transition-all duration-500 z-30 grid place-items-center;
+
+  .blurLayer {
+    @apply absolute top-0 left-0 w-full h-screen bg-[#222] z-20;
+  }
+
+  .overlayImg {
+    @apply w-1/4 h-1/4 object-contain rounded-full z-20;
+  }
 }

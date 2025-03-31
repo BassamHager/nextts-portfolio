@@ -10,12 +10,14 @@ import { FaWindowClose } from "react-icons/fa";
 import { cn } from "@/utils/cn";
 // data
 import { navItems } from "@/data";
+import NAV_OVERLAY_IMG from "@/public/assets/images/self/BH_FB.webp";
 // components
 import NavItems from "../ui/navItems";
 import SocialIcons from "../ui/socialIcons";
 import ContactEmail from "../ui/contactEmail";
 // types
 import { Social } from "@/types";
+import Image from "next/image";
 type Props = {
   socials: Social[];
 };
@@ -83,6 +85,22 @@ const Header = ({ socials }: Props) => {
             </button>
           </Link>
         </div>
+      )}
+
+      {isNavOpen && (
+        <button
+          className={styles.navOverlay}
+          onClick={() => setIsNavOpen(false)}
+        >
+          <div className={styles.blurLayer}></div>
+          <Image
+            src={NAV_OVERLAY_IMG}
+            width={100}
+            height={100}
+            alt={"Bassam"}
+            className={styles.overlayImg}
+          />
+        </button>
       )}
     </div>
   );

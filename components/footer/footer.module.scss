@@ -1,5 +1,5 @@
 .footerWrapper {
-  @apply mt-96 rounded-t-full lg:bg-black/50 w-full pb-20;
+  @apply mt-96 rounded-t-full lg:bg-black/50 w-full pb-20 lg:p-8 lg:pb-20;
 
   .textAndButtonContainer {
     @apply flex flex-col items-center;
