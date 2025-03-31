@@ -33,7 +33,7 @@ export default function Home() {
           <Projects projects={projects} />
           <Approach />
           <Clients />
-          <WipButtons />
+          {/* <WipButtons /> */}
           <Contact />
           <Footer />
         </div>

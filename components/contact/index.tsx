@@ -89,6 +89,11 @@ const Contact = () => {
               <SiGooglemaps className={styles.contactIcon} />
               <p className={styles.contactText}>
                 2324AW, Leiden, <span> The Netherlands </span>
+                <u>
+                  <em>
+                    <small>(CURRENT)</small>
+                  </em>
+                </u>
               </p>
             </div>
 
@@ -96,12 +101,6 @@ const Contact = () => {
               <SiGooglemaps className={styles.contactIcon} />
               <p className={styles.contactText}>
                 AlKhan, Sharjah, <span>UAE</span>
-                {` `}{" "}
-                <u>
-                  <em>
-                    <small>(CURRENT)</small>
-                  </em>
-                </u>
               </p>
             </div>
           </div>
