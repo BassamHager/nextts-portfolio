@@ -164,13 +164,7 @@ export function Globe({ globeConfig, data }: WorldProps) {
       startAnimation();
     }
     // react-hooks/exhaustive-deps
-  }, [
-    globeData,
-    defaultProps.atmosphereAltitude,
-    defaultProps.atmosphereColor,
-    defaultProps.polygonColor,
-    defaultProps.showAtmosphere,
-  ]);
+  }, [globeData]);
 
   const startAnimation = () => {
     if (!globeRef.current || !globeData) return;
@@ -230,7 +224,7 @@ export function Globe({ globeConfig, data }: WorldProps) {
       clearInterval(interval);
     };
     // react-hooks/exhaustive-deps
-  }, [globeRef.current, globeData, data.length]);
+  }, [globeRef.current, globeData]);
 
   return (
     <>
@@ -247,7 +241,7 @@ export function WebGLRendererConfig() {
     gl.setSize(size.width, size.height);
     gl.setClearColor(0xffaaff, 0);
     // react-hooks/exhaustive-deps
-  }, [gl, size.height, size.width]);
+  }, []);
 
   return null;
 }

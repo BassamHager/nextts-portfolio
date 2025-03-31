@@ -5,10 +5,14 @@
   @apply md:h-[calc(100%-64px)] md:flex-row md:flex-wrap md:content-end;
 
   // md
-  @apply md:flex-row md:max-w-[1200px];
+  @apply md:flex-row md:justify-center md:max-w-[1200px];
 
   .link {
     @apply w-full p-2 text-center transition-all duration-300 border-[5px] rounded-xl border-black/[.1] text-gray-500 bg-black/[.3] shadow-lg shadow-black;
+
+    // md
+    @apply md:w-1/4 md:h-20 md:flex md:justify-center md:items-center;
+
     // hover
     &:hover {
       @apply shadow-sm shadow-black text-white bg-black/[.5] border-transparent;
