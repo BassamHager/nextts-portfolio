@@ -29,7 +29,8 @@ export const InfiniteMovingCards = ({
   useEffect(() => {
     addAnimation();
     // react-hooks/exhaustive-deps
-  }, []);
+  }, [addAnimation]);
+
   const [start, setStart] = useState(false);
   function addAnimation() {
     if (containerRef.current && scrollerRef.current) {

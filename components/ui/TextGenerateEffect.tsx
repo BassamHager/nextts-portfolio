@@ -24,7 +24,7 @@ export const TextGenerateEffect = ({
       }
     );
     // react-hooks/exhaustive-deps
-  }, [scope.current]);
+  }, [scope.current, animate]);
 
   const renderWords = () => {
     return (
