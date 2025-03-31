@@ -34,15 +34,15 @@ const Header = ({ socials }: Props) => {
   const [isNavOpen, setIsNavOpen] = useState(false);
 
   // methods
-  const handleScroll = () => {
-    setIsScrolling(window.scrollY >= 100);
-  };
 
   // watch & rerender
   useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolling(window.scrollY >= 100);
+    };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [handleScroll]);
+  }, []);
 
   return (
     <div className={styles.headerWrapper}>
