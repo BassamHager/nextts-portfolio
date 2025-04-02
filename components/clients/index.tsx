@@ -1,8 +1,9 @@
 "use client";
 
 import React from "react";
-
+// data
 import { testimonials } from "@/data";
+// components
 import { InfiniteMovingCards } from "../ui/InfiniteCards";
 
 const Clients = () => {

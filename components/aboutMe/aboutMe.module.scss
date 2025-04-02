@@ -1,5 +1,5 @@
 .aboutWrapper {
-  @apply w-full flex flex-col justify-center items-center mt-96 gap-[15rem] border-[3px] border-black rounded-full h-full py-60 bg-gradient-to-r from-black via-[var(--primary-color)] to-black min-w-[400px] shadow-xl shadow-black;
+  @apply w-full h-full flex flex-col justify-center items-center mt-96 gap-[3rem] border-[3px] border-black rounded-full pt-20 pb-32 bg-gradient-to-r from-black via-[var(--primary-color)] to-black shadow-xl shadow-black;
 
   .mainTitle {
     @apply uppercase tracking-[2rem] text-gray-500 text-2xl p-[3rem];
@@ -13,7 +13,7 @@
     @apply w-full;
 
     .subtitle {
-      @apply text-4xl text-gray-500 font-semibold mb-[7rem] text-center;
+      @apply text-4xl text-gray-500 font-semibold py-[5rem] text-center;
 
       .accentText {
         @apply text-[var(--clr-neon)];
@@ -22,10 +22,14 @@
     }
 
     .textLinesContainer {
-      @apply relative w-[400px] h-[400px] md:w-[600px] border-y-[5px] mx-auto grid place-items-center bg-black/[.3] text-lg md:text-2xl text-gray-400 leading-10 rounded-xl p-7;
+      @apply relative sm:w-3/4 h-[400px] border-y-[5px] mx-auto grid place-items-center bg-black/[.3] text-lg md:text-2xl text-gray-400 leading-10 rounded-xl p-2 md:p-7;
 
       .bullet {
         @apply absolute w-12 h-12 -top-7 left-[calc(50%-24px)] rounded-full bg-gray-700 grid place-items-center;
+      }
+
+      .textLine {
+        @apply w-full h-full relative overflow-auto pt-2 grid place-items-center;
       }
     }
 

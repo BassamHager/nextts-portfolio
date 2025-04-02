@@ -1,4 +1,5 @@
 "use client";
+
 import { useState, useEffect, useContext } from "react";
 // styles
 import styles from "./experience.module.scss";

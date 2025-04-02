@@ -17,10 +17,10 @@
     }
 
     .contactInfoContainer {
-      @apply mt-10 border-[3px] border-black flex flex-col gap-7 items-center bg-black/[.3] p-14 rounded-full shadow-xl shadow-black;
+      @apply mt-10 border-[3px] border-black flex flex-col gap-7 items-center bg-black/[.3] py-14 px-3 rounded-full shadow-xl shadow-black;
 
       .contactInfo {
-        @apply flex items-center justify-center gap-5;
+        @apply flex items-center justify-center gap-3 md:gap-5;
 
         .contactIcon {
           @apply text-[#f7ab0a] h-7 w-7 animate-pulse;
@@ -32,7 +32,7 @@
       }
 
       .addressContainer {
-        @apply flex flex-col flex-wrap gap-7;
+        @apply flex flex-col items-center justify-center flex-wrap gap-3;
 
         span {
           @apply text-orange-500;
@@ -41,6 +41,14 @@
         div:last-child {
           span {
             @apply text-green-500;
+          }
+        }
+
+        .contactInfo {
+          @apply flex items-center justify-center text-center;
+
+          .contactText {
+            @apply w-2/3;
           }
         }
       }

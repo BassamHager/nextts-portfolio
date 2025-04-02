@@ -1,4 +1,3 @@
-"use client";
 import { useContext } from "react";
 // hooks
 import { AppContext } from "@/context";

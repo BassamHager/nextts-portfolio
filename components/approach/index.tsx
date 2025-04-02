@@ -1,8 +1,8 @@
 "use client";
 
 import { ReactNode, useState } from "react";
+// external libs
 import { AnimatePresence, motion } from "framer-motion";
-
 import { CanvasRevealEffect } from "../ui/CanvasRevealEffect";
 
 const Approach = () => {
@@ -75,7 +75,7 @@ const ApproachCard = ({
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       className="border border-black group/canvas-card flex items-center justify-center
-       max-w-sm w-full mx-auto p-4 relative lg:h-80 rounded-xl hover:scale-[105%] transition duration-500 shadow-sm hover:shadow-xl shadow-black bg-[#000033]"
+       max-w-[290px] md:max-w-sm w-full mx-auto p-4 relative min-h-[290px] lg:h-80 rounded-xl hover:scale-[105%] transition duration-500 shadow-sm hover:shadow-xl shadow-black hover:shadow-black bg-[#000033] hover:rounded-3xl"
     >
       <AnimatePresence>
         {hovered && (

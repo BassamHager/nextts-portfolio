@@ -29,31 +29,29 @@ const Hero = ({ pageInfo }: Props) => {
   });
 
   return (
-    <>
-      <div className={styles.heroWrapper}>
-        <BgCircles />
+    <div className={styles.heroWrapper}>
+      <BgCircles />
 
-        {/* @todo: update image placeholder */}
-        {pageInfo?.heroImage && (
-          <Image
-            src={pageInfo.heroImage}
-            alt={"Bassam"}
-            width={500}
-            height={500}
-            className={styles.heroImage}
-            priority
-          />
-        )}
+      {/* @todo: update image placeholder */}
+      {pageInfo?.heroImage && (
+        <Image
+          src={pageInfo.heroImage}
+          alt={"Bassam"}
+          width={500}
+          height={500}
+          className={styles.heroImage}
+          priority
+        />
+      )}
 
-        <div className={styles.contentContainerBelowImage}>
-          <h2 className={styles.role}>{pageInfo?.role}</h2>
+      <div className={styles.contentContainerBelowImage}>
+        <h2 className={styles.role}>{pageInfo?.role}</h2>
 
-          <h2 className={styles.heroText}>
-            <span className="">{text}</span> <Cursor cursorColor="#ff0000" />
-          </h2>
-        </div>
+        <h2 className={styles.heroText}>
+          <span className="">{text}</span> <Cursor cursorColor="#ff0000" />
+        </h2>
       </div>
-    </>
+    </div>
   );
 };
 

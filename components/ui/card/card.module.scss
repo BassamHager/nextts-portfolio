@@ -1,5 +1,5 @@
 .cardWrapper {
-  @apply relative w-full min-w-[400px] m-auto max-w-[1200px] min-h-[800px] flex items-center justify-center border-[10px] border-[#000033] rounded-full shadow-black shadow-xl  overflow-hidden bg-[#222];
+  @apply relative w-full min-w-[290px] m-auto max-w-[1200px] md:min-h-[800px] flex items-center justify-center border-[10px] border-[#000033] rounded-full shadow-black shadow-xl  overflow-hidden bg-[#222];
 
   .anime {
     @apply absolute top-0 left-0 w-full h-full flex items-center justify-center;
@@ -24,11 +24,10 @@
   }
 
   .cardContentWrapper {
-    @apply relative w-full h-[800px];
-    // @apply relative border-[2rem] sm:border-[3rem] border-[var(--dark-bg)] w-full h-[55.5rem] sm:h-[56.5rem] text-white py-[1rem] z-[40];
+    @apply relative w-full md:h-[800px];
 
     article {
-      @apply min-w-[400px] w-full h-full m-auto overflow-hidden;
+      @apply min-w-[290px] w-full h-full m-auto overflow-hidden;
     }
   }
 }

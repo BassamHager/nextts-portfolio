@@ -1,7 +1,4 @@
-"use client";
-
 // data
-import { socials } from "@/data/socials";
 import { pageInfo } from "@/data/pageInfo";
 import { experiences } from "@/data/workExperience";
 import { projects } from "@/data/projects";
@@ -13,31 +10,30 @@ import {
   Clients,
   WorkExperience,
   Approach,
-  Footer,
-  Header,
   Contact,
-  WipButtons,
+  // WipButtons,
 } from "@/components";
 // context
 import { AppContextProvider } from "@/context";
+import ErrorBoundary from "@/components/ErrorBoundary";
 
 export default function Home() {
   return (
-    <main className="relative flex flex-col justify-center items-center mx-auto px-3 sm:px-5  overflow-clip">
-      <AppContextProvider>
-        <div className="max-w-7xl w-full">
-          <Header socials={socials} />
-          <Hero pageInfo={pageInfo} />
-          <AboutMe pageInfo={pageInfo} />
-          <WorkExperience experiences={experiences} />
-          <Projects projects={projects} />
-          <Approach />
-          <Clients />
-          {/* <WipButtons /> */}
-          <Contact />
-          <Footer />
-        </div>
-      </AppContextProvider>
+    <main className="relative w-full flex flex-col justify-center items-center px-2 md:px3 sm:px-5 overflow-clip">
+      <ErrorBoundary>
+        <AppContextProvider>
+          <div className="max-w-7xl w-full">
+            <Hero pageInfo={pageInfo} />
+            <AboutMe pageInfo={pageInfo} />
+            <WorkExperience experiences={experiences} />
+            <Projects projects={projects} />
+            <Approach />
+            <Clients />
+            {/* <WipButtons /> */}
+            <Contact />
+          </div>
+        </AppContextProvider>
+      </ErrorBoundary>
     </main>
   );
 }

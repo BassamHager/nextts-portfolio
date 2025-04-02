@@ -2,6 +2,10 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "./provider";
+// data
+import { socials } from "@/data/socials";
+// components
+import { Footer, Header } from "@/components";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,7 +21,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning={true}>
       <body className={inter.className}>
         <ThemeProvider
           attribute="class"
@@ -25,7 +29,9 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <Header socials={socials} />
           {children}
+          <Footer />
         </ThemeProvider>
       </body>
     </html>

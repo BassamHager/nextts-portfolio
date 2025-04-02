@@ -19,7 +19,7 @@
     }
 
     .heroText {
-      @apply mt-28 text-4xl p-4 rounded-full [text-shadow:_3px_4px_1px_black];
+      @apply min-h-[150px] mt-28 text-4xl p-4 rounded-full [text-shadow:_3px_4px_1px_black];
     }
   }
 }

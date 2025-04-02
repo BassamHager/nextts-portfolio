@@ -68,11 +68,11 @@ const Contact = () => {
         <div className={styles.contactInfoContainer}>
           <div className={styles.contactInfo}>
             <SiWhatsapp className={styles.contactIcon} />
-            <p className={styles.contactText}>+31 6 8587 2817</p>
+            <p className={styles.contactText}>+31 6 246 17 228</p>
           </div>
           <div className={styles.contactInfo}>
             <MdWifiCalling3 className={styles.contactIcon} />
-            <p className={styles.contactText}>+971 58 520 3114</p>
+            <p className={styles.contactText}>+31 6 246 17 228</p>
           </div>
           <div className={styles.contactInfo}>
             <SiTelegram className={styles.contactIcon} />

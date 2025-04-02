@@ -2,11 +2,11 @@
   @apply flex flex-col justify-start w-full h-full;
 
   .jobTitle {
-    @apply mt-20 w-[350px] mx-auto md:w-full text-center text-2xl lg:text-4xl font-light text-gray-400;
+    @apply mt-20 p-3 mx-auto md:w-full text-center text-2xl lg:text-4xl font-light text-gray-400;
   }
 
   .workplace {
-    @apply mt-10 lg:mt-20 flex items-center lg:ml-[20vw] w-fit lg:justify-start gap-5 lg:gap-10 mx-auto;
+    @apply mt-10 lg:mt-20 flex flex-wrap justify-center items-center lg:ml-[20vw] w-fit lg:justify-start gap-5 lg:gap-10 mx-auto;
 
     .companyLogoContainer {
       @apply w-fit shadow-xl shadow-black rounded-full;
@@ -64,10 +64,10 @@
   }
 
   .buttonsContainer {
-    @apply mt-auto mb-28 flex flex-col gap-1 md:flex-row lg:gap-5 md:justify-center;
+    @apply w-[250px] md:w-full mx-auto mt-auto mb-28 flex flex-col gap-1 md:flex-row lg:gap-5 md:justify-center;
 
     button {
-      @apply w-[350px] md:w-[200px] m-auto md:m-0 p-2 text-center transition-all duration-300 border-[5px] rounded-xl border-black/[.1] text-gray-400 bg-gray-700 shadow-lg shadow-black tracking-wide;
+      @apply w-full md:w-[200px] m-auto md:m-0 p-2 text-center transition-all duration-300 border-[5px] rounded-xl border-black/[.1] text-gray-400 bg-gray-700 shadow-lg shadow-black tracking-wide;
 
       &:hover {
         @apply shadow-sm shadow-black text-white bg-[var(--clr-neon)];

@@ -1,21 +1,17 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 // styles
 import styles from "./aboutMe.module.scss";
 // external libs & packages
 import { motion } from "framer-motion";
 // types
 import { PageInfo } from "@/types";
-
 type Props = { pageInfo: PageInfo };
 
 const AboutMe = ({ pageInfo }: Props) => {
-  const [isSsg, setIsSsg] = useState(false);
   const [linesCounter, setLinesCounter] = useState(0);
-  const actionButtonsRef = useRef<HTMLDivElement>(null);
   const showNext = () => {
     setLinesCounter(
       linesCounter !== pageInfo?.bgInformation.length - 1 ? (pre) => pre + 1 : 0
@@ -24,10 +20,6 @@ const AboutMe = ({ pageInfo }: Props) => {
   const showPrevious = () => {
     setLinesCounter(linesCounter - 1);
   };
-
-  useEffect(() => {
-    setIsSsg(true);
-  }, [isSsg]);
 
   return (
     <motion.div
@@ -73,9 +65,12 @@ const AboutMe = ({ pageInfo }: Props) => {
           <ul className={styles.textLinesContainer}>
             {pageInfo?.bgInformation?.map((line: string, ind: number) => {
               return linesCounter === ind ? (
-                <li key={ind} id={`line-${ind}`} className={styles.textLine}>
-                  <div className={styles.bullet}>{ind + 1}</div> <p>{line}</p>
-                </li>
+                <>
+                  <li key={ind} id={`line-${ind}`} className={styles.textLine}>
+                    <p>{line}</p>
+                  </li>
+                  <div className={styles.bullet}>{ind + 1}</div>
+                </>
               ) : null;
             })}
           </ul>
