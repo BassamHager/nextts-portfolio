@@ -8,6 +8,8 @@ import SwipingTool from "@/components/ui/swipingTool";
 import ProjectCard from "./projectCard";
 // context
 import { AppContext } from "@/context";
+// libs
+import { projectImages } from "@/libs/imageKit/constants";
 // data
 import { projectsCount } from "@/data/projects";
 // types
@@ -25,11 +27,11 @@ const Projects = ({ projects }: Props) => {
   const [projImages, setProjImages] = useState<string[]>([]);
   const [currentProjectIndex, setCurrentProjectIndex] = useState(0);
 
-  const projectsImages = (objects: Project[]): string[] =>
+  const mapProjectsImages = (objects: Project[]): string[] =>
     objects.map((obj) => obj.image);
 
   useEffect(() => {
-    const images = projectsImages(projects);
+    const images = mapProjectsImages(projects);
     setProjImages(images);
   }, [projects]);
 

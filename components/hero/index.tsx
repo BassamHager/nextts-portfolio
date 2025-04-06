@@ -1,12 +1,13 @@
 "use client";
 
-import Image from "next/image";
 // styles
 import styles from "./hero.module.scss";
-// external libs
+// libs
 import { Cursor, useTypewriter } from "react-simple-typewriter";
+import { heroSectionImage } from "@/libs/imageKit/constants";
 // components
 import BgCircles from "@/components/ui/bgCircles";
+import IkImageBuilder from "../ui/IkImageBuilder";
 // types
 import { PageInfo } from "@/types";
 
@@ -34,11 +35,11 @@ const Hero = ({ pageInfo }: Props) => {
 
       {/* @todo: update image placeholder */}
       {pageInfo?.heroImage && (
-        <Image
-          src={pageInfo.heroImage}
-          alt={"Bassam"}
+        <IkImageBuilder
+          path={heroSectionImage}
           width={500}
           height={500}
+          alt="Bassam"
           className={styles.heroImage}
           priority
         />

@@ -1,18 +1,18 @@
-import Image from "next/image";
 import Link from "next/link";
 import { useContext } from "react";
 // styles
 import styles from "./experienceCard.module.scss";
-// external libs & packages
+// libs
 import { motion } from "framer-motion";
-// typings
-import { Experience } from "@/types";
 // components
 import Card from "@/components/ui/card";
 import Responsibilities from "../responsibilities";
 import Technologies from "../technologies";
+import IkImageBuilder from "@/components/ui/IkImageBuilder";
 // context
 import { AppContext } from "@/context";
+// types
+import { Experience } from "@/types";
 
 type Props = {
   experience: Experience;
@@ -46,11 +46,12 @@ const ExperienceCard = ({ experience }: Props) => {
               {experience?.companyImage && experience?.companyLink ? (
                 <motion.div className={`peer ${styles.companyLogoContainer}`}>
                   <Link href={experience?.companyLink} target="_blank">
-                    <Image
-                      src={experience?.companyImage}
-                      alt={`work experience at ${experience?.company}`}
+                    <IkImageBuilder
                       width={100}
-                      className={`${styles.companyLogo}`}
+                      height={100}
+                      path={experience?.companyImage}
+                      alt={`work experience at ${experience?.company}`}
+                      className={styles.companyLogo}
                     />
                   </Link>
                 </motion.div>

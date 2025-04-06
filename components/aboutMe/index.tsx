@@ -1,11 +1,13 @@
 "use client";
 
-import Image from "next/image";
 import { useState } from "react";
 // styles
 import styles from "./aboutMe.module.scss";
-// external libs & packages
+// external libs
 import { motion } from "framer-motion";
+import { heroSectionImage } from "@/libs/imageKit/constants";
+// components
+import IkImageBuilder from "@/components/ui/IkImageBuilder";
 // types
 import { PageInfo } from "@/types";
 type Props = { pageInfo: PageInfo };
@@ -44,14 +46,12 @@ const AboutMe = ({ pageInfo }: Props) => {
               duration: 1.2,
             }}
           >
-            <Image
-              src={pageInfo.profilePic}
-              alt={"Bassam"}
+            <IkImageBuilder
+              path={heroSectionImage}
+              alt="Bassam"
               width={300}
               height={300}
               className={styles.aboutImage}
-              id="aboutImage"
-              priority
             />
           </motion.div>
         )}
@@ -65,12 +65,12 @@ const AboutMe = ({ pageInfo }: Props) => {
           <ul className={styles.textLinesContainer}>
             {pageInfo?.bgInformation?.map((line: string, ind: number) => {
               return linesCounter === ind ? (
-                <>
-                  <li key={ind} id={`line-${ind}`} className={styles.textLine}>
+                <div key={ind}>
+                  <li id={`line-${ind}`} className={styles.textLine}>
                     <p>{line}</p>
                   </li>
                   <div className={styles.bullet}>{ind + 1}</div>
-                </>
+                </div>
               ) : null;
             })}
           </ul>

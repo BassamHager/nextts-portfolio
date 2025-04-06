@@ -38,7 +38,7 @@ export interface Skill {
 export interface Experience {
   id: number;
   company: string;
-  companyImage: string | StaticImageData;
+  companyImage: string;
   dateStarted: Date | string;
   dateEnded: Date | string;
   isCurrentlyWorkingHere: boolean;
@@ -53,7 +53,7 @@ export interface Experience {
 
 export interface Project {
   title: string;
-  image: string | StaticImageData;
+  image: string;
   summary: string;
   technologies: Technology[];
   linkToBuild: string;

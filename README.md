@@ -47,4 +47,8 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 [ ] update wipSection component
 [ ] add suggestions/draft section
 [ ] add monitoring services via Sentry
-[ ] add ...
+[ ] update card buttons components (responsibilities, techs, etc)
+[ ] add a layout skeleton & a placeholder for each component
+[ ] clear tech name on swiping in experiences
+[ ] rename files to solve index.ts confusing issues
+[ ] restructure files to solve data, libs & similar dir names

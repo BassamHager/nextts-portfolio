@@ -30,13 +30,13 @@
     }
   }
 
-  .projectLogosContainer {
-    @apply w-full md:w-fit flex items-center flex-wrap gap-3 md:gap-5 mt-16 justify-center text-4xl m-auto rounded-full transition duration-300;
+  .logosContainer {
+    @apply w-full md:w-fit flex justify-center items-center flex-wrap gap-3 md:gap-5 mt-16 text-4xl m-auto rounded-full transition duration-300;
 
     button {
-      @apply border-[10px] border-gray-700 bg-gray-700 rounded-full overflow-hidden w-14 h-14 md:w-20 md:h-20 grid place-items-center shadow-xl shadow-black;
+      @apply border-[10px] border-black/50 rounded-full overflow-hidden w-14 h-14 md:w-20 md:h-20 grid place-items-center shadow-xl shadow-black;
 
-      img {
+      .img {
         @apply w-full h-full object-contain rounded-full;
       }
 
