@@ -66,10 +66,10 @@
   }
 
   .demoImageContainer {
-    @apply w-full h-full min-w-[350px];
+    @apply w-full h-[calc(100%-130px)] flex justify-center bg-black/30;
 
     .projectImage {
-      @apply w-full h-auto;
+      @apply object-contain w-full;
     }
   }
 }

@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 // external libs & packages
@@ -10,8 +11,7 @@ import styles from "./projectCard.module.scss";
 import { Project } from "@/types";
 // components
 import Card from "@/components/ui/card";
-import useSWRGlobalState from "@/utils/hooks/useSWRGlobalState";
-import { useState } from "react";
+import IkImageBuilder from "@/components/ui/IkImageBuilder";
 
 type Props = {
   project: Project;
@@ -102,10 +102,11 @@ export default function ProjectCard({ project }: Props) {
 
           {projectTab === "demo" && (
             <div className={styles.demoImageContainer}>
-              <Image
-                src={project?.image}
+              <IkImageBuilder
+                path={project.image as string}
+                width={500}
+                height={500}
                 alt={project?.title || "case study"}
-                width={100}
                 className={styles.projectImage}
               />
             </div>

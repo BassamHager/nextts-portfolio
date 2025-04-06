@@ -1,10 +1,3 @@
-// projects
-import abn from "@/public/assets/images/projects/abn_amro_tech_assignment.webp";
-import portfolio from "@/public/assets/images/projects/portfolio.webp";
-import poll from "@/public/assets/images/projects/poll-app.webp";
-import bank from "@/public/assets/images/projects/bank-dashboard.webp";
-import ryde from "@/public/assets/images/projects/ryde.webp";
-import pikameals from "@/public/assets/images/projects/pikameals.webp";
 // techs
 import azure from "@/public/assets/images/skills/azure.webp";
 import cicd from "@/public/assets/images/skills/cicd.webp";
@@ -78,37 +71,6 @@ import cloudflare_pages from "@/public/assets/images/skills/cloudflare_pages.web
 // os
 import macos from "@/public/assets/images/skills/macos.webp";
 import windows from "@/public/assets/images/skills/windows.webp";
-// companies
-import hyf from "@/public/assets/images/experiences/hyf-logo.webp";
-import exact from "@/public/assets/images/experiences/Exact-logo.webp";
-import spicyfi from "@/public/assets/images/experiences/spicyfi-logo.webp";
-import mws from "@/public/assets/images/experiences/MWS.logo.webp";
-import syt from "@/public/assets/images/experiences/SYT-logo.webp";
-import sffeco from "@/public/assets/images/experiences/sffeco.webp";
-import dm from "@/public/assets/images/experiences/dm.webp";
-import abn_amro from "@/public/assets/images/experiences/abn_amro.webp";
-import kaskade from "@/public/assets/images/experiences/kaskade.webp";
-
-export const projectImages = {
-  abn,
-  portfolio,
-  poll,
-  bank,
-  ryde,
-  pikameals,
-};
-
-export const companyImages = {
-  hyf,
-  exact,
-  spicyfi,
-  mws,
-  syt,
-  sffeco,
-  dm,
-  abn_amro,
-  kaskade,
-};
 
 export const techImages = {
   azure,

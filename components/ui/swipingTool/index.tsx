@@ -1,5 +1,4 @@
 import { ReactNode } from "react";
-import Image from "next/image";
 // styles
 import styles from "./swipingTool.module.scss";
 // external libs
@@ -10,6 +9,8 @@ import { motion } from "framer-motion";
 import useSwipe from "@/utils/hooks/useSwipe";
 // data
 import { projectsCount } from "@/data/projects";
+// components
+import IkImageBuilder from "@/components/ui/IkImageBuilder";
 
 type Props = {
   cardComponent: ReactNode;
@@ -54,7 +55,7 @@ const SwipingTool = ({
           </button>
         </div>
 
-        <div className={styles.projectLogosContainer}>
+        <div className={styles.logosContainer}>
           {logos?.map((image, index) => (
             <button
               key={index}
@@ -68,7 +69,12 @@ const SwipingTool = ({
               }`}
             >
               {image ? (
-                <Image src={image} alt={"logo"} className={styles.img} />
+                <IkImageBuilder
+                  width={100}
+                  height={100}
+                  path={image}
+                  alt={"logo"}
+                />
               ) : (
                 <RxDotFilled />
               )}

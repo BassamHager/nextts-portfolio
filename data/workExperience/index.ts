@@ -2,10 +2,10 @@
 import { Experience } from "@/types";
 // utils
 import { filterTechs } from "@/utils/filterTechs";
-// data
-import { companyImages } from "@/data/assets/images";
+// libs
+import { workExperiencesLogos } from "@/libs/imageKit/constants";
 const { hyf, exact, spicyfi, mws, syt, sffeco, dm, abn_amro, kaskade } =
-  companyImages;
+  workExperiencesLogos;
 
 export const experiences: Experience[] = [
   {
